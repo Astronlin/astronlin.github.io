@@ -5,9 +5,16 @@ permalink: /Gallery/
 ---
 **Figures coming soon!**
 
-![gohiking1](fig/gohiking1.JPG)
-![gohiking2](fig/gohiking2.JPG)
-![Interlaken](fig/interlaken1.jpg)
-![Interlaken](fig/interlaken2.jpg)
-![Interlaken](fig/interlaken3.jpg)
-![Interlaken](fig/interlaken4.jpg)
+### Hiking
+<img   src="/fig/gohiking1.JPG"   width="300" height="auto"/>
+<img   src="/fig/gohiking2.JPG"   width="300" height="auto"/>
+
+### Interlaken, Switherland
+<img   src="/fig/interlaken1.jpg" width="300" height="auto"/>
+<img   src="/fig/interlaken2.jpg" width="300" height="auto"/>
+<img   src="/fig/interlaken3.jpg" width="300" height="auto"/>
+<img   src="/fig/interlaken4.jpg" width="300" height="auto"/>
+
+### Starry night
+<img   src="/fig/star-trails.png" width="300" height="auto"/>
+<img   src="/fig/moon.PNG" width="300" height="auto"/>
