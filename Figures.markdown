@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Figures
+title: Galley
 permalink: /Figures/
 ---
 **Figures coming soon!**
