@@ -11,5 +11,3 @@ permalink: /Figures/
 ![Interlaken](fig/interlaken2.jpg)
 ![Interlaken](fig/interlaken3.jpg)
 ![Interlaken](fig/interlaken4.jpg)
-
-
