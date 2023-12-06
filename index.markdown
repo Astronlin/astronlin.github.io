@@ -4,3 +4,6 @@
 
 layout: home
 ---
+Welcome to my website!
+![Interlaken](fig/interlaken.jpg)
+
