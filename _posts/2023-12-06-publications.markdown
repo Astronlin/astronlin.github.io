@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "News"
 date:   2023-12-06 11:01:19 +0100
 categories: jekyll update
