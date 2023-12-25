@@ -6,7 +6,8 @@ layout: home
 ---
 **Welcome!**
 
+<img src="/fig/pingpong.jpeg" alt="Profile" width="auto" height="250">
+<img src="/fig/zurich.jpeg"  height="250" width="auto">
+
 [ORCID](https://orcid.org/0000-0002-2231-8381)
 & [Bilibili](https://space.bilibili.com/399381595?spm_id_from=333.1007.0.0)
-
-<img src="/fig/pingpong.jpeg" alt="Profile" width="auto" height="400">
