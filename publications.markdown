@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Publications
-permalink: /Publications/
+title: Research 
+permalink: /Research/
 ---
 Here I put the publications.
