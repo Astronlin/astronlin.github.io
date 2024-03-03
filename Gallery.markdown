@@ -37,3 +37,6 @@ permalink: /Gallery/
 <img   src="/fig/munich_citywalk/DSC0121.jpeg" width="300" height="auto"/>
 <img   src="/fig/munich_citywalk/DSC0162.jpeg" width="300" height="auto"/>
 
+### Ganyu seaside
+<img   src="/fig/ganyu_seaside/A.jpg" width="300" height="auto"/>
+<img   src="/fig/ganyu_seaside/A_1.jpg" width="300" height="auto"/>
