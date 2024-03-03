@@ -15,6 +15,8 @@ My current research focuses on 'Kinenatics and Dynamics' --- from molecular clou
 
 <img   src="/fig/research/GMPMC/sample_distribution.png"   width="600" height="auto"/>
 
+This work is under-review in NA.
+
 ### Neutral gas kinematics of a radio galaxy at the cosmic noon
 
 <img   src="/fig/research/PKS_0529-549/CImom1_ALMAposter.jpg"   width="600" height="auto"/>
