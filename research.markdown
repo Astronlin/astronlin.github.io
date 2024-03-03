@@ -19,7 +19,7 @@ My current research focuses on 'Kinenatics and Dynamics' --- from molecular clou
 > <img   src="/fig/research/GMPMC/sample_distribution.png"   width="300" height="auto"/>
 
 ### 2. Neutral gas kinematics of a radio galaxy at the cosmic noon
-> Drafting.
+> Drafting. This work is mainly done in ESO, Garching.
 > <img   src="/fig/research/PKS_0529-549/CImom1_ALMAposter.jpg"   width="400" height="auto"/>
 
 ---
