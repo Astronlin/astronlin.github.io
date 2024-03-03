@@ -38,5 +38,10 @@ permalink: /Gallery/
 <img   src="/fig/munich_citywalk/DSC0162.jpeg" width="300" height="auto"/>
 
 ### Ganyu seaside
-<img   src="/fig/ganyu_seaside/A.jpg" width="300" height="auto"/>
-<img   src="/fig/ganyu_seaside/A_1.jpg" width="300" height="auto"/>
+<img   src="/fig/ganyu_seaside/A.jpg" height="200" width="auto"/>
+<img   src="/fig/ganyu_seaside/A_1.jpg" height="200" width="auto"/>
+
+### Chinese New Year 2024 
+<img   src="/fig/chinese_new_year_2024/A_3.jpg" width="200" height="auto"/>
+<img   src="/fig/chinese_new_year_2024/A_4.jpg" width="200" height="auto"/>
+<img   src="/fig/chinese_new_year_2024/A_5.jpg" width="200" height="auto"/>
