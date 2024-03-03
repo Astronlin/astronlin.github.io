@@ -3,7 +3,7 @@ layout: page
 title: Gallery
 permalink: /Gallery/
 ---
-**Figures coming soon!**
+**Please Stay tuned!**
 
 ### Hiking
 <img   src="/fig/gohiking1.jpeg"   width="300" height="auto"/>
