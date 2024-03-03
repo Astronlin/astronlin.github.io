@@ -10,8 +10,9 @@ permalink: /Research/
 
 # *Main Works*
 
-> My current research focuses on 'Kinenatics and Dynamics' --- from molecular
-clouds in the Milky Way to high-redshift galaxies.
+<div style="background-color: skyblue; padding: 10px; border-radius: 10px;">
+My current research focuses on 'Kinenatics and Dynamics' --- from molecular clouds in the Milky Way to high-redshift galaxies.
+</div>
 
 ### 1. Virial states of molecular clouds across the Galactic plane
 > Under review in Nature Astronomy.
@@ -25,7 +26,11 @@ clouds in the Milky Way to high-redshift galaxies.
 
 # *Other extensions*
 
-* Developing a Python-based pipeline to facilitate the FAST data reduction 
-* HI narrow self-absorption (HINSA) in Galactic outer disk molecular clouds 
-* HI kinematics of the Galactic Anticenter High Velocity Cloud (AC-HVC)
-* HI kinematics of the Supernova Remnant IC 443 (SNR IC 443) 
+<div style="background-color: lemonchiffon; padding: 10px; border-radius: 10px;">
+    <ul>
+        <li> Developing a Python-based pipeline to facilitate the FAST data reduction </li>
+        <li> HI narrow self-absorption (HINSA) in Galactic outer disk molecular clouds </li>
+        <li> HI kinematics of the Galactic Anticenter High Velocity Cloud (AC-HVC)</li>
+        <li> HI kinematics of the Supernova Remnant IC 443 (SNR IC 443) </li>
+    </ul>
+</div>
