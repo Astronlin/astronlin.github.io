@@ -3,4 +3,4 @@ layout: page
 title: Contact
 permalink: /Contact/
 ---
-email: lingruiism@gmail.com
+Email: lingruiism@gmail.com
