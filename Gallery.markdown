@@ -50,7 +50,7 @@ permalink: /Gallery/
             transition: transform 0.3s ease-in-out;
         }
         .image-container img:hover {
-            transform: scale(2.0);
+            transform: scale(1.5);
         }
     </style>
 </head>
