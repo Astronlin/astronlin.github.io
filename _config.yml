@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Hello, I am Lingrui Lin. I am a Ph.D student in the School of Astronomy and Space Science at Nanjing University.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
+twitter_username: LingruiISM 
 github_username: Astronlin
 
 # Build settings
