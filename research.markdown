@@ -85,7 +85,8 @@ permalink: /Research/
         <div class="extension-list">
             <ul>
                 <li>Developing a Python-based pipeline to facilitate the FAST data reduction</li>
-                <li>HI narrow self-absorption (HINSA) in Galactic outer disk molecular clouds</li>
+                <li>HI narrow self-absorption (HINSA) in Galactic outer disk molecular clouds
+                    <img src="/fig/research/GMPMC/G37.467+2.700_HIdd.png" alt="HINSA" width="300"> </li>
                 <li>HI kinematics of the Galactic Anticenter High Velocity Cloud (AC-HVC)</li>
                 <li>HI kinematics of the Supernova Remnant IC 443 (SNR IC 443)</li>
                 <li>...</li>
