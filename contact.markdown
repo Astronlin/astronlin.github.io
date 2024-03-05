@@ -3,4 +3,4 @@ layout: page
 title: Contact
 permalink: /Contact/
 ---
-Email: lingruiism@gmail.com
+Email: lingruiphd@smail.nju.edu.cn, lingruiism@gmail.com, llrw@163.com
