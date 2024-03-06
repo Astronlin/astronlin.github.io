@@ -65,7 +65,7 @@ permalink: /Research/
         <div class="work">
             <h2>Inadequate turbulent support in low-metallicity molecular clouds</h2>
             <p>Under review at Nature Astronomy.</p>
-            <img src="/fig/research/GMPMC/sample_distribution.png" alt="Sample Distribution" width="300">
+            <img src="/fig/research/GMPMC/sample_distribution.jpeg" alt="Sample Distribution" width="300">
         </div>
 
         <div class="work">
