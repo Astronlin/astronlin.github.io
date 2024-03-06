@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "News"
+title:  "NEWS 2"
 date:   2024-03-06 11:01:19 +0100
 categories: jekyll update
 ---
