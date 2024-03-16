@@ -59,8 +59,8 @@ permalink: /Gallery/
         <div class="category">
             <h3>Hiking</h3>
             <div class="image-container">
-                <img src="/fig/gohiking1.jpeg" alt="Hiking Image 1" width="150" height="auto">
-                <img src="/fig/gohiking2.jpeg" alt="Hiking Image 2" width="150" height="auto">
+                <img src="/fig/gohiking1.jpeg" alt="Hiking Image 1" width="300" height="auto">
+                <img src="/fig/gohiking2.jpeg" alt="Hiking Image 2" width="300" height="auto">
             </div>
         </div>
         <div class="category">
@@ -107,6 +107,13 @@ permalink: /Gallery/
                 <img src="/fig/chinese_new_year_2024/A_3.jpeg" alt="Chinese New Year 2024 Image 1" width="150" height="auto">
                 <img src="/fig/chinese_new_year_2024/A_4.jpeg" alt="Chinese New Year 2024 Image 2" width="150" height="auto">
                 <img src="/fig/chinese_new_year_2024/A_5.jpeg" alt="Chinese New Year 2024 Image 3" width="150" height="auto">
+            </div>
+        </div>
+        <div class="category">
+            <h3>Nanjing University</h3>
+            <div class="image-container">
+                <img src="/fig/Nanjing_University/astro_yulan1.jpeg" alt="Yulan @ NJUastro 1" width="300" height="auto">
+                <img src="/fig/Nanjing_University/astro_yulan2.jpeg" alt="Yulan @ NJUastro 2" width="300" height="auto">
             </div>
         </div>
     </div>
