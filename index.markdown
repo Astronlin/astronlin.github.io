@@ -9,7 +9,7 @@ layout: home
 
     <div style="text-align: center;">
         <div style="display: inline-block; text-align: left;">
-            <img src="/fig/pingpong.jpeg" alt="Profile" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); width: 320px;">
+            <img src="/fig/lingrui_photo.jpg" alt="Profile" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); width: 320px;">
         </div>
         <div style="display: inline-block; vertical-align: middle; text-align: left; margin-left: 10px; max-width: calc(100% - 350px);">
             <p style="font-size: 14px; margin-top: 5px;"> I am Lingrui Lin (林令瑞). I am currently a Ph.D. student in the School of Astronomy and Space Science at Nanjing University, where I focus on studying the kinematics and dynamics of the interstellar medium. My research spans from molecular clouds in the Milky Way to the rotating disks of high-redshift galaxies.</p>
