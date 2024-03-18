@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Curriculum Vitae 
 permalink: /About/
 ---
 Hello, I am Lingrui Lin.
@@ -12,3 +12,9 @@ high-redshift galaxies.
 
 I am also the teaching assistant of the ISM lecture of the 2024 Spring
 semester.
+
+<html lang="en">
+<body>
+    <a href="/CV/Lingrui_CV.pdf" download>Click to see my CV</a>
+</body>
+</html>
