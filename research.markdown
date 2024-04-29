@@ -52,6 +52,7 @@ permalink: /Research/
             transform: scale(1.2);
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js" integrity="sha384-RviGZ8rU1NSRl9Fa8wTXCzZZfJMW0/9ZVT/k7YwJ7LYhJ1Tx4+hhjgUHCBbr+XR3" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -64,7 +65,8 @@ permalink: /Research/
         
         <div class="work">
             <h2>Inadequate turbulent support in low-metallicity molecular clouds</h2>
-            <p>Under review at Nature Astronomy.</p>
+            <p>Dynamic properties of molecular clouds are determined by the interplay of self-gravity, turbulence, external pressure, and magnetic field. Among them, the turbulent kinetic energy (E<sub>k</sub>) and the self-gravitational energy (E<sub>g</sub>) are routinely assumed to be virialized, yet benchmarks under metal-poor conditions are limited. We present mapping observations of optically-thin <sup>13</sup>CO lines targeting metal-poor molecular clouds from the Galactic outer disk and nearby dwarf galaxies. The ratio of 2E<sub>k</sub>/E<sub>g</sub> systematically declines towards lower metallicity, reaching sub-virial values at which turbulence alone cannot counterbalance the cloud self-gravity. The magnetic field, as another mechanism to support molecular clouds, likely becomes dominant under low-metallicity conditions.</p>
+            <p> Under review at Nature Astronomy.</p>
             <img src="/fig/research/GMPMC/sample_distribution.jpeg" alt="Sample Distribution" width="300">
         </div>
 
@@ -84,7 +86,7 @@ permalink: /Research/
 
         <div class="extension-list">
             <ul>
-                <li>Developing a Python-based pipeline to facilitate the FAST data reduction</li>
+                <li>Developing a Python-based pipeline to facilitate the FAST data reduction. For more information, <a href="https://github.com/Astronlin/NJU_FAST_ISM">visit the project page.</a></li>
                 <li>HI narrow self-absorption (HINSA) in Galactic outer disk molecular clouds
                     <img src="/fig/research/GMPMC/G37.467+2.700_HIdd.png" alt="HINSA" width="300"> </li>
                 <li>HI kinematics of the Galactic Anticenter High Velocity Cloud (AC-HVC)</li>
