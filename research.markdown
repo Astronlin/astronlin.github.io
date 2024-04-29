@@ -71,8 +71,9 @@ permalink: /Research/
         </div>
 
         <div class="work">
-            <h2>Neutral gas kinematics of a radio galaxy at the cosmic noon</h2>
-            <p>Drafting. This work is mainly done at ESO, Garching.</p>
+            <h2>A dynamically cold gas disk in an AGN-host galaxy at z~2.6: flat rotation curve, disk-halo degeneracy, and gas accretion</h2>
+<p>We study the gas dynamics of PKS 0529-549: a galaxy at z ≃ 2.6 hosting a radio-loud active galactic nuclei (AGN). We use new ALMA observations of the [CI] 2-1 line at a spatial resolution of 0.18'' (∼1.5 kpc). The high-resolution [CI] data confirms that the molecular gas forms a dynamically cold, rotation supported disk with Vrot/sigma_v ≃ 6, as suggested by previous low-resolution [CI] data. In addition, we find that (1) the rotation curve is approximately flat and imply a dynamical mass of ∼10^11 M⊙ within ∼3.5 kpc; (2) mass models display a strong disk-halo degeneracy, that is models with or without dark matter halo can fit equally well the observed rotation curve, leaving the dark matter content unconstrained; (3) dynamical upper limits on the stellar and gas masses are violated by stellar masses from spectral energy distribution fits and gas masses from common gas-to-H2 conversion factors, highlighting the large uncertainties on the baryonic content; (4) there is a kinematically anomalous component at 2 kpc from the galaxy center and a gas tail extending for ∼3 kpc; the two components are probably linked and may be due to a minor merger or a gas accretion event</p>
+            <p>Submitted to A&A. This work is mainly done at ESO Garching.</p>
             <img src="/fig/research/PKS_0529-549/CImom1_ALMAposter.jpg" alt="ALMA Poster" width="300">
         </div>
     </div>
