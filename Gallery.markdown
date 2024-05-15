@@ -119,17 +119,17 @@ permalink: /Gallery/
         <div class="category">
             <h3>Nanjing Downtown</h3>
             <div class="image-container">
-                <img src="/fig/Nanjing_downtown/_DSC0769.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0770.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0773.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0774.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0779.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0780.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0782.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0793.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0808.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0811.jpeg" alt=" " width="300" height="auto">
-                <img src="/fig/Nanjing_downtown/_DSC0819.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0769.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0770.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0773.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0774.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0779.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0780.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0782.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0793.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0808.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0811.jpeg" alt=" " width="300" height="auto">
+                <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0819.jpeg" alt=" " width="300" height="auto">
             </div>
         </div>
     </div>
