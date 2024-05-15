@@ -3,7 +3,7 @@ layout: page
 title: Gallery
 permalink: /Gallery/
 ---
-**Please Stay tuned!**
+**Stay tuned for more!**
 
 <html lang="en">
 <head>
