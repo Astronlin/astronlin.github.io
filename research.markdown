@@ -67,6 +67,7 @@ permalink: /Research/
             <h2>Inadequate turbulent support in low-metallicity molecular clouds</h2>
             <p>Dynamic properties of molecular clouds are determined by the interplay of self-gravity, turbulence, external pressure, and magnetic field. Among them, the turbulent kinetic energy (E<sub>k</sub>) and the self-gravitational energy (E<sub>g</sub>) are routinely assumed to be virialized, yet benchmarks under metal-poor conditions are limited. We present mapping observations of optically-thin <sup>13</sup>CO lines targeting metal-poor molecular clouds from the Galactic outer disk and nearby dwarf galaxies. The ratio of 2E<sub>k</sub>/E<sub>g</sub> systematically declines towards lower metallicity, reaching sub-virial values at which turbulence alone cannot counterbalance the cloud self-gravity. The magnetic field, as another mechanism to support molecular clouds, likely becomes dominant under low-metallicity conditions.</p>
             <p> Published in Nature Astronomy.</p>
+            <a href="https://www.nature.com/articles/s41550-024-02440-3">Click to see!</a>
             <img src="/fig/research/GMPMC/sample_distribution.jpeg" alt="Sample Distribution" width="300">
         </div>
 
@@ -74,6 +75,7 @@ permalink: /Research/
             <h2>Gas dynamics in an AGN-host galaxy at z ≃ 2.6: Regular rotation, noncircular motions, and mass models</h2>
 <p>We study the gas dynamics of PKS 0529-549: a galaxy at z ≃ 2.6 hosting a radio-loud active galactic nuclei (AGN). We use new ALMA observations of the [CI] 2-1 line at a spatial resolution of 0.18'' (∼1.5 kpc). The high-resolution [CI] data confirms that the molecular gas forms a dynamically cold, rotation supported disk with Vrot/sigma_v ≃ 6, as suggested by previous low-resolution [CI] data. In addition, we find that (1) the rotation curve is approximately flat and imply a dynamical mass of ∼10^11 M⊙ within ∼3.5 kpc; (2) mass models display a strong disk-halo degeneracy, that is models with or without dark matter halo can fit equally well the observed rotation curve, leaving the dark matter content unconstrained; (3) dynamical upper limits on the stellar and gas masses are violated by stellar masses from spectral energy distribution fits and gas masses from common gas-to-H2 conversion factors, highlighting the large uncertainties on the baryonic content; (4) there is a kinematically anomalous component at 2 kpc from the galaxy center and a gas tail extending for ∼3 kpc; the two components are probably linked and may be due to a minor merger or a gas accretion event</p>
             <p>Published in A&A. This work is mainly done at ESO Garching.</p>
+            <a href="https://www.aanda.org/articles/aa/full_html/2025/01/aa50814-24/aa50814-24.html">Click to see!</a>
             <img src="/fig/research/PKS_0529-549/CImom1_ALMAposter.jpg" alt="ALMA Poster" width="300">
         </div>
     </div>
