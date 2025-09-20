@@ -147,9 +147,7 @@ permalink: /Gallery/
                 <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1410_reduced.jpeg" alt=" " width="150" height="auto">
                 <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1412_reduced.jpeg" alt=" " width="150" height="auto">
                 <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1415_reduced.jpeg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1420_reduced.jpeg" alt=" " width="150" height="auto">
                 <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1421_reduced.jpeg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1425_reduced.jpeg" alt=" " width="150" height="auto">
                 <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1433_reduced.jpeg" alt=" " width="150" height="auto">
                 <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1438_reduced.jpeg" alt=" " width="150" height="auto">
             </div>
