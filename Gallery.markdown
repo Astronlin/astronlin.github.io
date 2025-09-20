@@ -135,27 +135,27 @@ permalink: /Gallery/
         <div class="category">
             <h3>Sep 20, 2025 @ Florence, Italy</h3>
             <div class="image-container">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1390.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1395.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1398.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1399.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1403.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1405.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1407.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1408.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1409.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1410.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1412.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1415.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1420.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1421.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1422.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1423.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1424.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1425.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1426.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1433.jpg" alt=" " width="300" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/_DSC1438.jpg" alt=" " width="300" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1390.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1395.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1398.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1399.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1403.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1405.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1407.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1408.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1409.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1410.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1412.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1415.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1420.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1421.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1422.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1423.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1424.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1425.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1426.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1433.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/_DSC1438.jpg" alt=" " width="150" height="auto">
             </div>
         </div>
     </div>
