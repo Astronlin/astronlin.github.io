@@ -135,27 +135,27 @@ permalink: /Gallery/
         <div class="category">
             <h3>Sep 20, 2025 @ Florence, Italy</h3>
             <div class="image-container">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1390.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1395.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1398.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1399.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1403.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1405.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1407.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1408.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1409.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1410.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1412.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1415.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1420.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1421.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1422.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1423.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1424.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1425.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1426.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1433.jpg" alt=" " width="150" height="auto">
-                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1438.jpg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1390_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1395_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1398_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1399_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1403_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1405_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1407_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1408_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1409_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1410_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1412_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1415_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1420_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1421_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1422_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1423_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1424_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1425_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1426_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1433_reduced.jpeg" alt=" " width="150" height="auto">
+                <img src="/fig/Sep20_2025_Firenze/Firenze_DSC1438_reduced.jpeg" alt=" " width="150" height="auto">
             </div>
         </div>
     </div>
