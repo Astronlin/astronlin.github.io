@@ -3,7 +3,7 @@ layout: page
 title: Gallery
 permalink: /Gallery/
 ---
-**Stay tuned for more!**
+**Stay tuned! Swipe to see more images.**
 
 <html lang="en">
 <head>
@@ -52,20 +52,32 @@ permalink: /Gallery/
         .image-container img:hover {
             transform: scale(1.5);
         }
+        .scroll-row {
+            display: flex;           /* 横向排列 */
+            overflow-x: auto;        /* 超出宽度可以横向滚动 */
+            gap: 10px;               /* 图片间距，可调 */
+            padding: 5px 0;          /* 上下内边距 */
+        }
+        .scroll-row img {
+           width: auto;            /* 固定宽度 */
+           height: 150px;            /* 高度按比例自动 */
+           flex-shrink: 0;          /* 防止被压缩 */
+           border-radius: 4px;      /* 可选，圆角 */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="category">
             <h3>Hiking</h3>
-            <div class="image-container">
+            <div class="scroll-row">
                 <img src="/fig/gohiking1.jpeg" alt="Hiking Image 1" width="300" height="auto">
                 <img src="/fig/gohiking2.jpeg" alt="Hiking Image 2" width="300" height="auto">
             </div>
         </div>
         <div class="category">
             <h3>Interlaken, Switzerland</h3>
-            <div class="image-container">
+            <div class="scroll-row">
                 <img src="/fig/Switzerland/interlaken1.jpeg" alt="Interlaken Image 1" width="150" height="auto">
                 <img src="/fig/Switzerland/interlaken2.jpeg" alt="Interlaken Image 2" width="150" height="auto">
                 <img src="/fig/Switzerland/interlaken3.jpeg" alt="Interlaken Image 3" width="150" height="auto">
@@ -74,7 +86,7 @@ permalink: /Gallery/
         </div>
         <div class="category">
             <h3>Starry night</h3>
-            <div class="image-container">
+            <div class="scroll-row">
                 <img src = "/fig/star-trails.jpeg"   alt = "Starry Night Image 1" width = "150" height = "auto">
                 <img src = "/fig/moon.jpeg"          alt = "Starry Night Image 2" width = "150" height = "auto">
                 <img src = "/fig/ESO_supernova.jpeg" alt = "Starry Night Image 3" width = "150" height = "auto">
@@ -83,7 +95,7 @@ permalink: /Gallery/
         </div>
         <div class="category">
             <h3>Munich Citywalk</h3>
-            <div class="image-container">
+            <div class="scroll-row">
                 <img src="/fig/munich_citywalk/DSC0040.jpeg" alt="Munich Citywalk Image 1" width="150" height="auto">
                 <img src="/fig/munich_citywalk/DSC0042.jpeg" alt="Munich Citywalk Image 2" width="150" height="auto">
                 <img src="/fig/munich_citywalk/DSC0057.jpeg" alt="Munich Citywalk Image 3" width="150" height="auto">
@@ -96,14 +108,14 @@ permalink: /Gallery/
         </div>
         <div class="category">
             <h3>Ganyu Seaside</h3>
-            <div class="image-container">
+            <div class="scroll-row">
                 <img src="/fig/ganyu_seaside/A.jpeg"   alt ="Ganyu Seaside Image 1" height="150" width="auto">
                 <img src="/fig/ganyu_seaside/A_1.jpeg" alt ="Ganyu Seaside Image 2" height="150" width="auto">
             </div>
         </div>
         <div class="category">
             <h3>Chinese New Year 2024</h3>
-            <div class="image-container">
+            <div class="scroll-row">
                 <img src="/fig/chinese_new_year_2024/A_3.jpeg" alt="Chinese New Year 2024 Image 1" width="150" height="auto">
                 <img src="/fig/chinese_new_year_2024/A_4.jpeg" alt="Chinese New Year 2024 Image 2" width="150" height="auto">
                 <img src="/fig/chinese_new_year_2024/A_5.jpeg" alt="Chinese New Year 2024 Image 3" width="150" height="auto">
@@ -111,14 +123,14 @@ permalink: /Gallery/
         </div>
         <div class="category">
             <h3>Nanjing University</h3>
-            <div class="image-container">
+            <div class="scroll-row">
                 <img src="/fig/Nanjing_University/astro_yulan1.jpeg" alt="Yulan @ NJUastro 1" width="300" height="auto">
                 <img src="/fig/Nanjing_University/astro_yulan2.jpeg" alt="Yulan @ NJUastro 2" width="300" height="auto">
             </div>
         </div>
         <div class="category">
             <h3>Nanjing Downtown</h3>
-            <div class="image-container">
+            <div class="scroll-row">
                 <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0769.jpeg" alt=" " width="150" height="auto">
                 <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0770.jpeg" alt=" " width="150" height="auto">
                 <img src="/fig/Nanjing_downtown/Xuanwulake_DSC0773.jpeg" alt=" " width="150" height="auto">
@@ -134,22 +146,22 @@ permalink: /Gallery/
         </div>
         <div class="category">
             <h3>Sep 2025 @ Florence, Italy</h3>
-            <div class="image-container">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1390_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1395_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1398_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1399_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1403_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1405_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1407_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1408_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1409_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1410_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1412_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1415_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1421_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1433_reduced.jpeg" alt=" " width="150">
-                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1438_reduced.jpeg" alt=" " width="150">
+            <div class="scroll-row">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1390_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1395_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1398_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1399_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1403_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1405_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1407_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1408_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1409_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1410_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1412_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1415_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1421_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1433_reduced.jpeg" alt=" ">
+                <img src="/fig/Sep_2025_Firenze/Firenze_DSC1438_reduced.jpeg" alt=" ">
             </div>
         </div>
     </div>
