@@ -10,8 +10,7 @@ University. I work on the kinematic and dynamics of the interstellar medium,
 ranging from molecular clouds in the Milky Way to the rotating disks of
 high-redshift galaxies.
 
-I am also the teaching assistant of the ISM lecture of the 2024 Spring
-semester.
+For information on my education, research, responsibilities, etc., please refer to my CV below.
 
 <html lang="en">
 <body>
