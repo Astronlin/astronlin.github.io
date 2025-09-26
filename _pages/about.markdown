@@ -1,7 +1,12 @@
 ---
-layout: page
-title: Curriculum Vitae 
-permalink: /About/
+layout: splash 
+title: About me
+permalink: /about/
+classes: wide
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /fig/zurich.jpeg
 ---
 Hello, I am Lingrui Lin.
 
@@ -14,6 +19,6 @@ For information on my education, research, responsibilities, etc., please refer 
 
 <html lang="en">
 <body>
-    <a href="/CV/Lingrui_CV.pdf" download>Click to see my CV</a>
+    <a href="/CV/Lingrui_CV.pdf" download>Click to download my CV</a>
 </body>
 </html>
