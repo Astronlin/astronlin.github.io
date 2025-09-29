@@ -8,19 +8,94 @@ header:
   overlay_filter: "0.5"
   overlay_image: /fig/zurich.jpeg
 ---
-<div style="padding: 20px">
-    <h1 style="color: #ff1493; font-weight: bold; font-family: Papyrus;"> 你好! Hello! Ciao! </h1>
-    <div style="text-align: center;">
-        <div style="display: inline-block; vertical-align: middle; text-align: left; margin-left: 20px; max-width: calc(100% - 50px);">
-            <p style="font-size: 20px; margin-top: 5px;"> I am Lingrui Lin (林令瑞). I am now a Ph.D. student from the School of Astronomy and Space Science in Nanjing University. </p>
-        </div>
+<style>
+  .intro-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .intro-container h1 {
+    font-family: Papyrus, sans-serif;
+    font-weight: bold;
+    color: #ff1493;
+  }
+
+  .intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* 小屏幕自动换行 */
+    margin-bottom: 30px;
+  }
+
+  .intro figure {
+    margin: 0;
+    text-align: center;
+    flex: 0 0 500px; /* 左侧图片列宽 */
+  }
+
+  .intro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .intro figcaption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  .intro .text {
+    flex: 1;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .more-links {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .more-links a {
+    display: block;
+    font-size: 38px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  .more-links a.orcid {
+    color: #A6CE39;
+  }
+
+  .more-links a.bilibili {
+    color: #00A1D6;
+  }
+</style>
+
+<div class="intro-container">
+  <h1>你好! Hello! Ciao!</h1>
+
+  <div class="intro">
+    <figure>
+      <img src="/fig/galileo_museum.jpg" alt="Galileo Museum">
+      <figcaption>Photo with a "colleague" [Galileo Museum @ Florence]</figcaption>
+    </figure>
+    <div class="text">
+      <p>
+        I am <b>Lingrui Lin (林令瑞)</b>.  
+        I am a Ph.D. student from the <i>School of Astronomy and Space Science</i> in Nanjing University.
+      </p>
     </div>
-        <br>
-    <h1 style="color: #ff1493; text-align: left; font-family: Papyrus;">More about me:</h1>
-    <div style="text-align: left;">
-        <a href="https://orcid.org/0000-0002-2231-8381" style="color: #A6CE39; text-decoration: none; font-size: 38px; font-weight: bold">ORCID</a>
-        <br>
-        <a href="https://space.bilibili.com/399381595?spm_id_from=333.1007.0.0" style="color: #00A1D6; text-decoration: none; font-size: 38px; font-weight: bold">Bilibili</a>
-    </div>
+  </div>
+  <h1 style="text-align: left;">More about me:</h1>
+  <div class="more-links">
+    <p>
+      <a href="https://orcid.org/0000-0002-2231-8381" class="orcid" style="display: inline-block; margin-right: 20px;">ORCID</a>
+      <a href="https://space.bilibili.com/399381595?spm_id_from=333.1007.0.0" class="bilibili" style="display: inline-block;">Bilibili</a>
+    </p>
+
+  </div>
 </div>
 
