@@ -24,14 +24,14 @@ header:
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap; /* 小屏幕自动换行 */
+    flex-wrap: wrap; 
     margin-bottom: 30px;
   }
 
   .intro figure {
     margin: 0;
     text-align: center;
-    flex: 0 0 500px; /* 左侧图片列宽 */
+    flex: 0 0 500px; 
   }
 
   .intro img {
@@ -80,7 +80,7 @@ header:
   <div class="intro">
     <figure>
       <img src="/fig/galileo_museum.jpg" alt="Galileo Museum">
-      <figcaption>Photo with a "colleague" [Galileo Museum @ Florence]</figcaption>
+      <figcaption>A "colleague" and me [Galileo Museum @ Florence]</figcaption>
     </figure>
     <div class="text">
       <p>
