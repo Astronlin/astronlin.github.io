@@ -79,7 +79,7 @@ header:
 
   <div class="intro">
     <figure>
-      <img src="/fig/galileo_museum.jpg" alt="Galileo Museum">
+      <img src="/fig/galileo_museum.jpg" alt="Galileo Museum" style="max-width: 100%">
       <figcaption>A "colleague" and me [Galileo Museum @ Florence]</figcaption>
     </figure>
     <div class="text">
