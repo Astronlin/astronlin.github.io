@@ -56,10 +56,10 @@ header:
     <div class="work">
         <h1>Topic: Rotating disk galaxies in the early Universe </h1>
         <img src="/fig/research/TRICEPS/logo.png">
-        <p> As a visiting Ph.D. student, I am now collaborating with <a href="https://www.lellifederico.com/"> Dr. Federico Lelli</a> at the Arcetri Astrophysical Observatory in Florence, Italy. In the <span style="color: red; font-weight: bold; font-family: 'Times New Roman', serif;"> TRICEPS </span> project, we are working on the dynamics of a sample of galaxies at redshift of 4 to 5. With observations from ALMA, VLA, and JWST, we are able to obtain thorough information on the kinematics and distribution of the baryonic matter in these galaxies. We will reveal <b>how galaxies form and evolve in the early Universe</b>, especially when it was younger than 10% of its current age.</p>
+        <p> As a visiting Ph.D. student, I am now collaborating with <a href="https://www.lellifederico.com/"> Dr. Federico Lelli</a> at the Arcetri Astrophysical Observatory in Florence, Italy, on the <span style="color: red; font-weight: bold; font-family: 'Times New Roman', serif;"> TRICEPS </span> project. We are studying the dynamics of a sample of galaxies at redshift of 4 to 5. With observations from ALMA, VLA, and JWST, we are able to obtain thorough information on the kinematics and distribution of the baryonic matter in these galaxies. We will reveal <b>how galaxies form and evolve in the early Universe</b>, especially when it was younger than 10% of its current age.</p>
         <p><b>Works:</b></p>
         <ul style="margin-top: -20px; margin-bottom: 15px; padding-left: 50px; line-height: 1.6;">
-          <li>ALMA and VLA data reduction</li>
+          <li>Reduce data from ALMA and VLA</li>
           <li>Fit the rotating gas disks</li>
           <li>Build mass models</li>
         </ul>
