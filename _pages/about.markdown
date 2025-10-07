@@ -15,7 +15,7 @@ University. I work on the kinematic and dynamics of the interstellar medium,
 ranging from molecular clouds in the Milky Way to the rotating disks of
 high-redshift galaxies.
 
-I was born in Ganyu, Lianyungang, Jiangsu province, China. It is a town near the sea so I went to the seaside very often when I am at my hometown.  
+I was born in Ganyu, Lianyungang, Jiangsu province, China. It is a town near the sea so I went to the seaside very often when I was at my hometown. 
 
 For information on my education, research, responsibilities, etc., please refer to my CV below.
 
