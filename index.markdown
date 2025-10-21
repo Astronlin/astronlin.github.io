@@ -85,7 +85,7 @@ header:
     <div class="text">
       <p>
         I am <b>Lingrui Lin (林令瑞)</b>.  
-        I am a Ph.D. student from the <i>School of Astronomy and Space Science</i> in Nanjing University.
+        I am a Ph.D. student from the <i>School of Astronomy and Space Science</i> in Nanjing University. Currently, I am visiting the Arcetri Astrophysical Observatory (OAA-INAF) as a visiting student.
       </p>
     </div>
   </div>
