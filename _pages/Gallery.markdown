@@ -153,6 +153,62 @@ classes: wide
                 <img src="/fig/Sep_2025_Firenze/Firenze_DSC1438_reduced.jpeg" alt="">
             </div>
         </div>
+        <div class="category">
+            <h3>May 2026 @ Grenoble/Sisteron/Gap, France</h3>
+            <div class="scroll-row">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1623.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1634.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1652.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1668.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1677.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1680.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1683.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1684.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1690.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1706.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1720.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1723.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1724.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1728.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1729.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1738.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1740.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1743.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1755.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1761.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1764.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1775.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1788.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1797.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1803.jpg" alt="">
+                <img src="/fig/Grenoble_Sisteron_Gap_May2026/France_DSC1804.jpg" alt="">
+            </div>
+        </div>
     </div>
 </body>
 </html>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
