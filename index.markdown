@@ -80,12 +80,12 @@ header:
   <div class="intro">
     <figure>
       <img src="/fig/galileo_museum.png" alt="Galileo Museum" style="max-width: 100%">
-      <figcaption>A "colleague" and me @ Galileo Museum, Firenze </figcaption>
+      <figcaption> September 21, 2025 @ Galileo Museum, Firenze </figcaption>
     </figure>
     <div class="text">
       <p>
         I am <b>Lingrui Lin (林令瑞)</b>.  
-        I am a Ph.D. student from the <i>School of Astronomy and Space Science</i> in Nanjing University. Currently, I am in the Arcetri Astrophysical Observatory (OAA-INAF) and the University of Florence as a visiting student.
+        I am a Ph.D. student from the <i>School of Astronomy and Space Science</i> in Nanjing University. Currently, I am in the Arcetri Astrophysical Observatory (OAA-INAF) as a visiting student.
       </p>
     </div>
   </div>

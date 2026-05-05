@@ -61,7 +61,15 @@ classes: wide
 
 <div class="container">    
     <div class="highlight">
-        My Ph.D. research mainly concerns the <b>'Kinematics'</b> (how an object moves) and <b>'Dynamics'</b> (how the motion of an object changes) of the interstellar gas on multiple physical scales - from molecular clouds to galaxy disks, and across the cosmic time - from the Milky Way to early galaxies. I am also interesting in the physics of <b>the interstellar medium</b>, which is essential when it comes to deriving proper interpretations from the observational results. Please refer to my <a href="https://orcid.org/0000-0002-2231-8381">ORCID</a> for the (co-)authored publications.
+        My Ph.D. research mainly concerns the <b>'Kinematics'</b> (how an
+object moves) and <b>'Dynamics'</b> (how the motion of an object changes) of
+the interstellar gas on multiple physical scales - from molecular clouds to
+galaxy disks, and across the cosmic time - from the Milky Way to early
+galaxies. I am also interesting in the physics of <b>the interstellar
+medium</b>, which is essential for deriving proper interpretations from the
+observations. Please refer to my <a
+href="https://orcid.org/0000-0002-2231-8381">ORCID</a> for the (co-)authored
+publications.
     </div>
 </div>
 
