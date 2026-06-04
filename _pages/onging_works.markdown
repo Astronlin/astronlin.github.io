@@ -54,14 +54,20 @@ header:
 
 <div class="container">
     <div class="work">
-        <h1>Topic: Rotating disk galaxies in the early Universe </h1>
+        <h1>Rotating disk galaxies in the early Universe </h1>
         <img src="/fig/research/TRICEPS/logo.png">
-        <p> As a visiting Ph.D. student, I am now collaborating with <a href="https://www.lellifederico.com/"> Dr. Federico Lelli</a> at the Arcetri Astrophysical Observatory in Florence, Italy, on the <span style="color: red; font-weight: bold; font-family: 'Times New Roman', serif;"> TRICEPS </span> project. We are studying the dynamics of a sample of galaxies at redshift of 4 to 5. With observations from ALMA, VLA, and JWST, we are able to obtain thorough information on the kinematics and distribution of the baryonic matter in these galaxies. We will reveal <b>how galaxies form and evolve in the early Universe</b>, especially when it was younger than 10% of its current age.</p>
-        <p><b>Works:</b></p>
+        <p> As a visiting Ph.D. student, I am now collaborating with <a href="https://www.lellifederico.com/"> Dr. Federico Lelli</a> at the Arcetri Astrophysical Observatory in Florence, Italy. The project we have been working on is <span style="color: crimson; font-weight: bold; font-family: 'Times New Roman', serif;"> TRICEPS </span>, where we study the cold gas dynamics of 16 massive galaxies at redshift of 4 to 5. With observations from ALMA, VLA, and JWST, we have obtained thorough information on the kinematics and distribution of the baryonic matter in these galaxies. We will reveal <b>how galaxies form and evolve in the early Universe</b>, especially when it was younger than 10% of its current age.</p>
+        <!-- <p><b>Works:</b></p> -->
         <ul style="margin-top: -20px; margin-bottom: 15px; padding-left: 50px; line-height: 1.6;">
-          <li>Reduce data from ALMA and VLA</li>
-          <li>Fit the rotating gas disks</li>
+          <li>Multi-wavelength data (see a complete atlas in Lelli, Lin et al. To be Subm.)</li>
+          <div style="display: flex; gap: 10px; justify-content: center;">
+          <img src="/fig/research/TRICEPS/AzTEC-159_atlas_multiwave.jpg" width=550> 
+         <img src="/fig/research/TRICEPS/J1000+0234_atlas_multiwave.jpg" width=550>
+         </div>
+          <li>Rotating disk modeling (see a complete atlas in Lin, Lelli et al. To be Subm.)</li>
+          <img src="/fig/research/TRICEPS/J1000+0234_atlas.jpg">
           <li>Build mass models</li>
+            <p> <b> Coming Soon! </b> </p>
         </ul>
     </div>
 </div>
