@@ -58,6 +58,7 @@ header:
         <img src="/fig/research/TRICEPS/logo.png">
         <p> As a visiting Ph.D. student, I am now collaborating with <a href="https://www.lellifederico.com/"> Dr. Federico Lelli</a> at the Arcetri Astrophysical Observatory in Florence, Italy. The project we have been working on is <span style="color: crimson; font-weight: bold; font-family: 'Times New Roman', serif;"> TRICEPS </span>, where we study the cold gas dynamics of 16 massive galaxies at redshift of 4 to 5. With observations from ALMA, VLA, and JWST, we have obtained thorough information on the kinematics and distribution of the baryonic matter in these galaxies. We will reveal <b>how galaxies form and evolve in the early Universe</b>, especially when it was younger than 10% of its current age.</p>
         <!-- <p><b>Works:</b></p> -->
+        <a href="https://k-poster.kuoni-congress.info/eas-2026/poster/2ECAB844-21F2-41C2-8E04-84B232B1B4CE" class="EAS" style="display: inline-block; margin-right: 20px;">EAS conference</a>
         <ul style="margin-top: -20px; margin-bottom: 15px; padding-left: 50px; line-height: 1.6;">
           <li>Multi-wavelength data (see a complete atlas in Lelli, Lin et al. To be Subm.)</li>
           <div style="display: flex; gap: 10px; justify-content: center;">
