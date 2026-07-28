@@ -7,3 +7,22 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.scroll-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.scroll-row img {
+  height: 180px;
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 6px;
+  transition: transform .3s;
+}
+
+.scroll-row img:hover {
+  transform: scale(1.2);
+}
