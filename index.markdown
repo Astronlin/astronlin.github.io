@@ -1,16 +1,26 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: splash
-author_profile: true
+layout: single 
+classes: wide
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /fig/zurich.jpeg
+  #overlay_color: "#000"
+  #overlay_filter: "0.3"
+  overlay_image: /fig/Lausanne_long.jpeg 
+  overlay_filter: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 255, 0.5))
+  caption: "July 2, 2026 @ Lausanne, Switzerland"
+  actions:
+    - label: "About me"
+      url: "About"
+  #  - label: "More pictures"
+  #    url: "Gallery"
+title: "Welcome to Lingrui Lin's webpage"
+excerpt: "Never too late to understand..."
+author_profile: true
 ---
 <style>
   .intro-container {
-    padding: 20px;
+    padding: 00px;
     font-family: Arial, sans-serif;
   }
 
@@ -76,26 +86,27 @@ header:
 
 <div class="intro-container">
   <h1>你好! Hello! Ciao!</h1>
+      <p>
+        I am <b>Lingrui Lin (林令瑞)</b>.  
+        I am a Ph.D. student from the <i>School of Astronomy and Space Science</i> of Nanjing University. Currently, I am at the Arcetri Astrophysical Observatory (OAA-INAF) as a visiting student.
+      </p>
 
   <div class="intro">
     <figure>
-      <img src="/fig/galileo_museum.png" alt="Galileo Museum" style="max-width: 100%">
+      <img src="/fig/galileo_museum.png" alt="Galileo Museum" style="max-width: 400%">
       <figcaption> September 21, 2025 @ Galileo Museum, Firenze </figcaption>
     </figure>
     <div class="text">
-      <p>
-        I am <b>Lingrui Lin (林令瑞)</b>.  
-        I am a Ph.D. student from the <i>School of Astronomy and Space Science</i> in Nanjing University. Currently, I am in the Arcetri Astrophysical Observatory (OAA-INAF) as a visiting student.
-      </p>
     </div>
   </div>
+  <!--
   <h1 style="text-align: left;">More about me:</h1>
   <div class="more-links">
     <p>
       <a href="https://orcid.org/0000-0002-2231-8381" class="orcid" style="display: inline-block; margin-right: 20px;">ORCID</a>
       <a href="https://space.bilibili.com/399381595?spm_id_from=333.1007.0.0" class="bilibili" style="display: inline-block;">Bilibili</a>
     </p>
-
   </div>
+  -->
 </div>
 
