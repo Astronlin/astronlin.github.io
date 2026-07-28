@@ -11,7 +11,7 @@ header:
   caption: "July 2, 2026 @ Lausanne, Switzerland"
   actions:
     - label: "About me"
-      url: "About"
+      url: "about"
   #  - label: "More pictures"
   #    url: "Gallery"
 title: "Welcome to Lingrui Lin's webpage"
