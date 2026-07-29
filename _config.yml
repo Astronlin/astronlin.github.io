@@ -114,15 +114,15 @@ analytics:
 # Site Author
 author:
   name             : "Lingrui Lin"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/fig/galileo_museum.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "In the beginning, there was darkness; Until someone set themselves aflame; Only then did the Universe know light"
   location         : "Earth, Solor System, the Galaxy"
-  email            :
+  # email            : lingruiphd@smail.nju.edu.cn
   links:
-    - label: "Email NJU"
+    - label: "NJU Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:lingruiphd@smail.nju.edu.cn"
-    - label: "Email Gmail"
+    - label: "Gmail"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:lingruiism@gmail.com"
     - label: "Orcid"
