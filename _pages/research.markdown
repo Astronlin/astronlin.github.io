@@ -1,79 +1,133 @@
 ---
-layout: splash
-title: Research
+layout: single
+title: "Research"
+excerpt: "See it and try to understand it..."
 permalink: /research/
-classes: wide
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.6"
+  overlay_image: /fig/research/header.jpg
+toc: true
+toc_label: "Research"
+toc_icon: "star"
+toc_sticky: true
+author_profile: true
 ---
-<style>
-     .container {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        max-width: 100%;
-        margin: 20px auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .highlight {
-        background-color: #e0f3ff;
-        padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
+My Ph.D. research mainly focuses on the **kinematics** (how objects move) and
+**dynamics** (how motions change) of the interstellar gas across multiple
+physical scales -- from molecular clouds to galaxy disks, and across cosmic time
+-- from the Milky Way to early galaxies. I am also interested in the physics of
+the **interstellar medium**, which is essential for proper interpretations of
+the observations. You may refer to my
+[ORCID](https://orcid.org/0000-0002-2231-8381) for my publications.
 
-.custom-button {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 10px;
-    background-color: #007bff;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-    font-size: 25px;
-}
+I have a lot of experience in reducing data from radio/mm/sub-millimeter single
+dish and interferometers. Hope that I am qualified to say that I am good (if
+not expert) at them.  
 
-.custom-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
+<!--
+<a href="#ongoing-works" class="btn btn--success"> Ongoing works </a>
+<a href="#published-works" class="btn btn--primary"> Published works </a>
+-->
+---
 
-.custom-button.green {
-    background-color: #28a745;
-}
+# Ongoing works
+{: #ongoing-works}
 
-.custom-button.green:hover {
-    background-color: #1e7e34;
-}
 
-@media (max-width: 600px) {
-    .custom-button {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
-        text-align: center;
-    }
-}
-</style>
+## Cold gas kinematics of high redshift massive galaxies
 
-<div class="container">    
-    <div class="highlight">
-        My Ph.D. research mainly concerns the <b>'Kinematics'</b> (how an
-object moves) and <b>'Dynamics'</b> (how the motion of an object changes) of
-the interstellar gas on multiple physical scales - from molecular clouds to
-galaxy disks, and across the cosmic time - from the Milky Way to early
-galaxies. I am also interesting in the physics of <b>the interstellar
-medium</b>, which is essential for deriving proper interpretations from the
-observations. Please refer to my <a
-href="https://orcid.org/0000-0002-2231-8381">ORCID</a> for the (co-)authored
-publications.
-    </div>
-</div>
+![TRICEPS](/fig/research/TRICEPS/logo.png){: .align-center width="600"}
 
-<div style="text-align: center; margin-top: 20px;">
-  <a href="/ongoing_works/" style="color: #ffffff" class="custom-button green">Ongoing works</a>
-  <a href="/published_works/" style="color: #ffffff" class="custom-button">Published works</a>
-</div>
+I am currently collaborating with [Dr. Federico
+Lelli](https://www.lellifederico.com/) at the Arcetri Astrophysical Observatory
+(INAF) in Florence, Italy. Our **TRICEPS** project studies the cold gas dynamics of
+massive galaxies at redshift $z=4-5$ using ALMA, VLA, and JWST observations.
+
+We aim to understand **how galaxies form and evolve in the early Universe**, 
+when the Universe was less than 10% of its current age.
+
+**Paper coming soon!** 
+
+**Multi-wavelength atlas**
+
+![AzTEC](/fig/research/TRICEPS/AzTEC-159_atlas_multiwave.jpg){: width="48%"}
+![J1000](/fig/research/TRICEPS/J1000+0234_atlas_multiwave.jpg){: width="48%"}
+
+**Rotating disk modeling**
+
+![Modeling](/fig/research/TRICEPS/J1000+0234_atlas.jpg)
+
+
+## HI fraction in Galactic outer disk molecular clouds
+
+The HI narrow line self-absorption (HINSA) provides a powerful method for measuring the HI content in molecular
+clouds. Together with molecular gas observations, we are attempting to measure
+the HI/H2 fraction of low metallicity molecular clouds in the Galactic outer
+disk.
+
+![HINSA](/fig/research/GMPMC/G37.467+2.700_HIdd.png){: width="300"}
+
+**Paper to be written...**
+
+---
+
+# Published works
+{: #published-works}
+
+
+## Inadequate turbulent support in low-metallicity molecular clouds
+
+The dynamic properties of molecular clouds are governed by self-gravity,
+turbulence, external pressure, and magnetic fields.  Using optically thin
+$^{13}$CO observations of low-metallicity molecular clouds in the Galactic
+outer disk, we find that cloud virial parameters decrease with metallicity,
+suggesting that turbulence alone cannot support clouds against gravity.
+
+**Highlight:**  
+Evidence for metallicity-dependent star formation initial conditions.
+
+**Implication:**  
+Understanding star formation in the low-metallicity early Universe.
+
+**Status:**  
+Published in *Nature Astronomy*. [Read the paper](https://www.nature.com/articles/s41550-024-02440-3)
+
+![Virial parameter](/fig/research/GMPMC/alpha_vir_Figure1.png)
+
+
+## Gas dynamics of an AGN-host galaxy at cosmic noon
+
+We present ALMA \[CI\] (2–1) observations of PKS 0529–549, a starburst radio
+galaxy at $z\simeq2.6$. We reveal a rotation-supported gas disk with $V_{\rm
+rot}/\sigma_{\rm v} = 6\pm3$ and visible non-circular motions.
+
+**Highlight:**  
+A dynamically cold gas disk in an AGN-host starburst galaxy.
+
+**Implication:**  
+Early galaxy disks can remain dynamically cold in extreme conditions.
+
+**Status:**  
+Published in *Astronomy & Astrophysics*. [Read the paper](https://www.aanda.org/articles/aa/full_html/2025/01/aa50814-24/aa50814-24.html)
+
+![PKS](/fig/research/PKS_0529-549/PKS-plots.png)
+
+---
+
+# Code development 
+
+
+## FAST data calibration 
+- A Python-based pipeline for FAST data reduction (gear to the Drift Scan mode). [Github](https://github.com/Astronlin/NJU_FAST_ISM)
+
+
+## HINSA identification
+- A snippet based on the second-derivative method (Krčo et al. 2008) and MCMC. [Github](https://github.com/Astronlin/HINSA-codes)
+
+---
+
+# Other interests
+- The Galactic High Velocity Clouds
+- SNR IC 443
+- ...

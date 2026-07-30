@@ -7,15 +7,15 @@ header:
   #overlay_color: "#000"
   #overlay_filter: "0.3"
   overlay_image: /fig/Lausanne_long.jpeg 
-  overlay_filter: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 255, 0.5))
+  overlay_filter: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 255, 255, 0.6))
   caption: "July 2, 2026 @ Lausanne, Switzerland"
   actions:
     - label: "About me"
       url: "about"
   #  - label: "More pictures"
   #    url: "Gallery"
-title: "Welcome to Lingrui Lin's webpage"
-excerpt: "For anything you may want to know..."
+title: "Welcome to my corner of the Universe"
+excerpt: "**The unknown** is but a fog to be dispersed; <br> **Knowledge** is the true pillar of the world"
 author_profile: true
 gallery:
   #- url: /fig/galileo_museum.png
@@ -43,14 +43,11 @@ gallery:
     alt: "Firenze"
     title: "September 20, 2025 @ Firenze, Italy"
 ---
+<span style="font-size:1.5em;"> 你好! Hello! Ciao! Glad you're here. </span> 
 
-<h1 style="color:#ff1493; font-weight:700;">
-你好! Hello! Ciao!
-</h1>
+More **[About](/about/)** me. 
 
-I am **Lingrui Lin (林令瑞)**. I am a Ph.D. student from the *School of Astronomy and Space Science* at Nanjing University. Currently, I am a visiting student at the Arcetri Astrophysical Observatory (INAF-OAA).
+Take a look at my **[Research](/research/).**
 
-**Take a look at my [Research](/research/).**
-
-**Take a look at my [Gallery](/gallery/).**
+Take a look at my **[Gallery](/gallery/).**
 {% include gallery id="gallery" layout="third"%}

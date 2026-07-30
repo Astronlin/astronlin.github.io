@@ -6,11 +6,11 @@ header:
   overlay_image: /fig/Pleiades_25p.jpg
   #overlay_filter: 
   caption: "The Pleiades, 昴星团 (December 18, 2023, Munich)"
-title: "Seen from the Earth."
+title: "Seen from the Earth"
 excerpt: "Swipe to see more images. Stay tuned."
 toc: true
 toc_label: "Start exploring"
-toc_icon: "cog"
+toc_icon: "camera"
 toc_sticky: true
 author_profile: true
 ---

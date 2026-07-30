@@ -1,74 +1,45 @@
 ---
-layout: splash 
-title: About me
+layout: single 
+title: "About me" 
+excerpt: "About an ever-evolving self, with much left to discover..."
 permalink: /about/
-classes: wide
+# classes: wide
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
   overlay_image: /fig/zurich.jpeg
+  overlay_color: "#000"
+  overlay_filter: "0.6"
+  caption: "Novemeber 26, 2023 @ Zurich, Switzerland (Credit: G. Luo)"
+author_profile: true
+gallery:
+  - url: /fig/pingpong.jpeg
+    image_path: /fig/pingpong.jpeg
+    alt: "Ping-pong"
+    title: "Ping-pong game"
+toc: true
+toc_label: "You may want to know"
+toc_icon: "face-smile"
+toc_sticky: true
 ---
 
-I am a Ph.D student from the School of Astronomy and Space Science in Nanjing
-University. I work on the kinematics and dynamics of the interstellar gas,
-ranging from molecular clouds in the Milky Way to the rotating disks in
-high-redshift galaxies.
+# Who I am
 
-I was born in Ganyu, Lianyungang, Jiangsu, China (江苏省连云港市赣榆区). It is a small town near the
+I am Lingrui Lin (林令瑞). I am a Ph.D. student from the **[School of Astronomy and Space Science](https://astronomy.nju.edu.cn/)** in Nanjing University. Currently, I am also a visiting student at the Arcetri Astrophysical Observatory **[(INAF-OAA)](https://www.arcetri.inaf.it/)**.
+
+I was born in Ganyu, Lianyungang, Jiangsu, China (江苏省连云港市赣榆区). It is a town near the
 sea, so I went to the seaside very often when I was at my hometown. 
 
+My favorite sport is table tennis (i.e., ping-pong, 乒乓球). It has been a nice experience to join the **[ping-pong club](https://www.ssdciattfirenze.it/wp/)** in Florence.
+{% include gallery id="gallery" layout="third"%}
 
-<!--
-<html lang="en">
-<body>
-    /* <a href="/CV/Lingrui_CV.pdf" download>Click to download my CV</a>
-    <a href="/CV/Lingrui_CV.pdf" target="_blank">Click to download my CV</a>
-</body>
-</html>
--->
+# Academic CV 
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
-    <style>
-        /* This keeps the preview responsive and looking clean */
-        .cv-container {
-            width: 100%;
-            max-width: 800px; /* Limits the width for better readability */
-            margin: 20px auto; /* Centers the container */
-        }
-        
-        .cv-preview {
-            width: 100%;
-            height: 800px; /* Adjust height to fit a full page comfortably */
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+<p style="text-align:center;">
+  <a href="{{ '/CV/Lingrui_CV.pdf' | relative_url }}" target="_blank">
+    Download my CV
+  </a>
+</p>
 
-        .fallback-link {
-            display: block;
-            margin-bottom: 15px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="cv-container">
-        <div class="fallback-link">
-            <a href="/CV/Lingrui_CV.pdf" target="_blank">Click to download.</a>
-        </div>
-
-        <iframe class="cv-preview" src="/CV/Lingrui_CV.pdf#toolbar=0">
-            <p>Your browser does not support embedded PDFs. 
-               <a href="/CV/Lingrui_CV.pdf">Click here to download the PDF</a>.
-            </p>
-        </iframe>
-    </div>
-
-</body>
-</html>
+<iframe
+  class="cv-preview"
+  src="{{ '/CV/Lingrui_CV.pdf' | relative_url }}#toolbar=0&zoom=page-width">
+</iframe>
