@@ -22,7 +22,7 @@ the observations. You may refer to my
 [ORCID](https://orcid.org/0000-0002-2231-8381) for my publications.
 
 I have a lot of experience in reducing data from radio/mm/sub-millimeter single
-dish and interferometers. Hope that I am qualified to say that I am good (if
+dishes and interferometers. Hope that I am qualified to say that I am good (if
 not expert) at them.  
 
 <!--
@@ -59,7 +59,7 @@ when the Universe was less than 10% of its current age.
 ![Modeling](/fig/research/TRICEPS/J1000+0234_atlas.jpg)
 
 
-## HI fraction in Galactic outer disk molecular clouds
+## HI fraction of the Galactic outer disk molecular clouds
 
 The HI narrow line self-absorption (HINSA) provides a powerful method for measuring the HI content in molecular
 clouds. Together with molecular gas observations, we are attempting to measure
