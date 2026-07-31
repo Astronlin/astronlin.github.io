@@ -22,9 +22,9 @@ the **interstellar medium**, which is essential for proper interpretations of
 the observations. You may refer to my
 [ORCID](https://orcid.org/0000-0002-2231-8381) for my publications.
 
-I have a lot of experience in reducing data from radio/mm/sub-millimeter single
-dishes and interferometers. Hope that I am qualified to say that I am good (if
-not expert) at them.  
+I have extensive experience in reducing and analyzing radio, millimeter, and
+sub-millimeter observations from both single dish telescopes and
+interferometers. 
 
 <!--
 <a href="#ongoing-works" class="btn btn--success"> Ongoing works </a>
