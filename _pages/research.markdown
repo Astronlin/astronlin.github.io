@@ -48,7 +48,7 @@ massive galaxies at redshift $z=4-5$ using ALMA, VLA, and JWST observations.
 We aim to understand **how galaxies form and evolve in the early Universe**, 
 when the Universe was less than 10% of its current age.
 
-**Paper coming soon!** 
+**Manuscript to be submitted.** 
 
 **Multi-wavelength atlas**
 
@@ -69,7 +69,7 @@ disk.
 
 ![HINSA](/fig/research/GMPMC/G37.467+2.700_HIdd.png){: width="300"}
 
-**Paper to be written...**
+**Analysis in progress**
 
 ---
 
@@ -124,7 +124,7 @@ Published in *Astronomy & Astrophysics*. [Read the paper](https://www.aanda.org/
 
 
 ## HINSA identification
-- A snippet based on the second-derivative method (Krčo et al. 2008) and MCMC. [Github](https://github.com/Astronlin/HINSA-codes)
+- A Python implementation of the second-derivative method (Krčo et al. 2008) and MCMC. [Github](https://github.com/Astronlin/HINSA-codes)
 
 ---
 
