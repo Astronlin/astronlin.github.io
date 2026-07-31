@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Research"
-excerpt: "See it and try to understand it..."
+#excerpt: "See it and try to understand it..."
+excerpt: "***The unknown** is but a fog to be dispersed; <br> **knowledge** is the true pillar of the world.*"
 permalink: /research/
 header:
   overlay_color: "#000"

@@ -1,7 +1,7 @@
 ---
 layout: single 
 title: "About me" 
-excerpt: "About an ever-evolving self, with much left to discover..."
+excerpt: "*About an ever-evolving self, with much left to discover...*"
 permalink: /about/
 # classes: wide
 header:
@@ -10,16 +10,31 @@ header:
   overlay_filter: "0.6"
   caption: "Novemeber 26, 2023 @ Zurich, Switzerland (Credit: G. Luo)"
 author_profile: true
-gallery:
+gallery1:
   - url: /fig/pingpong.jpeg
     image_path: /fig/pingpong.jpeg
     alt: "Ping-pong"
-    title: "Ping-pong game"
+    title: "Ping-pong game in Nanjing"
+gallery2:
+  - url: /fig/Nanjing_downtown/Xuanwulake_DSC0819.jpeg
+    image_path: /fig/Nanjing_downtown/Xuanwulake_DSC0819.jpeg
+    alt: "Nanjing"
+    title: "June 10, 2025 @ Nanjing, China"
+  - url: /fig/Switzerland/interlaken1.jpeg
+    image_path: /fig/Switzerland/interlaken1.jpeg
+    alt: "Interlaken"
+    title: "November 26, 2023 @ Interlaken, Switzerland"
+  - url: /fig/Sep_2025_Firenze/Firenze_DSC1415_reduced.jpeg
+    image_path: /fig/Sep_2025_Firenze/Firenze_DSC1415_reduced.jpeg
+    alt: "Firenze"
+    title: "September 20, 2025 @ Firenze, Italy"
 toc: true
 toc_label: "You may want to know"
 toc_icon: "face-smile"
 toc_sticky: true
 ---
+
+<span style="font-size:1.5em;"> 你好! Hello! Ciao! Glad you're here. </span>
 
 # Who I am
 
@@ -29,9 +44,14 @@ I was born in Ganyu, Lianyungang, Jiangsu, China (江苏省连云港市赣榆区
 sea, so I went to the seaside very often when I was at my hometown. 
 
 My favorite sport is table tennis (i.e., ping-pong, 乒乓球). It has been a nice experience to join the **[ping-pong club](https://www.ssdciattfirenze.it/wp/)** in Florence.
-{% include gallery id="gallery" layout="third"%}
+{% include gallery id="gallery1" layout="third"%}
+
+I like to record the world using my camera. Take a look at my **[Gallery](/gallery/).**
+{% include gallery id="gallery2" layout="third"%}
 
 # Academic CV 
+
+Take a look at my **[Research](/research/).**
 
 <p style="text-align:center;">
   <a href="{{ '/CV/Lingrui_CV.pdf' | relative_url }}" target="_blank">
