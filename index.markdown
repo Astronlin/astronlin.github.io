@@ -1,7 +1,11 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: single 
+layout: search 
+comments: true
+#share: true
+#related: true
+#read_time: true
 classes: wide 
 header:
   #overlay_color: "#000"
@@ -45,3 +49,4 @@ gallery:
   #  alt: "Firenze"
   #  title: "September 20, 2025 @ Firenze, Italy"
 ---
+# Search

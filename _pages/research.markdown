@@ -42,7 +42,7 @@ not expert) at them.
 
 I am currently collaborating with [Dr. Federico
 Lelli](https://www.lellifederico.com/) at the Arcetri Astrophysical Observatory
-(INAF) in Florence, Italy. Our **TRICEPS** project studies the cold gas dynamics of
+(INAF) in Florence, Italy. Our TRICEPS project studies the cold gas dynamics of
 massive galaxies at redshift $z=4-5$ using ALMA, VLA, and JWST observations.
 
 We aim to understand **how galaxies form and evolve in the early Universe**, 
