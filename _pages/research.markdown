@@ -120,7 +120,7 @@ Published in *Astronomy & Astrophysics*. [Read the paper](https://www.aanda.org/
 
 
 ## FAST data calibration 
-- A Python-based pipeline for FAST data reduction (gear to the Drift Scan mode). [Github](https://github.com/Astronlin/NJU_FAST_ISM)
+- A Python-based pipeline for FAST data reduction (geared towards the Drift Scan mode). [Github](https://github.com/Astronlin/NJU_FAST_ISM)
 
 
 ## HINSA identification

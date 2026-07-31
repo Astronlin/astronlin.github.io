@@ -8,7 +8,7 @@ header:
   overlay_image: /fig/zurich.jpeg
   overlay_color: "#000"
   overlay_filter: "0.6"
-  caption: "Novemeber 26, 2023 @ Zurich, Switzerland (Credit: G. Luo)"
+  caption: "November 26, 2023 @ Zurich, Switzerland (Credit: G. Luo)"
 author_profile: true
 gallery1:
   - url: /fig/pingpong.jpeg
