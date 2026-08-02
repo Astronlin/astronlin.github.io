@@ -10,9 +10,12 @@ classes: wide
 header:
   #overlay_color: "#000"
   #overlay_filter: "0.3"
-  overlay_image: /fig/Lausanne_long.jpeg 
-  overlay_filter: linear-gradient(90deg, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.3), rgba(255, 255, 255, 0.1))
-  caption: "July 2, 2026 @ Lausanne, Switzerland"
+  #overlay_image: /fig/Lausanne_long.jpeg 
+  #overlay_filter: linear-gradient(90deg, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.3), rgba(255, 255, 255, 0.1))
+  #caption: "July 2, 2026 @ Lausanne, Switzerland"
+  overlay_image: /fig/Sep_2025_Firenze/Firenze_DSC1415_frontpage.jpg
+  overlay_filter: linear-gradient(135deg, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.3), rgba(255, 255, 255, 0.1))
+  caption: "September 20, 2025 @ Firenze, Italy"
   actions:
     - label: "About me"
       url: "about"
