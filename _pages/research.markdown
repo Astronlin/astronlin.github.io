@@ -59,6 +59,25 @@ when the Universe was less than 10% of its current age.
 
 ![Modeling](/fig/research/TRICEPS/J1000+0234_atlas.jpg)
 
+### Interative: Can a merger mimic a rotating disk?
+
+A coherent velocity gradient in a spectral cube does not uniquely demonstrate
+circular rotation. Two interacting components can blend spatially and
+spectrally, producing disk-like moment maps, position--velocity diagrams, and
+an apparently high $V_{\rm rot}/\sigma$. Use the controls below to explore how
+beam smearing and the components' velocity separation affect this degeneracy.
+[Generated using ChatGPT]
+
+<iframe
+  src="/interactive/disk-merger-cube.html"
+  title="Interactive comparison of a rotating disk and a two-component merger"
+  sandbox="allow-scripts"
+  referrerpolicy="no-referrer"
+  loading="lazy"
+  scrolling="no"
+  style="display:block;width:100%;height:700px;border:0;margin:1.5rem 0;"
+></iframe>
+
 
 ## HI fraction of the Galactic outer disk molecular clouds
 
