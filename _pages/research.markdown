@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Research"
+classes: wide
 #excerpt: "See it and try to understand it..."
 excerpt: "***The unknown** is but a fog to be dispersed; <br> **knowledge** is the true pillar of the world.*"
 permalink: /research/
@@ -77,6 +78,8 @@ spectrally, producing disk-like moment maps, position--velocity diagrams, and
 an apparently high $V_{\rm rot}/\sigma$. Use the controls below to explore how
 beam smearing and the components' velocity separation affect this degeneracy.
 
+<p> <a href="/interactive/TRICEPS/disk-merger-cube.html" target="_blank" rel="noopener noreferrer" > Open the interactive rotating-disk versus merger comparison ↗ </a> </p>
+
 <iframe
   src="/interactive/TRICEPS/disk-merger-cube.html"
   title="Interactive comparison of a rotating disk and a two-component merger"
@@ -84,10 +87,9 @@ beam smearing and the components' velocity separation affect this degeneracy.
   referrerpolicy="no-referrer"
   loading="lazy"
   scrolling="no"
-  style="display:block;width:100%;height:800px;border:0;margin:1.5rem 0;"
+  style="display:block;width:100%;height:300px;border:0;margin:1.5rem 0;"
 ></iframe>
 
-<p> <a href="/interactive/TRICEPS/disk-merger-cube.html" target="_blank" rel="noopener noreferrer" > Open the interactive rotating-disk versus merger comparison ↗ </a> </p>
 
 
 

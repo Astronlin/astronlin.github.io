@@ -886,13 +886,28 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;body&gt;
 &lt;div id=&quot;disk-merger-cube&quot; aria-label=&quot;Comparison of a rotating disk and a merger in a spectral cube&quot;&gt;
   &lt;div class=&quot;viz-controls&quot;&gt;
-    &lt;label class=&quot;form-label&quot; for=&quot;dmc-beam&quot;&gt;
-      Beam FWHM: &lt;span id=&quot;dmc-beam-value&quot;&gt;0.35&lt;/span&gt; kpc
-      &lt;input class=&quot;form-range&quot; id=&quot;dmc-beam&quot; type=&quot;range&quot; min=&quot;0.10&quot; max=&quot;0.80&quot; step=&quot;0.05&quot; value=&quot;0.35&quot;&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;dmc-spatial-disk&quot;&gt;
+      Disk spatial resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-spatial-disk-value&quot;&gt;0.35&lt;/span&gt; kpc&lt;/span&gt;
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-disk&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease disk spatial resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-spatial-disk&quot; type=&quot;range&quot; min=&quot;0.05&quot; max=&quot;1&quot; step=&quot;0.05&quot; value=&quot;0.35&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-disk&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase disk spatial resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
     &lt;/label&gt;
-    &lt;label class=&quot;form-label&quot; for=&quot;dmc-dv&quot;&gt;
-      Merger velocity separation: &lt;span id=&quot;dmc-dv-value&quot;&gt;300&lt;/span&gt; km s⁻¹
-      &lt;input class=&quot;form-range&quot; id=&quot;dmc-dv&quot; type=&quot;range&quot; min=&quot;120&quot; max=&quot;420&quot; step=&quot;20&quot; value=&quot;300&quot;&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;dmc-inc&quot;&gt;
+      Disk inclination: &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-inc-value&quot;&gt;55&lt;/span&gt;°&lt;/span&gt;
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-inc&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease disk inclination&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-inc&quot; type=&quot;range&quot; min=&quot;1&quot; max=&quot;89&quot; step=&quot;1&quot; value=&quot;55&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-inc&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase disk inclination&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;dmc-velocity-disk&quot;&gt;
+      Disk velocity resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-velocity-disk-value&quot;&gt;15&lt;/span&gt; km s⁻¹&lt;/span&gt;
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-velocity-disk&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease disk velocity resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-velocity-disk&quot; type=&quot;range&quot; min=&quot;3&quot; max=&quot;90&quot; step=&quot;1&quot; value=&quot;15&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-velocity-disk&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase disk velocity resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;dmc-curve&quot;&gt;
+      Disk rotation curve
+      &lt;span class=&quot;dmc-select-wrap&quot;&gt;
+        &lt;select class=&quot;form-select&quot; id=&quot;dmc-curve&quot;&gt;
+          &lt;option value=&quot;disk&quot;&gt;Pure disk&lt;/option&gt;
+          &lt;option value=&quot;bulge-disk&quot;&gt;Bulge + disk&lt;/option&gt;
+          &lt;option value=&quot;bh-bulge-disk&quot;&gt;SMBH + bulge + disk&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;span class=&quot;dmc-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;▼&lt;/span&gt;
+      &lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 
@@ -905,9 +920,9 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;details class=&quot;dmc-assumptions&quot; open&gt;
     &lt;summary&gt;Model assumptions&lt;/summary&gt;
     &lt;div class=&quot;dmc-assumption-grid&quot;&gt;
-      &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination 55°; rising circular speed to 240 km s⁻¹; intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
-      &lt;p&gt;&lt;strong&gt;Merger:&lt;/strong&gt; two offset Gaussian components with a tunable velocity separation, mild internal shear, and a faint connecting component.&lt;/p&gt;
-      &lt;p&gt;&lt;strong&gt;Both:&lt;/strong&gt; identical circular Gaussian beam; no noise, no warp, and no radiative-transfer or non-circular-flow model.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination &lt;span id=&quot;dmc-inc-assumption&quot;&gt;55&lt;/span&gt;°; &lt;span id=&quot;dmc-curve-assumption&quot;&gt;pure-disk&lt;/span&gt; rotation curve; intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Merger:&lt;/strong&gt; two offset Gaussian components separated by 0.88 kpc in projection, with a tunable velocity separation, mild internal shear, and a faint connecting component.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Resolution:&lt;/strong&gt; circular Gaussian spatial FWHM and Gaussian spectral FWHM; spatial pixels are FWHM/3, the disk centre is registered to a pixel, and every panel retains a fixed ±1.5 kpc field of view. Disk and merger can be synchronized or varied independently.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/details&gt;
 
@@ -918,32 +933,50 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;/div&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-disk-m0&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment zero map of a rotating disk&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Moment 0 · integrated brightness&lt;/figcaption&gt;
+      &lt;figcaption&gt;Moment 0 · integrated brightness; black: intensity contours&lt;/figcaption&gt;
     &lt;/figure&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-disk-m1&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment one velocity map of a rotating disk&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Moment 1 · line-of-sight velocity&lt;/figcaption&gt;
+      &lt;figcaption&gt;Moment 1 · line-of-sight velocity; thick: 0 km s⁻¹&lt;/figcaption&gt;
     &lt;/figure&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-disk-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Major-axis position velocity diagram of a rotating disk&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Major-axis PV diagram&lt;/figcaption&gt;
+      &lt;figcaption&gt;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&lt;/figcaption&gt;
     &lt;/figure&gt;
 
     &lt;div class=&quot;dmc-row-heading&quot;&gt;
       &lt;h3&gt;Two-component merger&lt;/h3&gt;
       &lt;span class=&quot;text-small text-muted&quot; id=&quot;dmc-merger-ratio&quot;&gt;Disk-fit V/σ ≈ 5.2&lt;/span&gt;
     &lt;/div&gt;
+    &lt;div class=&quot;dmc-merger-controls&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;dmc-spatial-merger&quot;&gt;
+        Merger spatial resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-spatial-merger-value&quot;&gt;0.35&lt;/span&gt; kpc&lt;/span&gt;
+        &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-merger&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger spatial resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-spatial-merger&quot; type=&quot;range&quot; min=&quot;0.05&quot; max=&quot;1&quot; step=&quot;0.05&quot; value=&quot;0.35&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-merger&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger spatial resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;dmc-velocity-merger&quot;&gt;
+        Merger velocity resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-velocity-merger-value&quot;&gt;15&lt;/span&gt; km s⁻¹&lt;/span&gt;
+        &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-velocity-merger&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger velocity resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-velocity-merger&quot; type=&quot;range&quot; min=&quot;3&quot; max=&quot;90&quot; step=&quot;1&quot; value=&quot;15&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-velocity-merger&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger velocity resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;dmc-dv&quot;&gt;
+        Merger velocity separation: &lt;span id=&quot;dmc-dv-value&quot;&gt;300&lt;/span&gt; km s⁻¹
+        &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-dv&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger velocity separation&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-dv&quot; type=&quot;range&quot; min=&quot;120&quot; max=&quot;420&quot; step=&quot;20&quot; value=&quot;300&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-dv&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger velocity separation&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;div class=&quot;dmc-sync-controls&quot;&gt;
+        &lt;label&gt;&lt;input id=&quot;dmc-sync-spatial&quot; type=&quot;checkbox&quot; checked&gt; Synchronize spatial resolution&lt;/label&gt;
+        &lt;label&gt;&lt;input id=&quot;dmc-sync-velocity&quot; type=&quot;checkbox&quot; checked&gt; Synchronize velocity resolution&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-merger-m0&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment zero map of a two-component merger&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Moment 0 · integrated brightness&lt;/figcaption&gt;
+      &lt;figcaption&gt;Moment 0 · integrated brightness; black: intensity contours&lt;/figcaption&gt;
     &lt;/figure&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-merger-m1&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment one velocity map of a two-component merger&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Moment 1 · apparent rotating gradient&lt;/figcaption&gt;
+      &lt;figcaption&gt;Moment 1 · apparent rotating gradient; thick: 0 km s⁻¹&lt;/figcaption&gt;
     &lt;/figure&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-merger-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Major-axis position velocity diagram of a two-component merger&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Major-axis PV · blended components&lt;/figcaption&gt;
+      &lt;figcaption&gt;Major-axis PV · blended components; black: intensity contours&lt;/figcaption&gt;
     &lt;/figure&gt;
   &lt;/div&gt;
 
@@ -963,14 +996,48 @@ html&gt;body{padding:0}&lt;/style&gt;
     font-size: 18px;
     line-height: 1.35;
   }
-  #disk-merger-cube .viz-controls {
+  #disk-merger-cube .viz-controls,
+  #disk-merger-cube .dmc-merger-controls {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: end;
+    gap: 14px;
+    padding: 8px 10px;
+    border: 1px solid #8a8a8a;
+    border-radius: 6px;
+    background: #f4f4f4;
   }
   #disk-merger-cube .form-label {
     min-width: 0;
     font-weight: 600;
+  }
+  #disk-merger-cube .viz-controls &gt; .form-label {
+    display: block;
+    margin-bottom: 0;
+  }
+  #disk-merger-cube .dmc-value-unit {
+    white-space: nowrap;
+  }
+  #disk-merger-cube .dmc-merger-controls {
+    grid-column: 1 / -1;
+  }
+  #disk-merger-cube .dmc-sync-controls {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    font-size: 16px;
+  }
+  #disk-merger-cube .dmc-sync-controls label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  #disk-merger-cube .dmc-sync-controls input {
+    width: 17px;
+    height: 17px;
+    accent-color: #134e9b;
   }
   #disk-merger-cube .form-range {
     display: block;
@@ -984,6 +1051,56 @@ html&gt;body{padding:0}&lt;/style&gt;
     border-radius: 999px;
     accent-color: #9e0022;
     cursor: pointer;
+  }
+  #disk-merger-cube .dmc-slider-control {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) 30px;
+    align-items: center;
+    gap: 9px;
+    margin-top: 7px;
+  }
+  #disk-merger-cube .dmc-slider-control .form-range { margin-top: 0; }
+  #disk-merger-cube .dmc-step {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    color: #161616;
+    background: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    font: 700 22px/1 system-ui, sans-serif;
+    cursor: pointer;
+  }
+  #disk-merger-cube .dmc-step:hover { background: #eeeeee; }
+  #disk-merger-cube .dmc-step:focus-visible { outline: 3px solid #111111; outline-offset: 2px; }
+  #disk-merger-cube .dmc-step:disabled { opacity: .42; cursor: not-allowed; }
+  #disk-merger-cube .form-select {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 5px 34px 5px 8px;
+    color: #161616;
+    background: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    font: inherit;
+    font-weight: 500;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  #disk-merger-cube .dmc-select-wrap {
+    position: relative;
+    display: block;
+  }
+  #disk-merger-cube .dmc-select-arrow {
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    color: #161616;
+    font-size: 13px;
+    pointer-events: none;
+    transform: translateY(-50%);
   }
   #disk-merger-cube .form-range::-webkit-slider-runnable-track {
     height: 10px;
@@ -1015,8 +1132,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     border-radius: 50%;
     box-shadow: 0 0 0 2px #560012;
   }
-  #disk-merger-cube #dmc-beam::-webkit-slider-thumb { background: #134e9b; box-shadow: 0 0 0 2px #082c5c; }
-  #disk-merger-cube #dmc-beam::-moz-range-thumb { background: #134e9b; box-shadow: 0 0 0 2px #082c5c; }
+  #disk-merger-cube :is(#dmc-spatial-disk, #dmc-spatial-merger)::-webkit-slider-thumb { background: #134e9b; box-shadow: 0 0 0 2px #082c5c; }
+  #disk-merger-cube :is(#dmc-spatial-disk, #dmc-spatial-merger)::-moz-range-thumb { background: #134e9b; box-shadow: 0 0 0 2px #082c5c; }
   #disk-merger-cube .form-range:focus-visible {
     outline: 3px solid #111111;
     outline-offset: 3px;
@@ -1104,7 +1221,8 @@ html&gt;body{padding:0}&lt;/style&gt;
   @media (max-width: 540px) {
     #disk-merger-cube .viz-controls,
     #disk-merger-cube .dmc-plot-grid,
-    #disk-merger-cube .dmc-assumption-grid {
+    #disk-merger-cube .dmc-assumption-grid,
+    #disk-merger-cube .dmc-merger-controls {
       grid-template-columns: 1fr;
     }
     #disk-merger-cube .dmc-row-heading {
@@ -1116,19 +1234,47 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;script&gt;
 (() =&gt; {
   const root = document.getElementById(&#x27;disk-merger-cube&#x27;);
-  const beamInput = document.getElementById(&#x27;dmc-beam&#x27;);
+  const incInput = document.getElementById(&#x27;dmc-inc&#x27;);
+  const diskSpatialInput = document.getElementById(&#x27;dmc-spatial-disk&#x27;);
+  const mergerSpatialInput = document.getElementById(&#x27;dmc-spatial-merger&#x27;);
+  const diskVelocityInput = document.getElementById(&#x27;dmc-velocity-disk&#x27;);
+  const mergerVelocityInput = document.getElementById(&#x27;dmc-velocity-merger&#x27;);
+  const syncSpatialInput = document.getElementById(&#x27;dmc-sync-spatial&#x27;);
+  const syncVelocityInput = document.getElementById(&#x27;dmc-sync-velocity&#x27;);
+  const curveInput = document.getElementById(&#x27;dmc-curve&#x27;);
   const dvInput = document.getElementById(&#x27;dmc-dv&#x27;);
-  const beamValue = document.getElementById(&#x27;dmc-beam-value&#x27;);
+  const incValue = document.getElementById(&#x27;dmc-inc-value&#x27;);
+  const incAssumption = document.getElementById(&#x27;dmc-inc-assumption&#x27;);
+  const curveAssumption = document.getElementById(&#x27;dmc-curve-assumption&#x27;);
+  const diskSpatialValue = document.getElementById(&#x27;dmc-spatial-disk-value&#x27;);
+  const mergerSpatialValue = document.getElementById(&#x27;dmc-spatial-merger-value&#x27;);
+  const diskVelocityValue = document.getElementById(&#x27;dmc-velocity-disk-value&#x27;);
+  const mergerVelocityValue = document.getElementById(&#x27;dmc-velocity-merger-value&#x27;);
   const dvValue = document.getElementById(&#x27;dmc-dv-value&#x27;);
   const mergerRatio = document.getElementById(&#x27;dmc-merger-ratio&#x27;);
   const note = document.getElementById(&#x27;dmc-note&#x27;);
 
-  const NX = 34, NY = 34, NV = 45;
   const XMAX = 1.5, VMAX = 350;
-  const dx = 2 * XMAX / (NX - 1);
-  const dvChan = 2 * VMAX / (NV - 1);
-  const inc = 55 * Math.PI / 180;
+  let gridRadius = XMAX;
+  let NX = 34, NY = 34, NV = 235;
+  let dx = 2 * XMAX / (NX - 1);
+  let dvChan = 3;
   const sigma = 35;
+
+  function setSampling(spatialFwhm, velocityFwhm) {
+    // Keep an odd-sized, centre-registered grid: the intrinsic disk peak is
+    // always sampled at x = y = 0, rather than falling between pixels.
+    dx = spatialFwhm / 3;
+    dvChan = velocityFwhm;
+    gridRadius = XMAX;
+    NX = 2 * Math.ceil(gridRadius / dx) + 1;
+    NY = NX;
+    NV = Math.ceil(2 * VMAX / dvChan) + 1;
+  }
+
+  function displayRadius(spatialFwhm) {
+    return XMAX;
+  }
 
   function cssColor(name) {
     return getComputedStyle(root).getPropertyValue(name).trim();
@@ -1195,18 +1341,35 @@ html&gt;body{padding:0}&lt;/style&gt;
     return Math.exp(-0.5 * z * z);
   }
 
-  function buildCube(kind, deltaV) {
+  function rotationSpeed(r, curveType) {
+    const G = 4.3009e-6; // kpc (km s^-1)^2 Msun^-1
+    const disk = 220 * (1 - Math.exp(-r / 0.35));
+    if (curveType === &#x27;disk&#x27;) return disk;
+
+    // Hernquist-like compact bulge contribution.
+    const bulgeMass = 5e9;
+    const bulgeScale = 0.25;
+    const bulge2 = G * bulgeMass * r / (r + bulgeScale) ** 2;
+    if (curveType === &#x27;bulge-disk&#x27;) return Math.sqrt(disk ** 2 + bulge2);
+
+    // Central supermassive black hole, illustrative of a massive galaxy/AGN host.
+    const bhMass = 6e8;
+    const bh2 = G * bhMass / Math.max(r, 0.025);
+    return Math.sqrt(disk ** 2 + bulge2 + bh2);
+  }
+
+  function buildCube(kind, deltaV, inclination, curveType) {
     const cube = new Float32Array(NX * NY * NV);
     for (let iy = 0; iy &lt; NY; iy++) {
-      const y = -XMAX + iy * dx;
+      const y = (iy - (NY - 1) / 2) * dx;
       for (let ix = 0; ix &lt; NX; ix++) {
-        const x = -XMAX + ix * dx;
+        const x = (ix - (NX - 1) / 2) * dx;
         if (kind === &#x27;disk&#x27;) {
-          const yd = y / Math.cos(inc);
+          const yd = y / Math.cos(inclination);
           const r = Math.sqrt(x * x + yd * yd) + 1e-5;
           const brightness = Math.exp(-r / 0.55);
-          const vrot = 240 * (1 - Math.exp(-r / 0.28));
-          const mean = vrot * Math.sin(inc) * x / r;
+          const vrot = rotationSpeed(r, curveType);
+          const mean = vrot * Math.sin(inclination) * x / r;
           for (let iv = 0; iv &lt; NV; iv++) {
             const vel = -VMAX + iv * dvChan;
             cube[idx(ix, iy, iv)] = brightness * gaussian(vel, mean, sigma);
@@ -1272,6 +1435,31 @@ html&gt;body{padding:0}&lt;/style&gt;
     return out;
   }
 
+  function convolveSpectral(cube, fwhm) {
+    const sigmaChan = fwhm / 2.355 / dvChan;
+    if (sigmaChan &lt; 0.20) return cube;
+    const radius = Math.max(1, Math.ceil(3 * sigmaChan));
+    const kernel = [];
+    let norm = 0;
+    for (let k = -radius; k &lt;= radius; k++) {
+      const w = Math.exp(-0.5 * (k / sigmaChan) ** 2);
+      kernel.push(w);
+      norm += w;
+    }
+    for (let i = 0; i &lt; kernel.length; i++) kernel[i] /= norm;
+
+    const out = new Float32Array(cube.length);
+    for (let y = 0; y &lt; NY; y++) for (let x = 0; x &lt; NX; x++) for (let v = 0; v &lt; NV; v++) {
+      let sum = 0;
+      for (let k = -radius; k &lt;= radius; k++) {
+        const vv = Math.max(0, Math.min(NV - 1, v + k));
+        sum += cube[idx(x, y, vv)] * kernel[k + radius];
+      }
+      out[idx(x, y, v)] = sum;
+    }
+    return out;
+  }
+
   function moments(cube) {
     const m0 = new Float32Array(NX * NY);
     const m1 = new Float32Array(NX * NY);
@@ -1313,11 +1501,16 @@ html&gt;body{padding:0}&lt;/style&gt;
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = colors.bg;
     ctx.fillRect(0, 0, W, H);
-    return { ctx, W, H, left: 72, right: 20, top: 18, bottom: 55 };
+    return {
+      ctx, W, H,
+      left: 88, right: 22, top: 18, bottom: 64,
+      axisFont: 24, tickFont: 20
+    };
   }
 
-  function drawAxes(g, xlabel, ylabel, colors) {
-    const { ctx, W, H, left, right, top, bottom } = g;
+  function drawAxes(g, xlabel, ylabel, colors, bounds = g, xRadius = XMAX, showSpatialY = false) {
+    const { ctx, W, H, axisFont, tickFont } = g;
+    const { left, right, top, bottom } = bounds;
     ctx.strokeStyle = colors.border;
     ctx.lineWidth = 2;
     ctx.beginPath();
@@ -1326,25 +1519,36 @@ html&gt;body{padding:0}&lt;/style&gt;
     ctx.lineTo(W - right, H - bottom);
     ctx.stroke();
     ctx.fillStyle = colors.fg;
-    ctx.font = &#x27;24px sans-serif&#x27;;
+    ctx.font = `${axisFont}px sans-serif`;
     ctx.textAlign = &#x27;center&#x27;;
-    ctx.fillText(xlabel, (left + W - right) / 2, H - 12);
+    ctx.fillText(xlabel, (left + W - right) / 2, H - 13);
     ctx.save();
     ctx.translate(22, (top + H - bottom) / 2);
     ctx.rotate(-Math.PI / 2);
     ctx.fillText(ylabel, 0, 0);
     ctx.restore();
-    ctx.font = &#x27;20px sans-serif&#x27;;
+    ctx.font = `${tickFont}px sans-serif`;
     ctx.fillStyle = colors.muted;
-    ctx.fillText(&#x27;-1.5&#x27;, left, H - bottom + 28);
-    ctx.fillText(&#x27;0&#x27;, (left + W - right) / 2, H - bottom + 28);
-    ctx.fillText(&#x27;+1.5&#x27;, W - right, H - bottom + 28);
+    const tickY = H - bottom + 27;
+    const digits = xRadius &lt; 1 ? 2 : 1;
+    ctx.fillText(`-${xRadius.toFixed(digits)}`, left, tickY);
+    ctx.fillText(&#x27;0&#x27;, (left + W - right) / 2, tickY);
+    ctx.fillText(`+${xRadius.toFixed(digits)}`, W - right, tickY);
+    if (showSpatialY) {
+      ctx.textAlign = &#x27;right&#x27;;
+      const yDigits = xRadius &lt; 1 ? 2 : 1;
+      ctx.fillText(`+${xRadius.toFixed(yDigits)}`, left - 8, top + 8);
+      ctx.fillText(&#x27;0&#x27;, left - 8, (top + H - bottom) / 2 + 8);
+      ctx.fillText(`-${xRadius.toFixed(yDigits)}`, left - 8, H - bottom + 7);
+      ctx.textAlign = &#x27;center&#x27;;
+    }
   }
 
-  function drawBeam(g, beamFwhm, colors) {
-    const { ctx, W, H, left, right, top, bottom } = g;
+  function drawBeam(g, beamFwhm, colors, bounds = g, plotRadius = XMAX) {
+    const { ctx, W, H } = g;
+    const { left, right, top, bottom } = bounds;
     const pw = W - left - right, ph = H - top - bottom;
-    const major = beamFwhm / (2 * XMAX) * pw;
+    const major = beamFwhm / (2 * plotRadius) * pw;
     const minor = 0.72 * major;
     const cx = left + 16 + major / 2;
     const cy = top + ph - 16 - minor / 2;
@@ -1360,12 +1564,64 @@ html&gt;body{padding:0}&lt;/style&gt;
     ctx.restore();
   }
 
-  function drawMap(canvas, moment, type, colors, beamFwhm) {
+  // Lightweight marching-squares contours for the canvas maps and PV diagrams.
+  function drawContours(ctx, data, nx, ny, levels, toCanvas, styleForLevel) {
+    for (const level of levels) {
+      const style = styleForLevel(level);
+      ctx.save();
+      ctx.strokeStyle = style.color;
+      ctx.lineWidth = style.width;
+      ctx.globalAlpha = style.alpha ?? 1;
+      for (let y = 0; y &lt; ny - 1; y++) for (let x = 0; x &lt; nx - 1; x++) {
+        const a = data[y * nx + x];
+        const b = data[y * nx + x + 1];
+        const c = data[(y + 1) * nx + x + 1];
+        const d = data[(y + 1) * nx + x];
+        const crosses = [];
+        const addCrossing = (v1, v2, x1, y1, x2, y2) =&gt; {
+          if ((v1 &lt; level &amp;&amp; v2 &gt;= level) || (v1 &gt;= level &amp;&amp; v2 &lt; level)) {
+            const f = (level - v1) / (v2 - v1);
+            crosses.push([x1 + f * (x2 - x1), y1 + f * (y2 - y1)]);
+          }
+        };
+        addCrossing(a, b, x, y, x + 1, y);
+        addCrossing(b, c, x + 1, y, x + 1, y + 1);
+        addCrossing(c, d, x + 1, y + 1, x, y + 1);
+        addCrossing(d, a, x, y + 1, x, y);
+        for (let k = 0; k + 1 &lt; crosses.length; k += 2) {
+          const p1 = toCanvas(crosses[k][0], crosses[k][1]);
+          const p2 = toCanvas(crosses[k + 1][0], crosses[k + 1][1]);
+          ctx.beginPath();
+          ctx.moveTo(p1[0], p1[1]);
+          ctx.lineTo(p2[0], p2[1]);
+          ctx.stroke();
+        }
+      }
+      ctx.restore();
+    }
+  }
+
+  function drawMap(canvas, moment, type, colors, beamFwhm, plotRadius) {
     const g = prepareCanvas(canvas, colors);
     const { ctx, W, H, left, right, top, bottom } = g;
     const pw = W - left - right, ph = H - top - bottom;
-    const cw = pw / NX, ch = ph / NY;
+    // The two spatial axes cover identical ranges, so force a square plotting
+    // region. This preserves the projected axis ratio b/a = cos(inclination).
+    const plotSize = Math.min(pw, ph);
+    const plotLeft = left + (pw - plotSize) / 2;
+    const plotTop = top + (ph - plotSize) / 2;
+    const mapBounds = {
+      left: plotLeft,
+      right: W - plotLeft - plotSize,
+      top: plotTop,
+      bottom: H - plotTop - plotSize
+    };
+    const pixelSize = dx / (2 * plotRadius) * plotSize;
     const threshold = moment.max0 * 0.025;
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(plotLeft, plotTop, plotSize, plotSize);
+    ctx.clip();
     for (let y = 0; y &lt; NY; y++) for (let x = 0; x &lt; NX; x++) {
       const k = y * NX + x;
       let color;
@@ -1379,23 +1635,80 @@ html&gt;body{padding:0}&lt;/style&gt;
         color = colors.diverging[Math.round(50 + 50 * vel / 220)];
       }
       ctx.fillStyle = color;
-      ctx.fillRect(left + x * cw, top + (NY - 1 - y) * ch, cw + 0.6, ch + 0.6);
+      const xCenter = (x - (NX - 1) / 2) * dx;
+      const yCenter = (y - (NY - 1) / 2) * dx;
+      ctx.fillRect(
+        plotLeft + (xCenter - dx / 2 + plotRadius) / (2 * plotRadius) * plotSize,
+        plotTop + (plotRadius - yCenter - dx / 2) / (2 * plotRadius) * plotSize,
+        pixelSize + 0.6, pixelSize + 0.6
+      );
     }
-    drawBeam(g, beamFwhm, colors);
-    drawAxes(g, &#x27;Offset (kpc)&#x27;, &#x27;Offset (kpc)&#x27;, colors);
+    const toCanvas = (x, y) =&gt; [
+      plotLeft + ((x - (NX - 1) / 2) * dx + plotRadius) / (2 * plotRadius) * plotSize,
+      plotTop + (plotRadius - (y - (NY - 1) / 2) * dx) / (2 * plotRadius) * plotSize
+    ];
+    if (type === &#x27;m0&#x27;) {
+      // Fixed fractional levels: identical for the disk and merger maps.
+      const intensityLevels = [0.08, 0.16, 0.32, 0.50, 0.70].map(f =&gt; f * moment.max0);
+      drawContours(ctx, moment.m0, NX, NY, intensityLevels, toCanvas,
+        () =&gt; ({ color: &#x27;#111111&#x27;, width: 1.3, alpha: 0.9 }));
+    } else {
+      const velocityLevels = [];
+      for (let v = -210; v &lt;= 210; v += 30) velocityLevels.push(v);
+      const maskedVelocity = new Float32Array(moment.m1.length);
+      for (let k = 0; k &lt; moment.m1.length; k++) {
+        maskedVelocity[k] = moment.m0[k] &lt; threshold ? NaN : moment.m1[k];
+      }
+      drawContours(ctx, maskedVelocity, NX, NY, velocityLevels, toCanvas,
+        v =&gt; ({ color: &#x27;#151515&#x27;, width: v === 0 ? 3.3 : 1.0, alpha: v === 0 ? 1 : 0.86 }));
+    }
+    ctx.restore();
+    drawBeam(g, beamFwhm, colors, mapBounds, plotRadius);
+    drawAxes(g, &#x27;Offset (kpc)&#x27;, &#x27;Offset (kpc)&#x27;, colors, mapBounds, plotRadius, true);
   }
 
-  function drawPV(canvas, pvData, colors) {
+  function drawPV(canvas, pvData, colors, intrinsicCurve = null, plotRadius = XMAX) {
     const g = prepareCanvas(canvas, colors);
     const { ctx, W, H, left, right, top, bottom } = g;
     const pw = W - left - right, ph = H - top - bottom;
-    const cw = pw / NX, ch = ph / NV;
+    const cw = dx / (2 * plotRadius) * pw, ch = ph / NV;
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(left, top, pw, ph);
+    ctx.clip();
     for (let v = 0; v &lt; NV; v++) for (let x = 0; x &lt; NX; x++) {
       const t = Math.min(1, pvData.pv[v * NX + x] / pvData.max);
       ctx.fillStyle = colors.pv[Math.round(100 * Math.pow(t, 0.55))];
-      ctx.fillRect(left + x * cw, top + (NV - 1 - v) * ch, cw + 0.6, ch + 0.6);
+      const xCenter = (x - (NX - 1) / 2) * dx;
+      ctx.fillRect(left + (xCenter - dx / 2 + plotRadius) / (2 * plotRadius) * pw, top + (NV - 1 - v) * ch, cw + 0.6, ch + 0.6);
     }
-    drawAxes(g, &#x27;Major-axis offset (kpc)&#x27;, &#x27;Velocity (km s⁻¹)&#x27;, colors);
+    const toCanvas = (x, v) =&gt; [
+      left + ((x - (NX - 1) / 2) * dx + plotRadius) / (2 * plotRadius) * pw,
+      top + (NV - 0.5 - v) * ch
+    ];
+    // Fixed fractional levels: identical for disk and merger PV diagrams.
+    const intensityLevels = [0.12, 0.25, 0.50, 0.75].map(f =&gt; f * pvData.max);
+    drawContours(ctx, pvData.pv, NX, NV, intensityLevels, toCanvas,
+      () =&gt; ({ color: &#x27;#b00016&#x27;, width: 1.4, alpha: 0.95 }));
+    if (intrinsicCurve) {
+      ctx.save();
+      ctx.strokeStyle = &#x27;#00a6d6&#x27;;
+      ctx.lineWidth = 2.5;
+      ctx.setLineDash([7, 5]);
+      ctx.beginPath();
+      for (let ix = 0; ix &lt; NX; ix++) {
+        const x = (ix - (NX - 1) / 2) * dx;
+        const velocity = Math.sign(x || 1) * intrinsicCurve(Math.abs(x));
+        const y = top + (VMAX - velocity) / (2 * VMAX) * ph;
+        const px = left + (x + plotRadius) / (2 * plotRadius) * pw;
+        if (ix === 0) ctx.moveTo(px, y);
+        else ctx.lineTo(px, y);
+      }
+      ctx.stroke();
+      ctx.restore();
+    }
+    ctx.restore();
+    drawAxes(g, &#x27;Major-axis offset (kpc)&#x27;, &#x27;Velocity (km s⁻¹)&#x27;, colors, g, plotRadius);
     ctx.strokeStyle = colors.muted;
     ctx.lineWidth = 1.5;
     ctx.beginPath();
@@ -1404,38 +1717,79 @@ html&gt;body{padding:0}&lt;/style&gt;
     ctx.lineTo(W - right, y0);
     ctx.stroke();
     ctx.fillStyle = colors.muted;
-    ctx.font = &#x27;20px sans-serif&#x27;;
+    ctx.font = `${g.tickFont}px sans-serif`;
     ctx.textAlign = &#x27;right&#x27;;
-    ctx.fillText(&#x27;+350&#x27;, left - 8, top + 7);
-    ctx.fillText(&#x27;0&#x27;, left - 8, y0 + 7);
-    ctx.fillText(&#x27;-350&#x27;, left - 8, top + ph + 7);
+    ctx.fillText(&#x27;+350&#x27;, left - 8, top + 8);
+    ctx.fillText(&#x27;0&#x27;, left - 8, y0 + 8);
+    ctx.fillText(&#x27;-350&#x27;, left - 8, top + ph + 8);
   }
 
   let renderTimer;
+  function spatialFwhm(input) {
+    return Number(input.value);
+  }
+
+  function updateResolutionLabels() {
+    diskSpatialValue.textContent = spatialFwhm(diskSpatialInput).toFixed(2);
+    mergerSpatialValue.textContent = spatialFwhm(mergerSpatialInput).toFixed(2);
+    diskVelocityValue.textContent = Number(diskVelocityInput.value).toFixed(0);
+    mergerVelocityValue.textContent = Number(mergerVelocityInput.value).toFixed(0);
+  }
+
   function render() {
-    const beam = Number(beamInput.value);
+    const inclinationDeg = Number(incInput.value);
+    const inclination = inclinationDeg * Math.PI / 180;
+    const diskBeam = spatialFwhm(diskSpatialInput);
+    const mergerBeam = spatialFwhm(mergerSpatialInput);
+    const diskVelocityResolution = Number(diskVelocityInput.value);
+    const mergerVelocityResolution = Number(mergerVelocityInput.value);
+    const diskPlotRadius = displayRadius(diskBeam);
+    const mergerPlotRadius = displayRadius(mergerBeam);
     const deltaV = Number(dvInput.value);
-    beamValue.textContent = beam.toFixed(2);
+    const curveType = curveInput.value;
+    incValue.textContent = inclinationDeg.toFixed(0);
+    incAssumption.textContent = inclinationDeg.toFixed(0);
+    curveAssumption.textContent = curveInput.options[curveInput.selectedIndex].text.toLowerCase();
+    updateResolutionLabels();
     dvValue.textContent = deltaV.toFixed(0);
-    const inferredV = (deltaV / 2) / Math.sin(inc);
+    const inferredV = (deltaV / 2) / Math.sin(inclination);
     mergerRatio.textContent = `Disk-fit V/σ ≈ ${(inferredV / sigma).toFixed(1)}`;
 
     const colors = palette();
-    const diskCube = convolveSpatial(buildCube(&#x27;disk&#x27;, deltaV), beam);
-    const mergerCube = convolveSpatial(buildCube(&#x27;merger&#x27;, deltaV), beam);
+    setSampling(diskBeam, diskVelocityResolution);
+    const diskCube = convolveSpectral(
+      convolveSpatial(buildCube(&#x27;disk&#x27;, deltaV, inclination, curveType), diskBeam),
+      diskVelocityResolution
+    );
     const diskMom = moments(diskCube);
+    const diskPV = pvDiagram(diskCube);
+
+    setSampling(mergerBeam, mergerVelocityResolution);
+    const mergerCube = convolveSpectral(
+      convolveSpatial(buildCube(&#x27;merger&#x27;, deltaV, inclination, curveType), mergerBeam),
+      mergerVelocityResolution
+    );
     const mergerMom = moments(mergerCube);
+    const mergerPV = pvDiagram(mergerCube);
 
-    drawMap(document.getElementById(&#x27;dmc-disk-m0&#x27;), diskMom, &#x27;m0&#x27;, colors, beam);
-    drawMap(document.getElementById(&#x27;dmc-disk-m1&#x27;), diskMom, &#x27;m1&#x27;, colors, beam);
-    drawPV(document.getElementById(&#x27;dmc-disk-pv&#x27;), pvDiagram(diskCube), colors);
-    drawMap(document.getElementById(&#x27;dmc-merger-m0&#x27;), mergerMom, &#x27;m0&#x27;, colors, beam);
-    drawMap(document.getElementById(&#x27;dmc-merger-m1&#x27;), mergerMom, &#x27;m1&#x27;, colors, beam);
-    drawPV(document.getElementById(&#x27;dmc-merger-pv&#x27;), pvDiagram(mergerCube), colors);
+    setSampling(diskBeam, diskVelocityResolution);
+    drawMap(document.getElementById(&#x27;dmc-disk-m0&#x27;), diskMom, &#x27;m0&#x27;, colors, diskBeam, diskPlotRadius);
+    drawMap(document.getElementById(&#x27;dmc-disk-m1&#x27;), diskMom, &#x27;m1&#x27;, colors, diskBeam, diskPlotRadius);
+    drawPV(
+      document.getElementById(&#x27;dmc-disk-pv&#x27;),
+      diskPV,
+      colors,
+      radius =&gt; rotationSpeed(radius, curveType) * Math.sin(inclination),
+      diskPlotRadius
+    );
+    setSampling(mergerBeam, mergerVelocityResolution);
+    drawMap(document.getElementById(&#x27;dmc-merger-m0&#x27;), mergerMom, &#x27;m0&#x27;, colors, mergerBeam, mergerPlotRadius);
+    drawMap(document.getElementById(&#x27;dmc-merger-m1&#x27;), mergerMom, &#x27;m1&#x27;, colors, mergerBeam, mergerPlotRadius);
+    drawPV(document.getElementById(&#x27;dmc-merger-pv&#x27;), mergerPV, colors, null, mergerPlotRadius);
 
-    if (beam &gt;= 0.55) {
+    if (mergerBeam &gt;= 0.55) {
       note.textContent = &#x27;With strong beam smearing, the merger components blend into an especially disk-like velocity gradient.&#x27;;
-    } else if (beam &lt;= 0.20) {
+    } else if (mergerBeam &lt;= 0.20) {
       note.textContent = &#x27;At finer resolution, the merger retains two brightness peaks and a discontinuous PV structure.&#x27;;
     } else {
       note.textContent = &#x27;At this beam size, spatial and spectral blending turns two narrow components into a smooth red-to-blue gradient.&#x27;;
@@ -1444,11 +1798,51 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   function scheduleRender() {
     clearTimeout(renderTimer);
-    renderTimer = setTimeout(render, 40);
+    renderTimer = setTimeout(render, 150);
   }
 
-  beamInput.addEventListener(&#x27;input&#x27;, scheduleRender);
+  incInput.addEventListener(&#x27;input&#x27;, scheduleRender);
+  curveInput.addEventListener(&#x27;change&#x27;, scheduleRender);
+  function syncResolution(source, target, syncInput) {
+    if (syncInput.checked) target.value = source.value;
+    updateResolutionLabels();
+  }
+
+  function updateSyncState(renderAfter = true) {
+    mergerSpatialInput.disabled = syncSpatialInput.checked;
+    mergerVelocityInput.disabled = syncVelocityInput.checked;
+    root.querySelectorAll(&#x27;[data-target=&quot;dmc-spatial-merger&quot;]&#x27;).forEach(button =&gt; button.disabled = mergerSpatialInput.disabled);
+    root.querySelectorAll(&#x27;[data-target=&quot;dmc-velocity-merger&quot;]&#x27;).forEach(button =&gt; button.disabled = mergerVelocityInput.disabled);
+    if (syncSpatialInput.checked) mergerSpatialInput.value = diskSpatialInput.value;
+    if (syncVelocityInput.checked) mergerVelocityInput.value = diskVelocityInput.value;
+    updateResolutionLabels();
+    if (renderAfter) scheduleRender();
+  }
+
+  diskSpatialInput.addEventListener(&#x27;input&#x27;, () =&gt; syncResolution(diskSpatialInput, mergerSpatialInput, syncSpatialInput));
+  mergerSpatialInput.addEventListener(&#x27;input&#x27;, updateResolutionLabels);
+  diskVelocityInput.addEventListener(&#x27;input&#x27;, () =&gt; syncResolution(diskVelocityInput, mergerVelocityInput, syncVelocityInput));
+  mergerVelocityInput.addEventListener(&#x27;input&#x27;, updateResolutionLabels);
+  diskSpatialInput.addEventListener(&#x27;change&#x27;, scheduleRender);
+  mergerSpatialInput.addEventListener(&#x27;change&#x27;, scheduleRender);
+  diskVelocityInput.addEventListener(&#x27;change&#x27;, scheduleRender);
+  mergerVelocityInput.addEventListener(&#x27;change&#x27;, scheduleRender);
+  syncSpatialInput.addEventListener(&#x27;change&#x27;, updateSyncState);
+  syncVelocityInput.addEventListener(&#x27;change&#x27;, updateSyncState);
   dvInput.addEventListener(&#x27;input&#x27;, scheduleRender);
+  root.querySelectorAll(&#x27;.dmc-step&#x27;).forEach(button =&gt; {
+    button.addEventListener(&#x27;click&#x27;, () =&gt; {
+      const input = document.getElementById(button.dataset.target);
+      if (input.disabled) return;
+      const step = Number(input.step) || 1;
+      const next = Math.min(Number(input.max), Math.max(Number(input.min), Number(input.value) + Number(button.dataset.direction) * step));
+      if (next === Number(input.value)) return;
+      input.value = String(next);
+      input.dispatchEvent(new Event(&#x27;input&#x27;, { bubbles: true }));
+      input.dispatchEvent(new Event(&#x27;change&#x27;, { bubbles: true }));
+    });
+  });
+  updateSyncState(false);
   render();
 })();
 &lt;/script&gt;
