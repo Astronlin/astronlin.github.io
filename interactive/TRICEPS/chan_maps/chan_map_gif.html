@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRICEPS animated channel maps</title>
+
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #ffffff;
+      --foreground: #202124;
+      --border: #c9c9c9;
+      --muted: #666666;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #1b1b1b;
+        --foreground: #ededed;
+        --border: #555555;
+        --muted: #b0b0b0;
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+      color: var(--foreground);
+      background: var(--background);
+    }
+
+    .channel-map-viewer {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    select {
+      width: 100%;
+      padding: 0.45rem;
+      color: var(--foreground);
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    figure {
+      margin: 1rem 0 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="channel-map-viewer">
+    <label for="target-select">Choose one galaxy</label>
+
+    <select id="target-select">
+      <option value="ALESS-73.1_chan_map.gif">ALESS-73.1</option>
+      <option value="AzTEC-159_chan_map.gif">AzTEC-159, inclination 40°</option>
+      <option value="AzTEC-159_inc30_chan_map.gif">AzTEC-159, inclination 30°</option>
+      <option value="AzTEC-159_inc50_chan_map.gif">AzTEC-159, inclination 50°</option>
+      <option value="AzTEC1_Jun26_chan_map.gif">AzTEC-1</option>
+      <option value="BR1202-0725N_chan_map.gif">BR1202-0725N</option>
+      <option value="BR1202-0725S_chan_map.gif">BR1202-0725S</option>
+      <option value="BRI1335_chan_map.gif">BRI1335</option>
+      <option value="J0331-0741_chan_map.gif">J0331-0741</option>
+      <option value="J0817+1351_chan_map.gif">J0817+1351</option>
+      <option value="J0923+0247N_chan_map.gif">J0923+0247N</option>
+      <option value="J0923+0247S_uv0.10_chan_map.gif">J0923+0247S</option>
+      <option value="J1000+0234_chan_map.gif">J1000+0234</option>
+      <option value="J1341+0141_chan_map.gif">J1341+0141</option>
+      <option value="J1511+0408N_uv0.10_chan_map.gif">J1511+0408N</option>
+      <option value="J1511+0408S_chan_map.gif">J1511+0408S</option>
+      <option value="SGP38326-1_chan_map.gif">SGP38326-1</option>
+      <option value="SGP38326-2_chan_map.gif">SGP38326-2</option>
+      <option value="BR1202-0725Lya_chan_map.gif">BR1202-0725 Lyα</option>
+      <option value="SGP38326-3_chan_map.gif">SGP38326-3</option>
+    </select>
+
+    <figure>
+      <img
+        id="channel-map"
+        src="J1000+0234_chan_map.gif"
+        alt="Animated [C II] channel maps for J1000+0234"
+      >
+      <figcaption id="caption">
+        J1000+0234: blue contours and background grayscale show the data; red contours show the model; the yellow star is the kinematic center; the dashed line is the kinematic major axis.
+      </figcaption>
+    </figure>
+  </main>
+
+  <script>
+    const selector = document.getElementById('target-select');
+    const image = document.getElementById('channel-map');
+    const caption = document.getElementById('caption');
+
+    selector.addEventListener('change', () => {
+      const selected = selector.options[selector.selectedIndex];
+      const target = selected.text;
+
+      image.src = selected.value;
+      image.alt = `Animated [C II] channel maps for ${target}`;
+      caption.textContent =
+        `${target}: blue contours and background grayscale show the data; red contours show the model; the yellow star is the kinematic center; the dashed line is the kinematic major axis.`;
+    });
+  </script>
+</body>
+</html>
