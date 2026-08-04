@@ -57,15 +57,17 @@ when the Universe was less than 10% of its current age.
 
 ### Rotating disk modeling
 
-[CII] Channel maps
-
 <!--![Modeling](/fig/research/TRICEPS/J1000+0234_atlas.jpg)-->
+<p> <a href="/interactive/TRICEPS/chan_maps/chan_map_gif.html" target="_blank" rel="noopener noreferrer" > See the amazing plots ↗ </a> </p>
+
+<!--
 <iframe
   src="/interactive/TRICEPS/chan_maps/chan_map_gif.html"
   title="Animated [CII] channel maps"
   loading="lazy"
   style="display:block; width:100%; height:780px; border:0; "
 ></iframe>
+-->
 
 ### Interative: Can a merger mimic a rotating disk?
 
@@ -74,8 +76,10 @@ circular rotation. Two interacting components can blend spatially and
 spectrally, producing disk-like moment maps, position--velocity diagrams, and
 an apparently high $V_{\rm rot}/\sigma$. Use the controls below to explore how
 beam smearing and the components' velocity separation affect this degeneracy.
-[Generated using ChatGPT]
 
+<p> <a href="/interactive/TRICEPS/disk-merger-cube.html" target="_blank" rel="noopener noreferrer" > Open the interactive rotating-disk versus merger comparison ↗ </a> </p>
+
+<!--
 <iframe
   src="/interactive/TRICEPS/disk-merger-cube.html"
   title="Interactive comparison of a rotating disk and a two-component merger"
@@ -83,8 +87,9 @@ beam smearing and the components' velocity separation affect this degeneracy.
   referrerpolicy="no-referrer"
   loading="lazy"
   scrolling="no"
-  style="display:block;width:100%;height:650px;border:0;margin:1.5rem 0;"
+  style="display:block;width:50%;height:250px;border:0;margin:1.5rem 0;"
 ></iframe>
+-->
 
 
 ## HI fraction of the Galactic outer disk molecular clouds
