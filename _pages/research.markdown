@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Research"
-classes: wide
+# classes: wide
 #excerpt: "See it and try to understand it..."
 excerpt: "***The unknown** is but a fog to be dispersed; <br> **knowledge** is the true pillar of the world.*"
 permalink: /research/
