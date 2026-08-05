@@ -92,7 +92,7 @@ beam smearing and the components' velocity separation affect this degeneracy.
       loading="lazy"
       style="display:block;width:min(100%,540px);height:auto;flex:1 1 440px;min-width:0;"
     >
-    <span style="display:block;flex:0 0 auto;white-space:nowrap;font-weight:600;">Click to try ↗</span>
+    <span style="display:block;flex:0 0 auto;white-space:nowrap;font-weight:600;">Try RotVis ↗</span>
   </a>
 </p>
 
