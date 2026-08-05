@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Disk Merger Cube 2X3</title>
+<title>RotVis — rotating disk and merger comparison</title>
 <style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
 </head>
 <body>
-<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Disk Merger Cube 2X3" srcdoc="&lt;!doctype html&gt;
+<iframe sandbox="allow-scripts allow-top-navigation-by-user-activation" referrerpolicy="no-referrer" title="RotVis interactive rotating-disk and merger comparison" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -889,6 +889,22 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;div id=&quot;disk-merger-cube&quot; aria-label=&quot;Comparison of a rotating disk and a merger in a spectral cube&quot;&gt;
+  &lt;nav class=&quot;dmc-top-nav&quot; aria-label=&quot;RotVis navigation&quot;&gt;
+    &lt;a href=&quot;/&quot; target=&quot;_top&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;/interactive/TRICEPS/rotvis-manual.html&quot; target=&quot;_top&quot;&gt;User manual&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;details class=&quot;dmc-assumptions&quot; open&gt;
+    &lt;summary&gt;Model assumptions&lt;/summary&gt;
+    &lt;div class=&quot;dmc-assumption-grid&quot;&gt;
+      &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination &lt;span id=&quot;dmc-inc-assumption&quot;&gt;55&lt;/span&gt;°; &lt;span id=&quot;dmc-curve-assumption&quot;&gt;pure-disk&lt;/span&gt; rotation curve; equivalent disk mass 1.50 × 10&lt;sup&gt;10&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;; bulge mass &lt;span id=&quot;dmc-bulge-mass-assumption&quot;&gt;3.00 × 10&lt;sup&gt;9&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt; (&lt;span id=&quot;dmc-bulge-fraction-assumption&quot;&gt;20.0%&lt;/span&gt; of the disk); SMBH mass &lt;span id=&quot;dmc-bh-mass-assumption&quot;&gt;1.50 × 10&lt;sup&gt;8&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt; (&lt;span id=&quot;dmc-bh-fraction-assumption&quot;&gt;1.00%&lt;/span&gt; of the disk); intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Merger:&lt;/strong&gt; two offset Gaussian components separated by &lt;span id=&quot;dmc-separation-assumption&quot;&gt;0.88&lt;/span&gt; kpc in projection, with a tunable velocity separation, mild internal shear, and a faint connecting component.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Resolution:&lt;/strong&gt; circular Gaussian spatial FWHM and Gaussian spectral FWHM; spatial pixels are FWHM/3, the disk centre is registered to a pixel, and every panel retains a fixed ±1.5 kpc field of view. PV and spectral velocity axes expand automatically when required. Disk and merger can be synchronized or varied independently.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+
+  &lt;label class=&quot;dmc-spectrum-toggle&quot;&gt;&lt;input id=&quot;dmc-show-spectrum&quot; type=&quot;checkbox&quot;&gt; Show global 1D spectra instead of PV diagrams&lt;/label&gt;
+
   &lt;div class=&quot;viz-controls&quot;&gt;
     &lt;label class=&quot;form-label&quot; for=&quot;dmc-spatial-disk&quot;&gt;
       Disk spatial resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-spatial-disk-value&quot;&gt;0.35&lt;/span&gt; kpc&lt;/span&gt;
@@ -928,16 +944,6 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;span&gt;&lt;i class=&quot;dmc-swatch dmc-m1&quot;&gt;&lt;/i&gt;Moment 1: bwr&lt;/span&gt;
     &lt;span&gt;&lt;i class=&quot;dmc-swatch dmc-pv&quot;&gt;&lt;/i&gt;PV: Greys&lt;/span&gt;
   &lt;/div&gt;
-  &lt;label class=&quot;dmc-spectrum-toggle&quot;&gt;&lt;input id=&quot;dmc-show-spectrum&quot; type=&quot;checkbox&quot;&gt; Show global 1D spectra instead of PV diagrams&lt;/label&gt;
-
-  &lt;details class=&quot;dmc-assumptions&quot; open&gt;
-    &lt;summary&gt;Model assumptions&lt;/summary&gt;
-    &lt;div class=&quot;dmc-assumption-grid&quot;&gt;
-      &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination &lt;span id=&quot;dmc-inc-assumption&quot;&gt;55&lt;/span&gt;°; &lt;span id=&quot;dmc-curve-assumption&quot;&gt;pure-disk&lt;/span&gt; rotation curve; equivalent disk mass 1.50 × 10&lt;sup&gt;10&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;; bulge mass &lt;span id=&quot;dmc-bulge-mass-assumption&quot;&gt;3.00 × 10&lt;sup&gt;9&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt; (&lt;span id=&quot;dmc-bulge-fraction-assumption&quot;&gt;20.0%&lt;/span&gt; of the disk); SMBH mass &lt;span id=&quot;dmc-bh-mass-assumption&quot;&gt;1.50 × 10&lt;sup&gt;8&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt; (&lt;span id=&quot;dmc-bh-fraction-assumption&quot;&gt;1.00%&lt;/span&gt; of the disk); intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
-      &lt;p&gt;&lt;strong&gt;Merger:&lt;/strong&gt; two offset Gaussian components separated by &lt;span id=&quot;dmc-separation-assumption&quot;&gt;0.88&lt;/span&gt; kpc in projection, with a tunable velocity separation, mild internal shear, and a faint connecting component.&lt;/p&gt;
-      &lt;p&gt;&lt;strong&gt;Resolution:&lt;/strong&gt; circular Gaussian spatial FWHM and Gaussian spectral FWHM; spatial pixels are FWHM/3, the disk centre is registered to a pixel, and every panel retains a fixed ±1.5 kpc field of view. PV and spectral velocity axes expand automatically when required. Disk and merger can be synchronized or varied independently.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/details&gt;
 
   &lt;div class=&quot;dmc-plot-grid&quot;&gt;
     &lt;div class=&quot;dmc-row-heading&quot;&gt;
@@ -1024,6 +1030,24 @@ html&gt;body{padding:0}&lt;/style&gt;
     border: 1px solid #8a8a8a;
     border-radius: 6px;
     background: #f4f4f4;
+  }
+  #disk-merger-cube .dmc-top-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    margin: 0 2px 8px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  #disk-merger-cube .dmc-top-nav a {
+    color: #134e9b;
+    text-decoration: none;
+    border-bottom: 2px solid #134e9b;
+  }
+  #disk-merger-cube .dmc-top-nav a:hover,
+  #disk-merger-cube .dmc-top-nav a:focus-visible {
+    color: #8f001e;
+    border-bottom-color: #8f001e;
   }
   #disk-merger-cube .form-label {
     min-width: 0;
@@ -1464,7 +1488,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     return Math.sqrt(disk ** 2 + bulge2 + bh2);
   }
 
-  function diskVelocityExtent(inclination, curveType, bulgeMass, blackHoleMass, spectralFwhm) {
+  function maximumProjectedDiskSpeed(inclination, curveType, bulgeMass, blackHoleMass) {
     let maximumProjectedSpeed = 0;
     // Sample the emitting disk, including the unresolved central 25 pc used
     // by the SMBH softening prescription.
@@ -1475,8 +1499,24 @@ html&gt;body{padding:0}&lt;/style&gt;
         rotationSpeed(radius, curveType, bulgeMass, blackHoleMass) * Math.sin(inclination)
       );
     }
+    return maximumProjectedSpeed;
+  }
+
+  function diskVelocityExtent(inclination, curveType, bulgeMass, blackHoleMass, spectralFwhm) {
+    const maximumProjectedSpeed = maximumProjectedDiskSpeed(
+      inclination, curveType, bulgeMass, blackHoleMass
+    );
     // Preserve essentially all intrinsic and instrumental Gaussian line flux.
     return maximumProjectedSpeed + 5 * sigma + 3 * spectralFwhm / 2.355;
+  }
+
+  function diskVisibleVelocityLimit(inclination, curveType, bulgeMass, blackHoleMass) {
+    const maximumProjectedSpeed = maximumProjectedDiskSpeed(
+      inclination, curveType, bulgeMass, blackHoleMass
+    );
+    // The displayed disk range follows only the intrinsic model. It therefore
+    // remains fixed when either spatial or spectral resolution is changed.
+    return Math.max(DISPLAY_VMAX, Math.ceil((maximumProjectedSpeed + 2 * sigma) / 50) * 50);
   }
 
   function mergerVelocityExtent(deltaV, spectralFwhm) {
@@ -1848,27 +1888,24 @@ html&gt;body{padding:0}&lt;/style&gt;
       ctx.strokeStyle = &#x27;#00a6d6&#x27;;
       ctx.lineWidth = 2.5;
       ctx.setLineDash([7, 5]);
-      ctx.beginPath();
-      let branchStarted = false;
-      for (let ix = 0; ix &lt; NX; ix++) {
-        const x = (ix - (NX - 1) / 2) * dx;
-        // At the exact centre the projected side is undefined for a
-        // Keplerian rise. Do not assign it artificially to the receding side;
-        // leave a break between the symmetric approaching/receding branches.
-        if (Math.abs(x) &lt; 1e-10) {
-          branchStarted = false;
-          continue;
+      const centralRadius = 0.025;
+      const samplesPerBranch = 160;
+      for (const side of [-1, 1]) {
+        ctx.beginPath();
+        for (let k = 0; k &lt;= samplesPerBranch; k++) {
+          const fraction = k / samplesPerBranch;
+          const radius = side &lt; 0
+            ? plotRadius - fraction * (plotRadius - centralRadius)
+            : centralRadius + fraction * (plotRadius - centralRadius);
+          const x = side * radius;
+          const velocity = side * intrinsicCurve(radius);
+          const y = top + (plotVmax - velocity) / (2 * plotVmax) * ph;
+          const px = left + (x + plotRadius) / (2 * plotRadius) * pw;
+          if (k === 0) ctx.moveTo(px, y);
+          else ctx.lineTo(px, y);
         }
-        const velocity = Math.sign(x) * intrinsicCurve(Math.abs(x));
-        const y = top + (plotVmax - velocity) / (2 * plotVmax) * ph;
-        const px = left + (x + plotRadius) / (2 * plotRadius) * pw;
-        if (!branchStarted) {
-          ctx.moveTo(px, y);
-          branchStarted = true;
-        }
-        else ctx.lineTo(px, y);
+        ctx.stroke();
       }
-      ctx.stroke();
       ctx.restore();
     }
     ctx.restore();
@@ -1944,6 +1981,9 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
 
   let renderTimer;
+  let diskCache = null;
+  let mergerCache = null;
+  let lastShowSpectrum = null;
   function spatialFwhm(input) {
     return Number(input.value);
   }
@@ -1989,63 +2029,91 @@ html&gt;body{padding:0}&lt;/style&gt;
     mergerRatio.textContent = `Disk-fit V/σ ≈ ${(inferredV / sigma).toFixed(1)}`;
 
     const colors = palette();
+    const diskKey = JSON.stringify([
+      inclinationDeg, diskBeam, diskVelocityResolution, curveType,
+      bulgeMassInput.value, bhMassInput.value
+    ]);
+    const mergerKey = JSON.stringify([
+      mergerBeam, mergerVelocityResolution, deltaV, mergerSeparation
+    ]);
+    const diskChanged = !diskCache || diskCache.key !== diskKey;
+    const mergerChanged = !mergerCache || mergerCache.key !== mergerKey;
+    const displayModeChanged = lastShowSpectrum !== showSpectrum;
     const diskSpectralExtent = diskVelocityExtent(
       inclination, curveType, bulgeMass, blackHoleMass, diskVelocityResolution
     );
     const mergerSpectralExtent = mergerVelocityExtent(deltaV, mergerVelocityResolution);
-    const diskVisibleVmax = visibleVelocityLimit(diskSpectralExtent, diskVelocityResolution);
+    const diskVisibleVmax = diskVisibleVelocityLimit(
+      inclination, curveType, bulgeMass, blackHoleMass
+    );
     const mergerVisibleVmax = visibleVelocityLimit(mergerSpectralExtent, mergerVelocityResolution);
-    setSampling(diskBeam, diskVelocityResolution, diskSpectralExtent);
-    const diskCube = convolveSpectral(
-      convolveSpatial(buildCube(&#x27;disk&#x27;, deltaV, inclination, curveType, mergerSeparation, bulgeMass, blackHoleMass), diskBeam),
-      diskVelocityResolution
-    );
-    const diskMom = moments(diskCube);
-    const diskPV = pvDiagram(diskCube);
-    const diskSpectrum = showSpectrum ? globalSpectrum(diskCube) : null;
-
-    setSampling(mergerBeam, mergerVelocityResolution, mergerSpectralExtent);
-    const mergerCube = convolveSpectral(
-      convolveSpatial(buildCube(&#x27;merger&#x27;, deltaV, inclination, curveType, mergerSeparation, bulgeMass, blackHoleMass), mergerBeam),
-      mergerVelocityResolution
-    );
-    const mergerMom = moments(mergerCube);
-    const mergerPV = pvDiagram(mergerCube);
-    const mergerSpectrum = showSpectrum ? globalSpectrum(mergerCube) : null;
-
-    setSampling(diskBeam, diskVelocityResolution, diskSpectralExtent);
-    drawMap(document.getElementById(&#x27;dmc-disk-m0&#x27;), diskMom, &#x27;m0&#x27;, colors, diskBeam, diskPlotRadius);
-    drawMap(document.getElementById(&#x27;dmc-disk-m1&#x27;), diskMom, &#x27;m1&#x27;, colors, diskBeam, diskPlotRadius);
-    const diskThirdCanvas = document.getElementById(&#x27;dmc-disk-pv&#x27;);
-    if (showSpectrum) {
-      drawSpectrum(diskThirdCanvas, diskSpectrum, colors, &#x27;#006f9e&#x27;, diskVisibleVmax);
-      diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the rotating disk&#x27;);
-      diskThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
-    } else {
-      drawPV(
-        diskThirdCanvas,
-        diskPV,
-        colors,
-        radius =&gt; rotationSpeed(radius, curveType, bulgeMass, blackHoleMass) * Math.sin(inclination),
-        diskPlotRadius,
-        diskVisibleVmax
+    if (diskChanged) {
+      setSampling(diskBeam, diskVelocityResolution, diskSpectralExtent);
+      const cube = convolveSpectral(
+        convolveSpatial(buildCube(&#x27;disk&#x27;, deltaV, inclination, curveType, mergerSeparation, bulgeMass, blackHoleMass), diskBeam),
+        diskVelocityResolution
       );
-      diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a rotating disk&#x27;);
-      diskThirdCaption.textContent = &#x27;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&#x27;;
+      diskCache = {
+        key: diskKey,
+        moment: moments(cube),
+        pv: pvDiagram(cube),
+        spectrum: globalSpectrum(cube)
+      };
     }
-    setSampling(mergerBeam, mergerVelocityResolution, mergerSpectralExtent);
-    drawMap(document.getElementById(&#x27;dmc-merger-m0&#x27;), mergerMom, &#x27;m0&#x27;, colors, mergerBeam, mergerPlotRadius);
-    drawMap(document.getElementById(&#x27;dmc-merger-m1&#x27;), mergerMom, &#x27;m1&#x27;, colors, mergerBeam, mergerPlotRadius);
-    const mergerThirdCanvas = document.getElementById(&#x27;dmc-merger-pv&#x27;);
-    if (showSpectrum) {
-      drawSpectrum(mergerThirdCanvas, mergerSpectrum, colors, &#x27;#9e0022&#x27;, mergerVisibleVmax);
-      mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the two-component merger&#x27;);
-      mergerThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
-    } else {
-      drawPV(mergerThirdCanvas, mergerPV, colors, null, mergerPlotRadius, mergerVisibleVmax);
-      mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a two-component merger&#x27;);
-      mergerThirdCaption.textContent = &#x27;Major-axis PV · blended components; black: intensity contours&#x27;;
+
+    if (mergerChanged) {
+      setSampling(mergerBeam, mergerVelocityResolution, mergerSpectralExtent);
+      const cube = convolveSpectral(
+        convolveSpatial(buildCube(&#x27;merger&#x27;, deltaV, inclination, curveType, mergerSeparation, bulgeMass, blackHoleMass), mergerBeam),
+        mergerVelocityResolution
+      );
+      mergerCache = {
+        key: mergerKey,
+        moment: moments(cube),
+        pv: pvDiagram(cube),
+        spectrum: globalSpectrum(cube)
+      };
     }
+
+    if (diskChanged || displayModeChanged) {
+      setSampling(diskBeam, diskVelocityResolution, diskSpectralExtent);
+      drawMap(document.getElementById(&#x27;dmc-disk-m0&#x27;), diskCache.moment, &#x27;m0&#x27;, colors, diskBeam, diskPlotRadius);
+      drawMap(document.getElementById(&#x27;dmc-disk-m1&#x27;), diskCache.moment, &#x27;m1&#x27;, colors, diskBeam, diskPlotRadius);
+      const diskThirdCanvas = document.getElementById(&#x27;dmc-disk-pv&#x27;);
+      if (showSpectrum) {
+        drawSpectrum(diskThirdCanvas, diskCache.spectrum, colors, &#x27;#006f9e&#x27;, diskVisibleVmax);
+        diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the rotating disk&#x27;);
+        diskThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
+      } else {
+        drawPV(
+          diskThirdCanvas,
+          diskCache.pv,
+          colors,
+          radius =&gt; rotationSpeed(radius, curveType, bulgeMass, blackHoleMass) * Math.sin(inclination),
+          diskPlotRadius,
+          diskVisibleVmax
+        );
+        diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a rotating disk&#x27;);
+        diskThirdCaption.textContent = &#x27;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&#x27;;
+      }
+    }
+
+    if (mergerChanged || displayModeChanged) {
+      setSampling(mergerBeam, mergerVelocityResolution, mergerSpectralExtent);
+      drawMap(document.getElementById(&#x27;dmc-merger-m0&#x27;), mergerCache.moment, &#x27;m0&#x27;, colors, mergerBeam, mergerPlotRadius);
+      drawMap(document.getElementById(&#x27;dmc-merger-m1&#x27;), mergerCache.moment, &#x27;m1&#x27;, colors, mergerBeam, mergerPlotRadius);
+      const mergerThirdCanvas = document.getElementById(&#x27;dmc-merger-pv&#x27;);
+      if (showSpectrum) {
+        drawSpectrum(mergerThirdCanvas, mergerCache.spectrum, colors, &#x27;#9e0022&#x27;, mergerVisibleVmax);
+        mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the two-component merger&#x27;);
+        mergerThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
+      } else {
+        drawPV(mergerThirdCanvas, mergerCache.pv, colors, null, mergerPlotRadius, mergerVisibleVmax);
+        mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a two-component merger&#x27;);
+        mergerThirdCaption.textContent = &#x27;Major-axis PV · blended components; black: intensity contours&#x27;;
+      }
+    }
+    lastShowSpectrum = showSpectrum;
 
     // Compare the centre separation with the beam-broadened component size,
     // and the velocity separation with the spectrally broadened line width.

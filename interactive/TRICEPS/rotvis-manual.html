@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RotVis user manual</title>
+  <meta name="description" content="User manual for RotVis, an interactive comparison of a rotating disk and a two-component merger in spectral-line observations.">
+  <style>
+    :root { color-scheme: light; --ink:#171717; --muted:#595959; --blue:#134e9b; --red:#8f001e; --line:#c8c8c8; --soft:#f4f4f4; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:#fff; font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .page { width:min(920px, calc(100% - 32px)); margin:0 auto; padding:18px 0 56px; }
+    nav { display:flex; justify-content:space-between; align-items:center; gap:16px; padding-bottom:14px; border-bottom:1px solid var(--line); }
+    nav div { display:flex; flex-wrap:wrap; gap:18px; }
+    a { color:var(--blue); text-decoration-thickness:1.5px; text-underline-offset:3px; }
+    a:hover, a:focus-visible { color:var(--red); }
+    .brand { text-decoration:none; font-weight:700; font-size:20px; }
+    header { padding:34px 0 22px; }
+    h1 { margin:0 0 8px; font-size:clamp(32px,6vw,52px); line-height:1.08; }
+    h2 { margin:36px 0 10px; padding-bottom:5px; border-bottom:1px solid var(--line); font-size:25px; }
+    h3 { margin:23px 0 6px; font-size:19px; }
+    p, ul, ol { margin:8px 0 14px; }
+    li + li { margin-top:5px; }
+    .lead { max-width:760px; color:var(--muted); font-size:20px; }
+    .quick { padding:16px 20px; background:var(--soft); border-left:4px solid var(--blue); }
+    .quick h2 { margin-top:0; border:0; padding:0; }
+    table { width:100%; border-collapse:collapse; margin:12px 0 20px; }
+    th, td { padding:10px 9px; vertical-align:top; border-bottom:1px solid var(--line); text-align:left; }
+    th { background:var(--soft); }
+    code { padding:1px 4px; background:var(--soft); font-size:.92em; }
+    .note { padding:12px 16px; border:1px solid var(--line); background:#fafafa; }
+    footer { margin-top:42px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:15px; }
+    @media (max-width:620px) {
+      nav { align-items:flex-start; }
+      nav div { justify-content:flex-end; }
+      table, tbody, tr, th, td { display:block; }
+      thead { position:absolute; clip:rect(0 0 0 0); width:1px; height:1px; overflow:hidden; }
+      td { padding:8px 4px; }
+      td::before { content:attr(data-label); display:block; font-weight:700; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav aria-label="RotVis navigation">
+      <a class="brand" href="/interactive/TRICEPS/disk-merger-cube.html">RotVis</a>
+      <div><a href="/">Home</a><a href="/interactive/TRICEPS/disk-merger-cube.html">Open the tool</a></div>
+    </nav>
+
+    <header>
+      <h1>RotVis user manual</h1>
+      <p class="lead">RotVis is a toy forward-modeling tool for exploring how a rotating disk and a two-component merger may appear in spatially and spectrally convolved emission-line observations. Hope it would be helpful if you are working on galaxy kinematics with low resolution data, and if you are worried about how merger can mimic a rotating disk, leading to wrong interpretations.</p>
+    </header>
+
+    <section class="quick">
+      <h2>Quick start</h2>
+      <ol>
+        <li>Choose a disk inclination and rotation curve shape.</li>
+        <li>Change the spatial and velocity resolutions to see beam and spectral smearing.</li>
+        <li>Adjust the merger separation in position and velocity.</li>
+        <li>Compare moment 0, moment 1, and the major-axis PV diagram.</li>
+        <li>Switch from PV diagrams to global 1D spectra when you want to inspect unresolved line profiles.</li>
+      </ol>
+    </section>
+
+    <h2>What the panels show</h2>
+    <table>
+      <thead><tr><th>Panel</th><th>       </th><th>What to inspect</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Panel">Moment 0</td><td data-label="Meaning">Integrated intensity</td><td data-label="What to inspect">One peak versus two peaks? Elongation? Bridges? </td></tr>
+        <tr><td data-label="Panel">Moment 1</td><td data-label="Meaning">Intensity-weighted line-of-sight velocity</td><td data-label="What to inspect">Smooth gradients? Twists? Discontinuities? The thick systemic-velocity contour (V=0)?</td></tr>
+        <tr><td data-label="Panel">PV diagram</td><td data-label="Meaning">Position-velocity diagram extracted along the kinematic major axis</td><td data-label="What to inspect">Symmetry? Multiple components? Line broadening? Effects of beam and spectral smearing? The Keplerian decline of the SMBH? Whether the merger produces a disk-like pattern?</td></tr>
+        <tr><td data-label="Panel">Global spectrum</td><td data-label="Meaning">Flux density integrated within the whole field of view</td><td data-label="What to inspect">Single-, double- or asymmetric line profiles? Spatial convolution conserves the flux in principle, but it can dilute the emission to outside of the field of view, and then change the spectrum.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Disk controls</h2>
+    <h3>Spatial resolution</h3>
+    <p>The circular Gaussian beam is specified by its FWHM in kpc. The spatial pixel size is one third of the selected FWHM. The field of view remains fixed at ±1.5 kpc and the brightest intrinsic disk pixel is registered at the centre.</p>
+
+    <h3>Inclination</h3>
+    <p>The inclination ranges from 1° (nearly face-on) to 89° (nearly edge-on). Projected rotation scales approximately as <em>V</em><sub>rot</sub> sin(<em>i</em>), while the projected minor axis contracts by cos(<em>i</em>).</p>
+
+    <h3>Velocity resolution</h3>
+    <p>The selected FWHM defines both the Gaussian spectral response and the velocity-channel spacing. The internal velocity coverage expands when necessary so that high-velocity flux is not discarded.</p>
+
+    <h3>Rotation-curve families</h3>
+    <ul>
+      <li><strong>Pure disk:</strong> an empirical rising-to-flat curve with asymptotic speed 220 km s<sup>−1</sup> and turnover radius 0.35 kpc.</li>
+      <li><strong>Bulge + disk:</strong> adds a compact Hernquist-like bulge with scale radius 0.25 kpc. Its mass is adjustable.</li>
+      <li><strong>SMBH + bulge + disk:</strong> adds a central point-mass contribution softened inside 0.025 kpc. Both bulge and SMBH masses are adjustable.</li>
+    </ul>
+    <p>The equivalent exponential-disk mass is approximately 1.50 × 10<sup>10</sup> M<sub>☉</sub>, inferred by matching the adopted disk rotation speed near 2.2 scale lengths. The displayed bulge-to-disk and SMBH-to-disk fractions update with their sliders.</p>
+
+    <h3>Dashed PV curve</h3>
+    <p>The cyan dashed line in the PV diagram is the intrinsic projected rotation curve before spatial or spectral convolution.</p>
+
+    <h2>Merger controls and geometry</h2>
+    <p>The merger contains two elliptical Gaussian components with unequal sizes and amplitudes (peak 1 : 0.82). Their centres lie along an axis offset slightly in y rather than along the global x axis. Each component has a mild internal velocity shear, and a faint broader bridge connects them.</p>
+    <ul>
+      <li><strong>Spatial separation:</strong> projected center-to-center distance, adjustable from 0.20 to 1.60 kpc.</li>
+      <li><strong>Velocity separation:</strong> difference between the component systemic velocities, adjustable from 120 to 420 km s<sup>−1</sup>.</li>
+      <li><strong>Spatial and velocity resolution:</strong> can be synchronized with the disk or controlled independently.</li>
+    </ul>
+    <!--
+    <p>When synchronization is off, changing disk resolution does not recompute or redraw the merger. This makes repeated exploration faster.</p>-->
+    <!--
+    <h2>Forward-modeling procedure</h2>
+    <ol>
+      <li>Assign intrinsic surface brightness and a Gaussian line profile to each spatial pixel.</li>
+      <li>Set the line centre from the disk projected velocity or the merger component velocity and local shear.</li>
+      <li>Convolve every velocity channel spatially with a circular Gaussian beam.</li>
+      <li>Convolve every spatial pixel spectrally with a Gaussian response.</li>
+      <li>Calculate moment maps, the major-axis PV diagram and the spatially integrated spectrum from the resulting 3D cube.</li>
+    </ol>
+    -->
+
+    <h2>How a merger mimic a disk :(</h2>
+    <p>RotVis demonstrates a degeneracy: spatial and spectral blending can turn two dynamically distinct components into a continuous red-to-blue moment-1 gradient. A high disk-fit <em>V</em>/σ therefore does not by itself prove that the source is an equilibrium rotating disk.</p>
+    <!--
+    <p>The message below the plots changes according to whether the merger components are resolved in position, velocity, both or neither. Treat this as a qualitative guide rather than a classification statistic.</p>
+    -->
+
+    <div class="note">
+      <strong>Limitation.</strong> RotVis is a pedagogical toy model, not a replacement for 3D fitting, residual inspection or merger classification. It does not currently include noise, asymmetric beams, warps, radial flows, clumpy disk brightness, radiative transfer, dark matter, self-consistent interacting orbits or a telescope-specific response.
+    </div>
+    
+    <!--
+    <h2>Suggested workflow for observations</h2>
+    <ol>
+      <li>Set spatial and velocity resolution close to the observed cube.</li>
+      <li>Explore inclination and plausible disk mass components.</li>
+      <li>Vary merger separations around the observed morphological and velocity scales.</li>
+      <li>Compare all products together; do not judge from moment 1 alone.</li>
+      <li>Use channel maps, residual cubes and independent morphological constraints for the real scientific inference.</li>
+    </ol>
+    -->
+
+    <footer>RotVis · Powered by ChatGPT, guided by human wisdom. <a href="/interactive/TRICEPS/disk-merger-cube.html">Return to the interactive tool</a>.</footer>
+  </main>
+</body>
+</html>
