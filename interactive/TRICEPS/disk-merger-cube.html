@@ -1849,12 +1849,23 @@ html&gt;body{padding:0}&lt;/style&gt;
       ctx.lineWidth = 2.5;
       ctx.setLineDash([7, 5]);
       ctx.beginPath();
+      let branchStarted = false;
       for (let ix = 0; ix &lt; NX; ix++) {
         const x = (ix - (NX - 1) / 2) * dx;
-        const velocity = Math.sign(x || 1) * intrinsicCurve(Math.abs(x));
+        // At the exact centre the projected side is undefined for a
+        // Keplerian rise. Do not assign it artificially to the receding side;
+        // leave a break between the symmetric approaching/receding branches.
+        if (Math.abs(x) &lt; 1e-10) {
+          branchStarted = false;
+          continue;
+        }
+        const velocity = Math.sign(x) * intrinsicCurve(Math.abs(x));
         const y = top + (plotVmax - velocity) / (2 * plotVmax) * ph;
         const px = left + (x + plotRadius) / (2 * plotRadius) * pw;
-        if (ix === 0) ctx.moveTo(px, y);
+        if (!branchStarted) {
+          ctx.moveTo(px, y);
+          branchStarted = true;
+        }
         else ctx.lineTo(px, y);
       }
       ctx.stroke();
