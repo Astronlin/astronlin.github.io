@@ -95,8 +95,12 @@
     light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
   );
   --font-size-base: var(--font-text-md-size, 14px);
-  --red: light-dark(rgb(186 38 35), rgb(250 66 62));
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
   --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
   --viz-series-1: var(--primary);
   --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
   --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
@@ -909,6 +913,14 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;span class=&quot;dmc-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;▼&lt;/span&gt;
       &lt;/span&gt;
     &lt;/label&gt;
+    &lt;label class=&quot;form-label dmc-bulge-control&quot; id=&quot;dmc-bulge-control&quot; for=&quot;dmc-bulge-logmass&quot; hidden&gt;
+      Bulge mass: &lt;span class=&quot;dmc-value-unit&quot; id=&quot;dmc-bulge-mass-value&quot;&gt;3.00 × 10&lt;sup&gt;9&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt;
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-bulge-logmass&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease bulge mass&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-bulge-logmass&quot; type=&quot;range&quot; min=&quot;8&quot; max=&quot;11&quot; step=&quot;0.05&quot; value=&quot;9.4771&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-bulge-logmass&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase bulge mass&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label dmc-bh-control&quot; id=&quot;dmc-bh-control&quot; for=&quot;dmc-bh-logmass&quot; hidden&gt;
+      SMBH mass: &lt;span class=&quot;dmc-value-unit&quot; id=&quot;dmc-bh-mass-value&quot;&gt;1.50 × 10&lt;sup&gt;8&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt;
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-bh-logmass&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease supermassive black-hole mass&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-bh-logmass&quot; type=&quot;range&quot; min=&quot;6&quot; max=&quot;10&quot; step=&quot;0.05&quot; value=&quot;8.18&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-bh-logmass&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase supermassive black-hole mass&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+    &lt;/label&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;dmc-legend text-small&quot; aria-hidden=&quot;true&quot;&gt;
@@ -921,9 +933,9 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;details class=&quot;dmc-assumptions&quot; open&gt;
     &lt;summary&gt;Model assumptions&lt;/summary&gt;
     &lt;div class=&quot;dmc-assumption-grid&quot;&gt;
-      &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination &lt;span id=&quot;dmc-inc-assumption&quot;&gt;55&lt;/span&gt;°; &lt;span id=&quot;dmc-curve-assumption&quot;&gt;pure-disk&lt;/span&gt; rotation curve; equivalent disk mass 1.50 × 10¹⁰ M☉; bulge mass 3.00 × 10⁹ M☉ (20% of the disk); SMBH mass 1.50 × 10⁸ M☉ (1% of the disk); intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination &lt;span id=&quot;dmc-inc-assumption&quot;&gt;55&lt;/span&gt;°; &lt;span id=&quot;dmc-curve-assumption&quot;&gt;pure-disk&lt;/span&gt; rotation curve; equivalent disk mass 1.50 × 10&lt;sup&gt;10&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;; bulge mass &lt;span id=&quot;dmc-bulge-mass-assumption&quot;&gt;3.00 × 10&lt;sup&gt;9&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt; (&lt;span id=&quot;dmc-bulge-fraction-assumption&quot;&gt;20.0%&lt;/span&gt; of the disk); SMBH mass &lt;span id=&quot;dmc-bh-mass-assumption&quot;&gt;1.50 × 10&lt;sup&gt;8&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt; (&lt;span id=&quot;dmc-bh-fraction-assumption&quot;&gt;1.00%&lt;/span&gt; of the disk); intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
       &lt;p&gt;&lt;strong&gt;Merger:&lt;/strong&gt; two offset Gaussian components separated by &lt;span id=&quot;dmc-separation-assumption&quot;&gt;0.88&lt;/span&gt; kpc in projection, with a tunable velocity separation, mild internal shear, and a faint connecting component.&lt;/p&gt;
-      &lt;p&gt;&lt;strong&gt;Resolution:&lt;/strong&gt; circular Gaussian spatial FWHM and Gaussian spectral FWHM; spatial pixels are FWHM/3, the disk centre is registered to a pixel, and every panel retains a fixed ±1.5 kpc field of view. Disk and merger can be synchronized or varied independently.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Resolution:&lt;/strong&gt; circular Gaussian spatial FWHM and Gaussian spectral FWHM; spatial pixels are FWHM/3, the disk centre is registered to a pixel, and every panel retains a fixed ±1.5 kpc field of view. PV and spectral velocity axes expand automatically when required. Disk and merger can be synchronized or varied independently.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/details&gt;
 
@@ -1017,6 +1029,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     min-width: 0;
     font-weight: 600;
   }
+  #disk-merger-cube .dmc-bulge-control[hidden],
+  #disk-merger-cube .dmc-bh-control[hidden] { display: none !important; }
   #disk-merger-cube .viz-controls &gt; .form-label {
     display: block;
     margin-bottom: 0;
@@ -1270,6 +1284,16 @@ html&gt;body{padding:0}&lt;/style&gt;
   const syncSpatialInput = document.getElementById(&#x27;dmc-sync-spatial&#x27;);
   const syncVelocityInput = document.getElementById(&#x27;dmc-sync-velocity&#x27;);
   const curveInput = document.getElementById(&#x27;dmc-curve&#x27;);
+  const bulgeControl = document.getElementById(&#x27;dmc-bulge-control&#x27;);
+  const bulgeMassInput = document.getElementById(&#x27;dmc-bulge-logmass&#x27;);
+  const bulgeMassValue = document.getElementById(&#x27;dmc-bulge-mass-value&#x27;);
+  const bulgeMassAssumption = document.getElementById(&#x27;dmc-bulge-mass-assumption&#x27;);
+  const bulgeFractionAssumption = document.getElementById(&#x27;dmc-bulge-fraction-assumption&#x27;);
+  const bhControl = document.getElementById(&#x27;dmc-bh-control&#x27;);
+  const bhMassInput = document.getElementById(&#x27;dmc-bh-logmass&#x27;);
+  const bhMassValue = document.getElementById(&#x27;dmc-bh-mass-value&#x27;);
+  const bhMassAssumption = document.getElementById(&#x27;dmc-bh-mass-assumption&#x27;);
+  const bhFractionAssumption = document.getElementById(&#x27;dmc-bh-fraction-assumption&#x27;);
   const dvInput = document.getElementById(&#x27;dmc-dv&#x27;);
   const separationInput = document.getElementById(&#x27;dmc-separation&#x27;);
   const showSpectrumInput = document.getElementById(&#x27;dmc-show-spectrum&#x27;);
@@ -1288,11 +1312,12 @@ html&gt;body{padding:0}&lt;/style&gt;
   const mergerThirdCaption = document.getElementById(&#x27;dmc-merger-third-caption&#x27;);
   const note = document.getElementById(&#x27;dmc-note&#x27;);
 
-  const XMAX = 1.5, VMAX = 350;
+  const XMAX = 1.5, DISPLAY_VMAX = 350;
   let gridRadius = XMAX;
   let NX = 34, NY = 34, NV = 235;
   let dx = 2 * XMAX / (NX - 1);
   let dvChan = 3;
+  let cubeVmax = DISPLAY_VMAX;
   const sigma = 35;
   const G = 4.3009e-6; // kpc (km s^-1)^2 Msun^-1
   const DISK_SCALE_LENGTH = 0.55;
@@ -1305,15 +1330,55 @@ html&gt;body{padding:0}&lt;/style&gt;
   const BULGE_MASS = 0.20 * DISK_MASS;
   const BH_MASS = 0.01 * DISK_MASS;
 
-  function setSampling(spatialFwhm, velocityFwhm) {
+  function formatMassHTML(mass) {
+    const exponent = Math.floor(Math.log10(mass));
+    const coefficient = mass / 10 ** exponent;
+    return `${coefficient.toFixed(2)} × 10&lt;sup&gt;${exponent}&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;`;
+  }
+
+  function formatMassFraction(mass) {
+    const percent = 100 * mass / DISK_MASS;
+    if (percent &lt; 0.1) return `${percent.toFixed(3)}%`;
+    if (percent &lt; 1) return `${percent.toFixed(2)}%`;
+    return `${percent.toFixed(1)}%`;
+  }
+
+  function updateBlackHoleControl(renderAfter = true) {
+    bhControl.hidden = curveInput.value !== &#x27;bh-bulge-disk&#x27;;
+    const mass = 10 ** Number(bhMassInput.value);
+    const formatted = formatMassHTML(mass);
+    bhMassValue.innerHTML = formatted;
+    bhMassAssumption.innerHTML = formatted;
+    bhFractionAssumption.textContent = formatMassFraction(mass);
+    if (renderAfter) scheduleRender();
+  }
+
+  function updateBulgeControl(renderAfter = true) {
+    bulgeControl.hidden = curveInput.value === &#x27;disk&#x27;;
+    const mass = 10 ** Number(bulgeMassInput.value);
+    const formatted = formatMassHTML(mass);
+    bulgeMassValue.innerHTML = formatted;
+    bulgeMassAssumption.innerHTML = formatted;
+    bulgeFractionAssumption.textContent = formatMassFraction(mass);
+    if (renderAfter) scheduleRender();
+  }
+
+  function updateMassControls(renderAfter = true) {
+    updateBulgeControl(false);
+    updateBlackHoleControl(false);
+    if (renderAfter) scheduleRender();
+  }
+
+  function setSampling(spatialFwhm, velocityFwhm, velocityExtent = DISPLAY_VMAX) {
     // Keep an odd-sized, centre-registered grid: the intrinsic disk peak is
     // always sampled at x = y = 0, rather than falling between pixels.
     dx = spatialFwhm / 3;
     dvChan = velocityFwhm;
+    cubeVmax = Math.max(DISPLAY_VMAX, Math.ceil(velocityExtent / dvChan) * dvChan);
     gridRadius = XMAX;
     NX = 2 * Math.ceil(gridRadius / dx) + 1;
     NY = NX;
-    NV = Math.ceil(2 * VMAX / dvChan) + 1;
+    NV = Math.ceil(2 * cubeVmax / dvChan) + 1;
   }
 
   function displayRadius(spatialFwhm) {
@@ -1385,21 +1450,48 @@ html&gt;body{padding:0}&lt;/style&gt;
     return Math.exp(-0.5 * z * z);
   }
 
-  function rotationSpeed(r, curveType) {
+  function rotationSpeed(r, curveType, bulgeMass = BULGE_MASS, blackHoleMass = BH_MASS) {
     const disk = DISK_ASYMPTOTIC_SPEED * (1 - Math.exp(-r / DISK_TURN_RADIUS));
     if (curveType === &#x27;disk&#x27;) return disk;
 
     // Hernquist-like compact bulge contribution.
     const bulgeScale = 0.25;
-    const bulge2 = G * BULGE_MASS * r / (r + bulgeScale) ** 2;
+    const bulge2 = G * bulgeMass * r / (r + bulgeScale) ** 2;
     if (curveType === &#x27;bulge-disk&#x27;) return Math.sqrt(disk ** 2 + bulge2);
 
-    // Central SMBH fixed to 1% of the equivalent exponential-disk mass.
-    const bh2 = G * BH_MASS / Math.max(r, 0.025);
+    // Central SMBH contribution for the selected mass.
+    const bh2 = G * blackHoleMass / Math.max(r, 0.025);
     return Math.sqrt(disk ** 2 + bulge2 + bh2);
   }
 
-  function buildCube(kind, deltaV, inclination, curveType, mergerSeparation) {
+  function diskVelocityExtent(inclination, curveType, bulgeMass, blackHoleMass, spectralFwhm) {
+    let maximumProjectedSpeed = 0;
+    // Sample the emitting disk, including the unresolved central 25 pc used
+    // by the SMBH softening prescription.
+    for (let k = 0; k &lt;= 600; k++) {
+      const radius = 0.025 + k * (3 - 0.025) / 600;
+      maximumProjectedSpeed = Math.max(
+        maximumProjectedSpeed,
+        rotationSpeed(radius, curveType, bulgeMass, blackHoleMass) * Math.sin(inclination)
+      );
+    }
+    // Preserve essentially all intrinsic and instrumental Gaussian line flux.
+    return maximumProjectedSpeed + 5 * sigma + 3 * spectralFwhm / 2.355;
+  }
+
+  function mergerVelocityExtent(deltaV, spectralFwhm) {
+    const internalShearMargin = 70;
+    return Math.abs(deltaV) / 2 + internalShearMargin + 5 * sigma + 3 * spectralFwhm / 2.355;
+  }
+
+  function visibleVelocityLimit(internalExtent, spectralFwhm) {
+    // Show the kinematic signal and roughly two intrinsic Gaussian sigmas,
+    // while retaining a stable ±350 km/s minimum and tidy 50 km/s limits.
+    const usefulExtent = internalExtent - 3 * sigma - 2 * spectralFwhm / 2.355;
+    return Math.max(DISPLAY_VMAX, Math.ceil(usefulExtent / 50) * 50);
+  }
+
+  function buildCube(kind, deltaV, inclination, curveType, mergerSeparation, bulgeMass, blackHoleMass) {
     const cube = new Float32Array(NX * NY * NV);
     for (let iy = 0; iy &lt; NY; iy++) {
       const y = (iy - (NY - 1) / 2) * dx;
@@ -1409,10 +1501,10 @@ html&gt;body{padding:0}&lt;/style&gt;
           const yd = y / Math.cos(inclination);
           const r = Math.sqrt(x * x + yd * yd) + 1e-5;
           const brightness = Math.exp(-r / DISK_SCALE_LENGTH);
-          const vrot = rotationSpeed(r, curveType);
+          const vrot = rotationSpeed(r, curveType, bulgeMass, blackHoleMass);
           const mean = vrot * Math.sin(inclination) * x / r;
           for (let iv = 0; iv &lt; NV; iv++) {
-            const vel = -VMAX + iv * dvChan;
+            const vel = -cubeVmax + iv * dvChan;
             cube[idx(ix, iy, iv)] = brightness * gaussian(vel, mean, sigma);
           }
         } else {
@@ -1430,7 +1522,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             const brightness = c.amp * Math.exp(-0.5 * (rx * rx + ry * ry));
             const localShear = 28 * (x - c.x) / c.sx;
             for (let iv = 0; iv &lt; NV; iv++) {
-              const vel = -VMAX + iv * dvChan;
+              const vel = -cubeVmax + iv * dvChan;
               cube[idx(ix, iy, iv)] += brightness * gaussian(vel, c.vel + localShear, sigma);
             }
           }
@@ -1440,7 +1532,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           const bridge = 0.18 * Math.exp(-0.5 * ((alongBridge / bridgeScale) ** 2 + (acrossBridge / 0.17) ** 2));
           const bridgeVelocity = (deltaV / 2) * Math.max(-1, Math.min(1, alongBridge / halfSeparation));
           for (let iv = 0; iv &lt; NV; iv++) {
-            const vel = -VMAX + iv * dvChan;
+            const vel = -cubeVmax + iv * dvChan;
             cube[idx(ix, iy, iv)] += bridge * gaussian(vel, bridgeVelocity, 55);
           }
         }
@@ -1516,7 +1608,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       let sum = 0, weighted = 0;
       for (let v = 0; v &lt; NV; v++) {
         const value = cube[idx(x, y, v)];
-        const vel = -VMAX + v * dvChan;
+        const vel = -cubeVmax + v * dvChan;
         sum += value;
         weighted += value * vel;
       }
@@ -1534,7 +1626,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       for (let v = 0; v &lt; NV; v++) flux[v] += cube[idx(x, y, v)];
     }
     for (let v = 0; v &lt; NV; v++) max = Math.max(max, flux[v]);
-    return { flux, max, channelWidth: dvChan };
+    return { flux, max, channelWidth: dvChan, velocityMin: -cubeVmax };
   }
 
   function pvDiagram(cube) {
@@ -1550,7 +1642,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       pv[v * NX + x] = sum;
       max = Math.max(max, sum);
     }
-    return { pv, max };
+    return { pv, max, channelWidth: dvChan, velocityMin: -cubeVmax };
   }
 
   function prepareCanvas(canvas, colors) {
@@ -1725,11 +1817,12 @@ html&gt;body{padding:0}&lt;/style&gt;
     drawAxes(g, &#x27;Offset (kpc)&#x27;, &#x27;Offset (kpc)&#x27;, colors, mapBounds, plotRadius, true);
   }
 
-  function drawPV(canvas, pvData, colors, intrinsicCurve = null, plotRadius = XMAX) {
+  function drawPV(canvas, pvData, colors, intrinsicCurve = null, plotRadius = XMAX, plotVmax = DISPLAY_VMAX) {
     const g = prepareCanvas(canvas, colors);
     const { ctx, W, H, left, right, top, bottom } = g;
     const pw = W - left - right, ph = H - top - bottom;
-    const cw = dx / (2 * plotRadius) * pw, ch = ph / NV;
+    const cw = dx / (2 * plotRadius) * pw;
+    const ch = pvData.channelWidth / (2 * plotVmax) * ph;
     ctx.save();
     ctx.beginPath();
     ctx.rect(left, top, pw, ph);
@@ -1738,11 +1831,13 @@ html&gt;body{padding:0}&lt;/style&gt;
       const t = Math.min(1, pvData.pv[v * NX + x] / pvData.max);
       ctx.fillStyle = colors.pv[Math.round(100 * Math.pow(t, 0.55))];
       const xCenter = (x - (NX - 1) / 2) * dx;
-      ctx.fillRect(left + (xCenter - dx / 2 + plotRadius) / (2 * plotRadius) * pw, top + (NV - 1 - v) * ch, cw + 0.6, ch + 0.6);
+      const velocity = pvData.velocityMin + v * pvData.channelWidth;
+      const py = top + (plotVmax - velocity) / (2 * plotVmax) * ph;
+      ctx.fillRect(left + (xCenter - dx / 2 + plotRadius) / (2 * plotRadius) * pw, py - ch / 2, cw + 0.6, ch + 0.6);
     }
     const toCanvas = (x, v) =&gt; [
       left + ((x - (NX - 1) / 2) * dx + plotRadius) / (2 * plotRadius) * pw,
-      top + (NV - 0.5 - v) * ch
+      top + (plotVmax - (pvData.velocityMin + v * pvData.channelWidth)) / (2 * plotVmax) * ph
     ];
     // Fixed fractional levels: identical for disk and merger PV diagrams.
     const intensityLevels = [0.12, 0.25, 0.50, 0.75].map(f =&gt; f * pvData.max);
@@ -1757,7 +1852,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       for (let ix = 0; ix &lt; NX; ix++) {
         const x = (ix - (NX - 1) / 2) * dx;
         const velocity = Math.sign(x || 1) * intrinsicCurve(Math.abs(x));
-        const y = top + (VMAX - velocity) / (2 * VMAX) * ph;
+        const y = top + (plotVmax - velocity) / (2 * plotVmax) * ph;
         const px = left + (x + plotRadius) / (2 * plotRadius) * pw;
         if (ix === 0) ctx.moveTo(px, y);
         else ctx.lineTo(px, y);
@@ -1777,12 +1872,12 @@ html&gt;body{padding:0}&lt;/style&gt;
     ctx.fillStyle = colors.muted;
     ctx.font = `${g.tickFont}px sans-serif`;
     ctx.textAlign = &#x27;right&#x27;;
-    ctx.fillText(&#x27;+350&#x27;, left - 8, top + 8);
+    ctx.fillText(`+${plotVmax}`, left - 8, top + 8);
     ctx.fillText(&#x27;0&#x27;, left - 8, y0 + 8);
-    ctx.fillText(&#x27;-350&#x27;, left - 8, top + ph + 8);
+    ctx.fillText(`-${plotVmax}`, left - 8, top + ph + 8);
   }
 
-  function drawSpectrum(canvas, spectrum, colors, lineColor) {
+  function drawSpectrum(canvas, spectrum, colors, lineColor, plotVmax = DISPLAY_VMAX) {
     const g = prepareCanvas(canvas, colors);
     const { ctx, W, H, left, right, top, bottom } = g;
     const pw = W - left - right, ph = H - top - bottom;
@@ -1802,11 +1897,11 @@ html&gt;body{padding:0}&lt;/style&gt;
     ctx.clip();
     ctx.beginPath();
     for (let v = 0; v &lt; spectrum.flux.length; v++) {
-      const velocity = -VMAX + v * spectrum.channelWidth;
+      const velocity = spectrum.velocityMin + v * spectrum.channelWidth;
       const normalized = spectrum.max &gt; 0 ? spectrum.flux[v] / spectrum.max : 0;
       const py = baseline - normalized * ph * 0.92;
-      const leftEdge = left + (velocity - spectrum.channelWidth / 2 + VMAX) / (2 * VMAX) * pw;
-      const rightEdge = left + (velocity + spectrum.channelWidth / 2 + VMAX) / (2 * VMAX) * pw;
+      const leftEdge = left + (velocity - spectrum.channelWidth / 2 + plotVmax) / (2 * plotVmax) * pw;
+      const rightEdge = left + (velocity + spectrum.channelWidth / 2 + plotVmax) / (2 * plotVmax) * pw;
       if (v === 0) ctx.moveTo(leftEdge, py);
       else ctx.lineTo(leftEdge, py);
       ctx.lineTo(rightEdge, py);
@@ -1829,9 +1924,9 @@ html&gt;body{padding:0}&lt;/style&gt;
     ctx.fillStyle = colors.muted;
     ctx.font = `${g.tickFont}px sans-serif`;
     ctx.textAlign = &#x27;center&#x27;;
-    ctx.fillText(&#x27;-350&#x27;, left, baseline + 27);
+    ctx.fillText(`-${plotVmax}`, left, baseline + 27);
     ctx.fillText(&#x27;0&#x27;, left + pw / 2, baseline + 27);
-    ctx.fillText(&#x27;+350&#x27;, W - right, baseline + 27);
+    ctx.fillText(`+${plotVmax}`, W - right, baseline + 27);
     ctx.textAlign = &#x27;right&#x27;;
     ctx.fillText(&#x27;1&#x27;, left - 8, top + 14);
     ctx.fillText(&#x27;0&#x27;, left - 8, baseline + 7);
@@ -1862,9 +1957,19 @@ html&gt;body{padding:0}&lt;/style&gt;
     const mergerSeparation = Number(separationInput.value);
     const showSpectrum = showSpectrumInput.checked;
     const curveType = curveInput.value;
+    const bulgeMass = 10 ** Number(bulgeMassInput.value);
+    const blackHoleMass = 10 ** Number(bhMassInput.value);
     incValue.textContent = inclinationDeg.toFixed(0);
     incAssumption.textContent = inclinationDeg.toFixed(0);
     curveAssumption.textContent = curveInput.options[curveInput.selectedIndex].text.toLowerCase();
+    const formattedBulgeMass = formatMassHTML(bulgeMass);
+    bulgeMassValue.innerHTML = formattedBulgeMass;
+    bulgeMassAssumption.innerHTML = formattedBulgeMass;
+    bulgeFractionAssumption.textContent = formatMassFraction(bulgeMass);
+    const formattedBlackHoleMass = formatMassHTML(blackHoleMass);
+    bhMassValue.innerHTML = formattedBlackHoleMass;
+    bhMassAssumption.innerHTML = formattedBlackHoleMass;
+    bhFractionAssumption.textContent = formatMassFraction(blackHoleMass);
     updateResolutionLabels();
     dvValue.textContent = deltaV.toFixed(0);
     separationValue.textContent = mergerSeparation.toFixed(2);
@@ -1873,30 +1978,36 @@ html&gt;body{padding:0}&lt;/style&gt;
     mergerRatio.textContent = `Disk-fit V/σ ≈ ${(inferredV / sigma).toFixed(1)}`;
 
     const colors = palette();
-    setSampling(diskBeam, diskVelocityResolution);
+    const diskSpectralExtent = diskVelocityExtent(
+      inclination, curveType, bulgeMass, blackHoleMass, diskVelocityResolution
+    );
+    const mergerSpectralExtent = mergerVelocityExtent(deltaV, mergerVelocityResolution);
+    const diskVisibleVmax = visibleVelocityLimit(diskSpectralExtent, diskVelocityResolution);
+    const mergerVisibleVmax = visibleVelocityLimit(mergerSpectralExtent, mergerVelocityResolution);
+    setSampling(diskBeam, diskVelocityResolution, diskSpectralExtent);
     const diskCube = convolveSpectral(
-      convolveSpatial(buildCube(&#x27;disk&#x27;, deltaV, inclination, curveType, mergerSeparation), diskBeam),
+      convolveSpatial(buildCube(&#x27;disk&#x27;, deltaV, inclination, curveType, mergerSeparation, bulgeMass, blackHoleMass), diskBeam),
       diskVelocityResolution
     );
     const diskMom = moments(diskCube);
     const diskPV = pvDiagram(diskCube);
     const diskSpectrum = showSpectrum ? globalSpectrum(diskCube) : null;
 
-    setSampling(mergerBeam, mergerVelocityResolution);
+    setSampling(mergerBeam, mergerVelocityResolution, mergerSpectralExtent);
     const mergerCube = convolveSpectral(
-      convolveSpatial(buildCube(&#x27;merger&#x27;, deltaV, inclination, curveType, mergerSeparation), mergerBeam),
+      convolveSpatial(buildCube(&#x27;merger&#x27;, deltaV, inclination, curveType, mergerSeparation, bulgeMass, blackHoleMass), mergerBeam),
       mergerVelocityResolution
     );
     const mergerMom = moments(mergerCube);
     const mergerPV = pvDiagram(mergerCube);
     const mergerSpectrum = showSpectrum ? globalSpectrum(mergerCube) : null;
 
-    setSampling(diskBeam, diskVelocityResolution);
+    setSampling(diskBeam, diskVelocityResolution, diskSpectralExtent);
     drawMap(document.getElementById(&#x27;dmc-disk-m0&#x27;), diskMom, &#x27;m0&#x27;, colors, diskBeam, diskPlotRadius);
     drawMap(document.getElementById(&#x27;dmc-disk-m1&#x27;), diskMom, &#x27;m1&#x27;, colors, diskBeam, diskPlotRadius);
     const diskThirdCanvas = document.getElementById(&#x27;dmc-disk-pv&#x27;);
     if (showSpectrum) {
-      drawSpectrum(diskThirdCanvas, diskSpectrum, colors, &#x27;#006f9e&#x27;);
+      drawSpectrum(diskThirdCanvas, diskSpectrum, colors, &#x27;#006f9e&#x27;, diskVisibleVmax);
       diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the rotating disk&#x27;);
       diskThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
     } else {
@@ -1904,22 +2015,23 @@ html&gt;body{padding:0}&lt;/style&gt;
         diskThirdCanvas,
         diskPV,
         colors,
-        radius =&gt; rotationSpeed(radius, curveType) * Math.sin(inclination),
-        diskPlotRadius
+        radius =&gt; rotationSpeed(radius, curveType, bulgeMass, blackHoleMass) * Math.sin(inclination),
+        diskPlotRadius,
+        diskVisibleVmax
       );
       diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a rotating disk&#x27;);
       diskThirdCaption.textContent = &#x27;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&#x27;;
     }
-    setSampling(mergerBeam, mergerVelocityResolution);
+    setSampling(mergerBeam, mergerVelocityResolution, mergerSpectralExtent);
     drawMap(document.getElementById(&#x27;dmc-merger-m0&#x27;), mergerMom, &#x27;m0&#x27;, colors, mergerBeam, mergerPlotRadius);
     drawMap(document.getElementById(&#x27;dmc-merger-m1&#x27;), mergerMom, &#x27;m1&#x27;, colors, mergerBeam, mergerPlotRadius);
     const mergerThirdCanvas = document.getElementById(&#x27;dmc-merger-pv&#x27;);
     if (showSpectrum) {
-      drawSpectrum(mergerThirdCanvas, mergerSpectrum, colors, &#x27;#9e0022&#x27;);
+      drawSpectrum(mergerThirdCanvas, mergerSpectrum, colors, &#x27;#9e0022&#x27;, mergerVisibleVmax);
       mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the two-component merger&#x27;);
       mergerThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
     } else {
-      drawPV(mergerThirdCanvas, mergerPV, colors, null, mergerPlotRadius);
+      drawPV(mergerThirdCanvas, mergerPV, colors, null, mergerPlotRadius, mergerVisibleVmax);
       mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a two-component merger&#x27;);
       mergerThirdCaption.textContent = &#x27;Major-axis PV · blended components; black: intensity contours&#x27;;
     }
@@ -1949,7 +2061,9 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
 
   incInput.addEventListener(&#x27;input&#x27;, scheduleRender);
-  curveInput.addEventListener(&#x27;change&#x27;, scheduleRender);
+  curveInput.addEventListener(&#x27;change&#x27;, updateMassControls);
+  bulgeMassInput.addEventListener(&#x27;input&#x27;, () =&gt; updateBulgeControl(true));
+  bhMassInput.addEventListener(&#x27;input&#x27;, () =&gt; updateBlackHoleControl(true));
   showSpectrumInput.addEventListener(&#x27;change&#x27;, scheduleRender);
   function syncResolution(source, target, syncInput) {
     if (syncInput.checked) target.value = source.value;
@@ -1996,6 +2110,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     });
   });
   updateSyncState(false);
+  updateMassControls(false);
   render();
 })();
 &lt;/script&gt;

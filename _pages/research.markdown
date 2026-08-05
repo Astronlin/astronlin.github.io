@@ -78,8 +78,25 @@ spectrally, producing disk-like moment maps, position--velocity diagrams, and
 an apparently high $V_{\rm rot}/\sigma$. Use the controls below to explore how
 beam smearing and the components' velocity separation affect this degeneracy.
 
-<p> <a href="/interactive/TRICEPS/disk-merger-cube.html" target="_blank" rel="noopener noreferrer" > Open the interactive rotating-disk versus merger comparison ↗ </a> </p>
+<p style="margin:1.5rem 0;text-align:center;">
+  <a
+    href="/interactive/TRICEPS/disk-merger-cube.html"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Open the RotVis interactive rotating-disk versus merger comparison"
+    style="display:inline-flex;width:100%;max-width:760px;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;text-decoration:none;"
+  >
+    <img
+      src="/interactive/TRICEPS/rotvis-logo.png"
+      alt="RotVis"
+      loading="lazy"
+      style="display:block;width:min(100%,540px);height:auto;flex:1 1 440px;min-width:0;"
+    >
+    <span style="display:block;flex:0 0 auto;white-space:nowrap;font-weight:600;">Click to try ↗</span>
+  </a>
+</p>
 
+<!--
 <iframe
   src="/interactive/TRICEPS/disk-merger-cube.html"
   title="Interactive comparison of a rotating disk and a two-component merger"
@@ -89,7 +106,7 @@ beam smearing and the components' velocity separation affect this degeneracy.
   scrolling="no"
   style="display:block;width:100%;height:300px;border:0;margin:1.5rem 0;"
 ></iframe>
-
+-->
 
 
 
