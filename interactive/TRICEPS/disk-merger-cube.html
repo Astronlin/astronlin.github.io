@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src 'self' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>RotVis — rotating disk and merger comparison</title>
-<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:.65rem 1rem 1rem;background:inherit}.rotvis-brand{display:flex;align-items:center;height:58px;margin:0 0 .45rem}.rotvis-brand img{display:block;width:150px;max-height:58px;object-fit:contain}iframe{display:block;width:100%;height:calc(100vh - 5rem);margin:0 auto;border:0}</style>
 </head>
 <body>
+<header class="rotvis-brand"><a href="/interactive/TRICEPS/disk-merger-cube.html" aria-label="RotVis home"><img src="/interactive/TRICEPS/rotvis-logo.png" alt="RotVis"></a></header>
 <iframe sandbox="allow-scripts allow-top-navigation-by-user-activation" referrerpolicy="no-referrer" title="RotVis interactive rotating-disk and merger comparison" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -899,12 +900,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;div class=&quot;dmc-assumption-grid&quot;&gt;
       &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination &lt;span id=&quot;dmc-inc-assumption&quot;&gt;55&lt;/span&gt;°; &lt;span id=&quot;dmc-curve-assumption&quot;&gt;pure-disk&lt;/span&gt; rotation curve; equivalent disk mass 1.50 × 10&lt;sup&gt;10&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;; bulge mass &lt;span id=&quot;dmc-bulge-mass-assumption&quot;&gt;3.00 × 10&lt;sup&gt;9&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt; (&lt;span id=&quot;dmc-bulge-fraction-assumption&quot;&gt;20.0%&lt;/span&gt; of the disk); SMBH mass &lt;span id=&quot;dmc-bh-mass-assumption&quot;&gt;1.50 × 10&lt;sup&gt;8&lt;/sup&gt; M&lt;sub&gt;☉&lt;/sub&gt;&lt;/span&gt; (&lt;span id=&quot;dmc-bh-fraction-assumption&quot;&gt;1.00%&lt;/span&gt; of the disk); intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
       &lt;p&gt;&lt;strong&gt;Merger:&lt;/strong&gt; two offset Gaussian components separated by &lt;span id=&quot;dmc-separation-assumption&quot;&gt;0.88&lt;/span&gt; kpc in projection, with a tunable velocity separation, mild internal shear, and a faint connecting component.&lt;/p&gt;
-      &lt;p&gt;&lt;strong&gt;Resolution:&lt;/strong&gt; circular Gaussian spatial FWHM and Gaussian spectral FWHM; spatial pixels are FWHM/3, the disk centre is registered to a pixel, and every panel retains a fixed ±1.5 kpc field of view. PV and spectral velocity axes expand automatically when required. Disk and merger can be synchronized or varied independently.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Resolution:&lt;/strong&gt; circular Gaussian spatial FWHM and Gaussian spectral FWHM; spatial pixels are FWHM/3, the disk centre is registered to a pixel, and every panel retains a fixed 5 kpc field of view (±2.5 kpc). PV and spectral velocity axes expand automatically when required. Disk and merger can be synchronized or varied independently.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/details&gt;
 
-  &lt;label class=&quot;dmc-spectrum-toggle&quot;&gt;&lt;input id=&quot;dmc-show-spectrum&quot; type=&quot;checkbox&quot;&gt; Show global 1D spectra instead of PV diagrams&lt;/label&gt;
-
+  &lt;div class=&quot;dmc-content-layout&quot;&gt;
+  &lt;aside class=&quot;dmc-sidebar&quot; aria-label=&quot;RotVis controls&quot;&gt;
+  &lt;h3&gt;Disk controls&lt;/h3&gt;
   &lt;div class=&quot;viz-controls&quot;&gt;
     &lt;label class=&quot;form-label&quot; for=&quot;dmc-spatial-disk&quot;&gt;
       Disk spatial resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-spatial-disk-value&quot;&gt;0.35&lt;/span&gt; kpc&lt;/span&gt;
@@ -939,9 +941,36 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 
+  &lt;h3&gt;Merger controls&lt;/h3&gt;
+  &lt;div class=&quot;dmc-merger-controls&quot;&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;dmc-spatial-merger&quot;&gt;
+      Merger spatial resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-spatial-merger-value&quot;&gt;0.35&lt;/span&gt; kpc&lt;/span&gt;
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-merger&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger spatial resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-spatial-merger&quot; type=&quot;range&quot; min=&quot;0.05&quot; max=&quot;1&quot; step=&quot;0.05&quot; value=&quot;0.35&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-merger&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger spatial resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;dmc-separation&quot;&gt;
+      Merger spatial separation: &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-separation-value&quot;&gt;0.88&lt;/span&gt; kpc&lt;/span&gt;
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-separation&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger spatial separation&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-separation&quot; type=&quot;range&quot; min=&quot;0.20&quot; max=&quot;1.60&quot; step=&quot;0.02&quot; value=&quot;0.88&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-separation&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger spatial separation&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;dmc-velocity-merger&quot;&gt;
+      Merger velocity resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-velocity-merger-value&quot;&gt;15&lt;/span&gt; km s⁻¹&lt;/span&gt;
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-velocity-merger&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger velocity resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-velocity-merger&quot; type=&quot;range&quot; min=&quot;3&quot; max=&quot;90&quot; step=&quot;1&quot; value=&quot;15&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-velocity-merger&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger velocity resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;dmc-dv&quot;&gt;
+      Merger velocity separation: &lt;span id=&quot;dmc-dv-value&quot;&gt;300&lt;/span&gt; km s⁻¹
+      &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-dv&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger velocity separation&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-dv&quot; type=&quot;range&quot; min=&quot;120&quot; max=&quot;420&quot; step=&quot;20&quot; value=&quot;300&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-dv&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger velocity separation&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;div class=&quot;dmc-sync-controls&quot;&gt;
+      &lt;label&gt;&lt;input id=&quot;dmc-sync-spatial&quot; type=&quot;checkbox&quot; checked&gt; Synchronize spatial resolution&lt;/label&gt;
+      &lt;label&gt;&lt;input id=&quot;dmc-sync-velocity&quot; type=&quot;checkbox&quot; checked&gt; Synchronize velocity resolution&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/aside&gt;
+
+  &lt;section class=&quot;dmc-results&quot; aria-label=&quot;RotVis model results&quot;&gt;
   &lt;div class=&quot;dmc-legend text-small&quot; aria-hidden=&quot;true&quot;&gt;
     &lt;span&gt;&lt;i class=&quot;dmc-swatch dmc-m0&quot;&gt;&lt;/i&gt;Moment 0: gist_heat_r&lt;/span&gt;
     &lt;span&gt;&lt;i class=&quot;dmc-swatch dmc-m1&quot;&gt;&lt;/i&gt;Moment 1: bwr&lt;/span&gt;
+    &lt;span&gt;&lt;i class=&quot;dmc-swatch dmc-m2&quot;&gt;&lt;/i&gt;Moment 2: Blues (0–70 km s⁻¹)&lt;/span&gt;
     &lt;span&gt;&lt;i class=&quot;dmc-swatch dmc-pv&quot;&gt;&lt;/i&gt;PV: Greys&lt;/span&gt;
   &lt;/div&gt;
 
@@ -950,61 +979,75 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;h3&gt;Rotating disk&lt;/h3&gt;
       &lt;span class=&quot;text-small text-muted&quot;&gt;True V/σ = 6.9&lt;/span&gt;
     &lt;/div&gt;
-    &lt;figure&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
       &lt;canvas id=&quot;dmc-disk-m0&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment zero map of a rotating disk&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Normalized moment-zero intensity from zero to one&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-m0&quot;&gt;&lt;/i&gt;&lt;span&gt;1 normalized&lt;/span&gt;&lt;/div&gt;
       &lt;figcaption&gt;Moment 0 · integrated brightness; black: intensity contours&lt;/figcaption&gt;
     &lt;/figure&gt;
-    &lt;figure&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
       &lt;canvas id=&quot;dmc-disk-m1&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment one velocity map of a rotating disk&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Moment-one velocity from minus 220 to plus 220 kilometers per second&quot;&gt;&lt;span&gt;−220&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-m1&quot;&gt;&lt;/i&gt;&lt;span&gt;+220 km s⁻¹&lt;/span&gt;&lt;/div&gt;
       &lt;figcaption&gt;Moment 1 · line-of-sight velocity; thick: 0 km s⁻¹&lt;/figcaption&gt;
     &lt;/figure&gt;
-    &lt;figure&gt;
-      &lt;canvas id=&quot;dmc-disk-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Major-axis position velocity diagram of a rotating disk&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption id=&quot;dmc-disk-third-caption&quot;&gt;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&lt;/figcaption&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
+      &lt;canvas id=&quot;dmc-disk-m2&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment two velocity-dispersion map of a rotating disk&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Moment-two velocity dispersion from zero to 70 kilometers per second&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-m2&quot;&gt;&lt;/i&gt;&lt;span&gt;70 km s⁻¹&lt;/span&gt;&lt;/div&gt;
+      &lt;figcaption&gt;Moment 2 · velocity dispersion (0–70 km s⁻¹)&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
+      &lt;canvas id=&quot;dmc-disk-major-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Major-axis position velocity diagram of a rotating disk&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Normalized PV intensity from zero to one&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-pv&quot;&gt;&lt;/i&gt;&lt;span&gt;1 normalized&lt;/span&gt;&lt;/div&gt;
+      &lt;figcaption&gt;Major-axis PV · one-beam width; cyan: intrinsic projected rotation curve&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
+      &lt;canvas id=&quot;dmc-disk-minor-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Minor-axis position velocity diagram of a rotating disk&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Normalized PV intensity from zero to one&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-pv&quot;&gt;&lt;/i&gt;&lt;span&gt;1 normalized&lt;/span&gt;&lt;/div&gt;
+      &lt;figcaption&gt;Minor-axis PV · one-beam extraction width&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;dmc-spectrum-panel&quot;&gt;
+      &lt;canvas id=&quot;dmc-disk-spectrum&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Spatially integrated one-dimensional spectrum of a rotating disk&quot;&gt;&lt;/canvas&gt;
+      &lt;figcaption&gt;Global 1D spectrum · integrated over the field of view&lt;/figcaption&gt;
     &lt;/figure&gt;
 
     &lt;div class=&quot;dmc-row-heading&quot;&gt;
       &lt;h3&gt;Two-component merger&lt;/h3&gt;
       &lt;span class=&quot;text-small text-muted&quot; id=&quot;dmc-merger-ratio&quot;&gt;Disk-fit V/σ ≈ 5.2&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;dmc-merger-controls&quot;&gt;
-      &lt;label class=&quot;form-label&quot; for=&quot;dmc-spatial-merger&quot;&gt;
-        Merger spatial resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-spatial-merger-value&quot;&gt;0.35&lt;/span&gt; kpc&lt;/span&gt;
-        &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-merger&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger spatial resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-spatial-merger&quot; type=&quot;range&quot; min=&quot;0.05&quot; max=&quot;1&quot; step=&quot;0.05&quot; value=&quot;0.35&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-merger&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger spatial resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;label class=&quot;form-label&quot; for=&quot;dmc-separation&quot;&gt;
-        Merger spatial separation: &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-separation-value&quot;&gt;0.88&lt;/span&gt; kpc&lt;/span&gt;
-        &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-separation&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger spatial separation&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-separation&quot; type=&quot;range&quot; min=&quot;0.20&quot; max=&quot;1.60&quot; step=&quot;0.02&quot; value=&quot;0.88&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-separation&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger spatial separation&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;label class=&quot;form-label&quot; for=&quot;dmc-velocity-merger&quot;&gt;
-        Merger velocity resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-velocity-merger-value&quot;&gt;15&lt;/span&gt; km s⁻¹&lt;/span&gt;
-        &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-velocity-merger&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger velocity resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-velocity-merger&quot; type=&quot;range&quot; min=&quot;3&quot; max=&quot;90&quot; step=&quot;1&quot; value=&quot;15&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-velocity-merger&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger velocity resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;label class=&quot;form-label&quot; for=&quot;dmc-dv&quot;&gt;
-        Merger velocity separation: &lt;span id=&quot;dmc-dv-value&quot;&gt;300&lt;/span&gt; km s⁻¹
-        &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-dv&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger velocity separation&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-dv&quot; type=&quot;range&quot; min=&quot;120&quot; max=&quot;420&quot; step=&quot;20&quot; value=&quot;300&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-dv&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger velocity separation&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;div class=&quot;dmc-sync-controls&quot;&gt;
-        &lt;label&gt;&lt;input id=&quot;dmc-sync-spatial&quot; type=&quot;checkbox&quot; checked&gt; Synchronize spatial resolution&lt;/label&gt;
-        &lt;label&gt;&lt;input id=&quot;dmc-sync-velocity&quot; type=&quot;checkbox&quot; checked&gt; Synchronize velocity resolution&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;figure&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
       &lt;canvas id=&quot;dmc-merger-m0&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment zero map of a two-component merger&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Normalized moment-zero intensity from zero to one&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-m0&quot;&gt;&lt;/i&gt;&lt;span&gt;1 normalized&lt;/span&gt;&lt;/div&gt;
       &lt;figcaption&gt;Moment 0 · integrated brightness; black: intensity contours&lt;/figcaption&gt;
     &lt;/figure&gt;
-    &lt;figure&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
       &lt;canvas id=&quot;dmc-merger-m1&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment one velocity map of a two-component merger&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Moment-one velocity from minus 220 to plus 220 kilometers per second&quot;&gt;&lt;span&gt;−220&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-m1&quot;&gt;&lt;/i&gt;&lt;span&gt;+220 km s⁻¹&lt;/span&gt;&lt;/div&gt;
       &lt;figcaption&gt;Moment 1 · apparent “rotating” gradient; thick: 0 km s⁻¹&lt;/figcaption&gt;
     &lt;/figure&gt;
-    &lt;figure&gt;
-      &lt;canvas id=&quot;dmc-merger-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Major-axis position velocity diagram of a two-component merger&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption id=&quot;dmc-merger-third-caption&quot;&gt;Major-axis PV · blended components; black: intensity contours&lt;/figcaption&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
+      &lt;canvas id=&quot;dmc-merger-m2&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment two velocity-dispersion map of a two-component merger&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Moment-two velocity dispersion from zero to 70 kilometers per second&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-m2&quot;&gt;&lt;/i&gt;&lt;span&gt;70 km s⁻¹&lt;/span&gt;&lt;/div&gt;
+      &lt;figcaption&gt;Moment 2 · apparent velocity dispersion (0–70 km s⁻¹)&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
+      &lt;canvas id=&quot;dmc-merger-major-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Major-axis position velocity diagram of a two-component merger&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Normalized PV intensity from zero to one&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-pv&quot;&gt;&lt;/i&gt;&lt;span&gt;1 normalized&lt;/span&gt;&lt;/div&gt;
+      &lt;figcaption&gt;Major-axis PV · one-beam width; blended components&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;dmc-has-colorbar&quot;&gt;
+      &lt;canvas id=&quot;dmc-merger-minor-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Minor-axis position velocity diagram of a two-component merger&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;dmc-colorbar&quot; aria-label=&quot;Normalized PV intensity from zero to one&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;i class=&quot;dmc-bar dmc-bar-pv&quot;&gt;&lt;/i&gt;&lt;span&gt;1 normalized&lt;/span&gt;&lt;/div&gt;
+      &lt;figcaption&gt;Minor-axis PV · one-beam extraction width&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;dmc-spectrum-panel&quot;&gt;
+      &lt;canvas id=&quot;dmc-merger-spectrum&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Spatially integrated one-dimensional spectrum of a two-component merger&quot;&gt;&lt;/canvas&gt;
+      &lt;figcaption&gt;Global 1D spectrum · integrated over the field of view&lt;/figcaption&gt;
     &lt;/figure&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;dmc-note text-small&quot; id=&quot;dmc-note&quot; aria-live=&quot;polite&quot;&gt;
     The components blend on the sky but remain separated in velocity; their moment-1 map can still resemble a smooth “rotating” gradient.
+  &lt;/div&gt;
+  &lt;/section&gt;
   &lt;/div&gt;
   &lt;footer class=&quot;dmc-credit&quot;&gt;Powered by ChatGPT, guided by human wisdom.&lt;/footer&gt;
 &lt;/div&gt;
@@ -1020,6 +1063,25 @@ html&gt;body{padding:0}&lt;/style&gt;
     font-size: 18px;
     line-height: 1.35;
   }
+  #disk-merger-cube .dmc-content-layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+  }
+  #disk-merger-cube .dmc-sidebar {
+    position: sticky;
+    top: 8px;
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+  }
+  #disk-merger-cube .dmc-sidebar &gt; h3:not(:first-child) { margin-top: 8px; }
+  #disk-merger-cube .dmc-sidebar .viz-controls,
+  #disk-merger-cube .dmc-sidebar .dmc-merger-controls {
+    grid-template-columns: 1fr;
+  }
+  #disk-merger-cube .dmc-results { min-width: 0; }
   #disk-merger-cube .viz-controls,
   #disk-merger-cube .dmc-merger-controls {
     display: grid;
@@ -1081,20 +1143,6 @@ html&gt;body{padding:0}&lt;/style&gt;
   #disk-merger-cube .dmc-sync-controls input {
     width: 17px;
     height: 17px;
-    accent-color: #134e9b;
-  }
-  #disk-merger-cube .dmc-spectrum-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin: 4px 0 12px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  #disk-merger-cube .dmc-spectrum-toggle input {
-    width: 19px;
-    height: 19px;
     accent-color: #134e9b;
   }
   #disk-merger-cube .form-range {
@@ -1216,6 +1264,27 @@ html&gt;body{padding:0}&lt;/style&gt;
   #disk-merger-cube figure {
     margin: 0 0 12px;
   }
+  #disk-merger-cube figure.dmc-has-colorbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 52px;
+    align-items: stretch;
+    column-gap: 5px;
+  }
+  #disk-merger-cube figure.dmc-has-colorbar canvas {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+  #disk-merger-cube figure.dmc-has-colorbar figcaption {
+    grid-column: 1 / -1;
+  }
+  #disk-merger-cube figure.dmc-spectrum-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 52px;
+    column-gap: 5px;
+  }
+  #disk-merger-cube figure.dmc-spectrum-panel canvas { grid-column: 1; }
+  #disk-merger-cube figure.dmc-spectrum-panel figcaption { grid-column: 1 / -1; }
   #disk-merger-cube canvas {
     display: block;
     width: 100%;
@@ -1227,6 +1296,33 @@ html&gt;body{padding:0}&lt;/style&gt;
     font-size: 16px;
     margin-top: 4px;
   }
+  #disk-merger-cube .dmc-colorbar {
+    display: grid;
+    grid-template-rows: auto minmax(100px, 1fr) auto;
+    justify-items: center;
+    gap: 5px;
+    height: 72%;
+    min-height: 150px;
+    margin: auto 0;
+    color: var(--dmc-fg);
+    font-size: 12px;
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+  }
+  #disk-merger-cube .dmc-colorbar &gt; span:first-child { grid-row: 3; }
+  #disk-merger-cube .dmc-colorbar &gt; span:last-child { grid-row: 1; }
+  #disk-merger-cube .dmc-bar {
+    display: block;
+    grid-row: 2;
+    width: 13px;
+    height: 100%;
+    border: 1px solid #666666;
+  }
+  #disk-merger-cube .dmc-bar-m0 { background: linear-gradient(to top, #ffffff, #fff8a8, #ffae2f, #b00016, #000000); }
+  #disk-merger-cube .dmc-bar-m1 { background: linear-gradient(to top, #0000ff, #ffffff, #ff0000); }
+  #disk-merger-cube .dmc-bar-m2 { background: linear-gradient(to top, #ffffff, #c6dbef, #6baed6, #2171b5, #08306b); }
+  #disk-merger-cube .dmc-bar-pv { background: linear-gradient(to top, #ffffff, #000000); }
   #disk-merger-cube .dmc-legend {
     display: flex;
     justify-content: center;
@@ -1248,6 +1344,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
   #disk-merger-cube .dmc-m0 { background: linear-gradient(90deg, #ffffff, #ffae2f, #b00016, #000000); }
   #disk-merger-cube .dmc-m1 { background: linear-gradient(90deg, #0000ff, #ffffff, #ff0000); }
+  #disk-merger-cube .dmc-m2 { background: linear-gradient(90deg, #ffffff, #c6dbef, #6baed6, #2171b5, #08306b); }
   #disk-merger-cube .dmc-pv { background: linear-gradient(90deg, #ffffff, #000000); }
   #disk-merger-cube .dmc-assumptions {
     margin: 12px 0 14px;
@@ -1284,11 +1381,21 @@ html&gt;body{padding:0}&lt;/style&gt;
     font-size: 14px;
     text-align: center;
   }
-  @media (max-width: 540px) {
+  @media (max-width: 1100px) {
+    #disk-merger-cube .dmc-content-layout { grid-template-columns: 1fr; }
+    #disk-merger-cube .dmc-sidebar { position: static; }
+    #disk-merger-cube .dmc-sidebar .viz-controls,
+    #disk-merger-cube .dmc-sidebar .dmc-merger-controls {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 700px) {
     #disk-merger-cube .viz-controls,
+    #disk-merger-cube .dmc-sidebar .viz-controls,
     #disk-merger-cube .dmc-plot-grid,
     #disk-merger-cube .dmc-assumption-grid,
-    #disk-merger-cube .dmc-merger-controls {
+    #disk-merger-cube .dmc-merger-controls,
+    #disk-merger-cube .dmc-sidebar .dmc-merger-controls {
       grid-template-columns: 1fr;
     }
     #disk-merger-cube .dmc-row-heading {
@@ -1320,7 +1427,6 @@ html&gt;body{padding:0}&lt;/style&gt;
   const bhFractionAssumption = document.getElementById(&#x27;dmc-bh-fraction-assumption&#x27;);
   const dvInput = document.getElementById(&#x27;dmc-dv&#x27;);
   const separationInput = document.getElementById(&#x27;dmc-separation&#x27;);
-  const showSpectrumInput = document.getElementById(&#x27;dmc-show-spectrum&#x27;);
   const incValue = document.getElementById(&#x27;dmc-inc-value&#x27;);
   const incAssumption = document.getElementById(&#x27;dmc-inc-assumption&#x27;);
   const curveAssumption = document.getElementById(&#x27;dmc-curve-assumption&#x27;);
@@ -1332,11 +1438,9 @@ html&gt;body{padding:0}&lt;/style&gt;
   const dvValue = document.getElementById(&#x27;dmc-dv-value&#x27;);
   const separationValue = document.getElementById(&#x27;dmc-separation-value&#x27;);
   const mergerRatio = document.getElementById(&#x27;dmc-merger-ratio&#x27;);
-  const diskThirdCaption = document.getElementById(&#x27;dmc-disk-third-caption&#x27;);
-  const mergerThirdCaption = document.getElementById(&#x27;dmc-merger-third-caption&#x27;);
   const note = document.getElementById(&#x27;dmc-note&#x27;);
 
-  const XMAX = 1.5, DISPLAY_VMAX = 350;
+  const XMAX = 2.5, DISPLAY_VMAX = 350;
   let gridRadius = XMAX;
   let NX = 34, NY = 34, NV = 235;
   let dx = 2 * XMAX / (NX - 1);
@@ -1451,7 +1555,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     const fg = &#x27;#161616&#x27;;
     const muted = &#x27;#6b6b6b&#x27;;
     const border = &#x27;#222222&#x27;;
-    // Matplotlib-like ramps: gist_heat_r (M0), bwr (M1), and Greys (PV).
+    // Matplotlib-like ramps: gist_heat_r (M0), bwr (M1), Blues (M2), and Greys (PV).
     const intensity = ramp([
       [0.00, &#x27;#ffffff&#x27;], [0.18, &#x27;#fff8a8&#x27;], [0.45, &#x27;#ffae2f&#x27;],
       [0.72, &#x27;#b00016&#x27;], [1.00, &#x27;#000000&#x27;]
@@ -1459,10 +1563,14 @@ html&gt;body{padding:0}&lt;/style&gt;
     const diverging = ramp([
       [0.00, &#x27;#0000ff&#x27;], [0.50, &#x27;#ffffff&#x27;], [1.00, &#x27;#ff0000&#x27;]
     ]);
+    const dispersion = ramp([
+      [0.00, &#x27;#ffffff&#x27;], [0.25, &#x27;#c6dbef&#x27;], [0.50, &#x27;#6baed6&#x27;],
+      [0.75, &#x27;#2171b5&#x27;], [1.00, &#x27;#08306b&#x27;]
+    ]);
     const pv = ramp([
       [0.00, &#x27;#ffffff&#x27;], [1.00, &#x27;#000000&#x27;]
     ]);
-    return { bg, fg, muted, border, diverging, intensity, pv };
+    return { bg, fg, muted, border, diverging, dispersion, intensity, pv };
   }
 
   function idx(x, y, v) {
@@ -1643,20 +1751,25 @@ html&gt;body{padding:0}&lt;/style&gt;
   function moments(cube) {
     const m0 = new Float32Array(NX * NY);
     const m1 = new Float32Array(NX * NY);
+    const m2 = new Float32Array(NX * NY);
     let max0 = 0;
     for (let y = 0; y &lt; NY; y++) for (let x = 0; x &lt; NX; x++) {
-      let sum = 0, weighted = 0;
+      let sum = 0, weighted = 0, weightedSquare = 0;
       for (let v = 0; v &lt; NV; v++) {
         const value = cube[idx(x, y, v)];
         const vel = -cubeVmax + v * dvChan;
         sum += value;
         weighted += value * vel;
+        weightedSquare += value * vel * vel;
       }
-      m0[y * NX + x] = sum;
-      m1[y * NX + x] = sum &gt; 0 ? weighted / sum : 0;
+      const k = y * NX + x;
+      const mean = sum &gt; 0 ? weighted / sum : 0;
+      m0[k] = sum;
+      m1[k] = mean;
+      m2[k] = sum &gt; 0 ? Math.sqrt(Math.max(0, weightedSquare / sum - mean * mean)) : 0;
       max0 = Math.max(max0, sum);
     }
-    return { m0, m1, max0 };
+    return { m0, m1, m2, max0 };
   }
 
   function globalSpectrum(cube) {
@@ -1669,20 +1782,33 @@ html&gt;body{padding:0}&lt;/style&gt;
     return { flux, max, channelWidth: dvChan, velocityMin: -cubeVmax };
   }
 
-  function pvDiagram(cube) {
-    const pv = new Float32Array(NX * NV);
+  function pvDiagram(cube, axis = &#x27;major&#x27;) {
+    const positionCount = axis === &#x27;major&#x27; ? NX : NY;
+    const pv = new Float32Array(positionCount * NV);
     let max = 0;
-    const halfWidth = 5;
+    // Spatial pixels are beam FWHM / 3, so the central pixel plus one pixel
+    // on either side gives an extraction strip exactly one beam FWHM wide.
+    const halfWidth = 1;
+    const xc = Math.floor(NX / 2);
     const yc = Math.floor(NY / 2);
-    for (let x = 0; x &lt; NX; x++) for (let v = 0; v &lt; NV; v++) {
+    for (let position = 0; position &lt; positionCount; position++) for (let v = 0; v &lt; NV; v++) {
       let sum = 0;
-      for (let y = Math.max(0, yc - halfWidth); y &lt;= Math.min(NY - 1, yc + halfWidth); y++) {
-        sum += cube[idx(x, y, v)];
+      if (axis === &#x27;major&#x27;) {
+        for (let y = Math.max(0, yc - halfWidth); y &lt;= Math.min(NY - 1, yc + halfWidth); y++) {
+          sum += cube[idx(position, y, v)];
+        }
+      } else {
+        for (let x = Math.max(0, xc - halfWidth); x &lt;= Math.min(NX - 1, xc + halfWidth); x++) {
+          sum += cube[idx(x, position, v)];
+        }
       }
-      pv[v * NX + x] = sum;
+      pv[v * positionCount + position] = sum;
       max = Math.max(max, sum);
     }
-    return { pv, max, channelWidth: dvChan, velocityMin: -cubeVmax };
+    return {
+      pv, max, axis, positionCount, positionPixelSize: dx,
+      velocityCount: NV, channelWidth: dvChan, velocityMin: -cubeVmax
+    };
   }
 
   function prepareCanvas(canvas, colors) {
@@ -1820,9 +1946,12 @@ html&gt;body{padding:0}&lt;/style&gt;
         color = colors.intensity[Math.round(100 * Math.pow(t, 0.55))];
       } else if (moment.m0[k] &lt; threshold) {
         color = colors.bg;
-      } else {
+      } else if (type === &#x27;m1&#x27;) {
         const vel = Math.max(-220, Math.min(220, moment.m1[k]));
         color = colors.diverging[Math.round(50 + 50 * vel / 220)];
+      } else {
+        const dispersion = Math.max(0, Math.min(70, moment.m2[k]));
+        color = colors.dispersion[Math.round(100 * dispersion / 70)];
       }
       ctx.fillStyle = color;
       const xCenter = (x - (NX - 1) / 2) * dx;
@@ -1842,7 +1971,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const intensityLevels = [0.08, 0.16, 0.32, 0.50, 0.70].map(f =&gt; f * moment.max0);
       drawContours(ctx, moment.m0, NX, NY, intensityLevels, toCanvas,
         () =&gt; ({ color: &#x27;#111111&#x27;, width: 1.3, alpha: 0.9 }));
-    } else {
+    } else if (type === &#x27;m1&#x27;) {
       const velocityLevels = [];
       for (let v = -210; v &lt;= 210; v += 30) velocityLevels.push(v);
       const maskedVelocity = new Float32Array(moment.m1.length);
@@ -1851,6 +1980,10 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
       drawContours(ctx, maskedVelocity, NX, NY, velocityLevels, toCanvas,
         v =&gt; ({ color: &#x27;#151515&#x27;, width: v === 0 ? 3.3 : 1.0, alpha: v === 0 ? 1 : 0.86 }));
+    } else {
+      const intensityLevels = [0.16, 0.32, 0.50, 0.70].map(f =&gt; f * moment.max0);
+      drawContours(ctx, moment.m0, NX, NY, intensityLevels, toCanvas,
+        () =&gt; ({ color: &#x27;#151515&#x27;, width: 1.0, alpha: 0.82 }));
     }
     ctx.restore();
     drawBeam(g, beamFwhm, colors, mapBounds, plotRadius);
@@ -1861,27 +1994,30 @@ html&gt;body{padding:0}&lt;/style&gt;
     const g = prepareCanvas(canvas, colors);
     const { ctx, W, H, left, right, top, bottom } = g;
     const pw = W - left - right, ph = H - top - bottom;
-    const cw = dx / (2 * plotRadius) * pw;
+    const positionCount = pvData.positionCount;
+    const velocityCount = pvData.velocityCount;
+    const positionPixelSize = pvData.positionPixelSize;
+    const cw = positionPixelSize / (2 * plotRadius) * pw;
     const ch = pvData.channelWidth / (2 * plotVmax) * ph;
     ctx.save();
     ctx.beginPath();
     ctx.rect(left, top, pw, ph);
     ctx.clip();
-    for (let v = 0; v &lt; NV; v++) for (let x = 0; x &lt; NX; x++) {
-      const t = Math.min(1, pvData.pv[v * NX + x] / pvData.max);
+    for (let v = 0; v &lt; velocityCount; v++) for (let x = 0; x &lt; positionCount; x++) {
+      const t = pvData.max &gt; 0 ? Math.min(1, pvData.pv[v * positionCount + x] / pvData.max) : 0;
       ctx.fillStyle = colors.pv[Math.round(100 * Math.pow(t, 0.55))];
-      const xCenter = (x - (NX - 1) / 2) * dx;
+      const xCenter = (x - (positionCount - 1) / 2) * positionPixelSize;
       const velocity = pvData.velocityMin + v * pvData.channelWidth;
       const py = top + (plotVmax - velocity) / (2 * plotVmax) * ph;
-      ctx.fillRect(left + (xCenter - dx / 2 + plotRadius) / (2 * plotRadius) * pw, py - ch / 2, cw + 0.6, ch + 0.6);
+      ctx.fillRect(left + (xCenter - positionPixelSize / 2 + plotRadius) / (2 * plotRadius) * pw, py - ch / 2, cw + 0.6, ch + 0.6);
     }
     const toCanvas = (x, v) =&gt; [
-      left + ((x - (NX - 1) / 2) * dx + plotRadius) / (2 * plotRadius) * pw,
+      left + ((x - (positionCount - 1) / 2) * positionPixelSize + plotRadius) / (2 * plotRadius) * pw,
       top + (plotVmax - (pvData.velocityMin + v * pvData.channelWidth)) / (2 * plotVmax) * ph
     ];
     // Fixed fractional levels: identical for disk and merger PV diagrams.
     const intensityLevels = [0.12, 0.25, 0.50, 0.75].map(f =&gt; f * pvData.max);
-    drawContours(ctx, pvData.pv, NX, NV, intensityLevels, toCanvas,
+    drawContours(ctx, pvData.pv, positionCount, velocityCount, intensityLevels, toCanvas,
       () =&gt; ({ color: &#x27;#b00016&#x27;, width: 1.4, alpha: 0.95 }));
     if (intrinsicCurve) {
       ctx.save();
@@ -1909,7 +2045,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       ctx.restore();
     }
     ctx.restore();
-    drawAxes(g, &#x27;Major-axis offset (kpc)&#x27;, &#x27;Velocity (km s⁻¹)&#x27;, colors, g, plotRadius);
+    const positionLabel = pvData.axis === &#x27;minor&#x27; ? &#x27;Minor-axis offset (kpc)&#x27; : &#x27;Major-axis offset (kpc)&#x27;;
+    drawAxes(g, positionLabel, &#x27;Velocity (km s⁻¹)&#x27;, colors, g, plotRadius);
     ctx.strokeStyle = colors.muted;
     ctx.lineWidth = 1.5;
     ctx.beginPath();
@@ -1983,7 +2120,6 @@ html&gt;body{padding:0}&lt;/style&gt;
   let renderTimer;
   let diskCache = null;
   let mergerCache = null;
-  let lastShowSpectrum = null;
   function spatialFwhm(input) {
     return Number(input.value);
   }
@@ -2006,7 +2142,6 @@ html&gt;body{padding:0}&lt;/style&gt;
     const mergerPlotRadius = displayRadius(mergerBeam);
     const deltaV = Number(dvInput.value);
     const mergerSeparation = Number(separationInput.value);
-    const showSpectrum = showSpectrumInput.checked;
     const curveType = curveInput.value;
     const bulgeMass = 10 ** Number(bulgeMassInput.value);
     const blackHoleMass = 10 ** Number(bhMassInput.value);
@@ -2038,7 +2173,6 @@ html&gt;body{padding:0}&lt;/style&gt;
     ]);
     const diskChanged = !diskCache || diskCache.key !== diskKey;
     const mergerChanged = !mergerCache || mergerCache.key !== mergerKey;
-    const displayModeChanged = lastShowSpectrum !== showSpectrum;
     const diskSpectralExtent = diskVelocityExtent(
       inclination, curveType, bulgeMass, blackHoleMass, diskVelocityResolution
     );
@@ -2056,7 +2190,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       diskCache = {
         key: diskKey,
         moment: moments(cube),
-        pv: pvDiagram(cube),
+        majorPV: pvDiagram(cube, &#x27;major&#x27;),
+        minorPV: pvDiagram(cube, &#x27;minor&#x27;),
         spectrum: globalSpectrum(cube)
       };
     }
@@ -2070,50 +2205,71 @@ html&gt;body{padding:0}&lt;/style&gt;
       mergerCache = {
         key: mergerKey,
         moment: moments(cube),
-        pv: pvDiagram(cube),
+        majorPV: pvDiagram(cube, &#x27;major&#x27;),
+        minorPV: pvDiagram(cube, &#x27;minor&#x27;),
         spectrum: globalSpectrum(cube)
       };
     }
 
-    if (diskChanged || displayModeChanged) {
+    if (diskChanged) {
       setSampling(diskBeam, diskVelocityResolution, diskSpectralExtent);
       drawMap(document.getElementById(&#x27;dmc-disk-m0&#x27;), diskCache.moment, &#x27;m0&#x27;, colors, diskBeam, diskPlotRadius);
       drawMap(document.getElementById(&#x27;dmc-disk-m1&#x27;), diskCache.moment, &#x27;m1&#x27;, colors, diskBeam, diskPlotRadius);
-      const diskThirdCanvas = document.getElementById(&#x27;dmc-disk-pv&#x27;);
-      if (showSpectrum) {
-        drawSpectrum(diskThirdCanvas, diskCache.spectrum, colors, &#x27;#006f9e&#x27;, diskVisibleVmax);
-        diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the rotating disk&#x27;);
-        diskThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
-      } else {
-        drawPV(
-          diskThirdCanvas,
-          diskCache.pv,
-          colors,
-          radius =&gt; rotationSpeed(radius, curveType, bulgeMass, blackHoleMass) * Math.sin(inclination),
-          diskPlotRadius,
-          diskVisibleVmax
-        );
-        diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a rotating disk&#x27;);
-        diskThirdCaption.textContent = &#x27;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&#x27;;
-      }
+      drawMap(document.getElementById(&#x27;dmc-disk-m2&#x27;), diskCache.moment, &#x27;m2&#x27;, colors, diskBeam, diskPlotRadius);
+      drawPV(
+        document.getElementById(&#x27;dmc-disk-major-pv&#x27;),
+        diskCache.majorPV,
+        colors,
+        radius =&gt; rotationSpeed(radius, curveType, bulgeMass, blackHoleMass) * Math.sin(inclination),
+        diskPlotRadius,
+        diskVisibleVmax
+      );
+      drawPV(
+        document.getElementById(&#x27;dmc-disk-minor-pv&#x27;),
+        diskCache.minorPV,
+        colors,
+        null,
+        diskPlotRadius,
+        diskVisibleVmax
+      );
+      drawSpectrum(
+        document.getElementById(&#x27;dmc-disk-spectrum&#x27;),
+        diskCache.spectrum,
+        colors,
+        &#x27;#006f9e&#x27;,
+        diskVisibleVmax
+      );
     }
 
-    if (mergerChanged || displayModeChanged) {
+    if (mergerChanged) {
       setSampling(mergerBeam, mergerVelocityResolution, mergerSpectralExtent);
       drawMap(document.getElementById(&#x27;dmc-merger-m0&#x27;), mergerCache.moment, &#x27;m0&#x27;, colors, mergerBeam, mergerPlotRadius);
       drawMap(document.getElementById(&#x27;dmc-merger-m1&#x27;), mergerCache.moment, &#x27;m1&#x27;, colors, mergerBeam, mergerPlotRadius);
-      const mergerThirdCanvas = document.getElementById(&#x27;dmc-merger-pv&#x27;);
-      if (showSpectrum) {
-        drawSpectrum(mergerThirdCanvas, mergerCache.spectrum, colors, &#x27;#9e0022&#x27;, mergerVisibleVmax);
-        mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the two-component merger&#x27;);
-        mergerThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
-      } else {
-        drawPV(mergerThirdCanvas, mergerCache.pv, colors, null, mergerPlotRadius, mergerVisibleVmax);
-        mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a two-component merger&#x27;);
-        mergerThirdCaption.textContent = &#x27;Major-axis PV · blended components; black: intensity contours&#x27;;
-      }
+      drawMap(document.getElementById(&#x27;dmc-merger-m2&#x27;), mergerCache.moment, &#x27;m2&#x27;, colors, mergerBeam, mergerPlotRadius);
+      drawPV(
+        document.getElementById(&#x27;dmc-merger-major-pv&#x27;),
+        mergerCache.majorPV,
+        colors,
+        null,
+        mergerPlotRadius,
+        mergerVisibleVmax
+      );
+      drawPV(
+        document.getElementById(&#x27;dmc-merger-minor-pv&#x27;),
+        mergerCache.minorPV,
+        colors,
+        null,
+        mergerPlotRadius,
+        mergerVisibleVmax
+      );
+      drawSpectrum(
+        document.getElementById(&#x27;dmc-merger-spectrum&#x27;),
+        mergerCache.spectrum,
+        colors,
+        &#x27;#9e0022&#x27;,
+        mergerVisibleVmax
+      );
     }
-    lastShowSpectrum = showSpectrum;
 
     // Compare the centre separation with the beam-broadened component size,
     // and the velocity separation with the spectrally broadened line width.
@@ -2143,7 +2299,6 @@ html&gt;body{padding:0}&lt;/style&gt;
   curveInput.addEventListener(&#x27;change&#x27;, updateMassControls);
   bulgeMassInput.addEventListener(&#x27;input&#x27;, () =&gt; updateBulgeControl(true));
   bhMassInput.addEventListener(&#x27;input&#x27;, () =&gt; updateBlackHoleControl(true));
-  showSpectrumInput.addEventListener(&#x27;change&#x27;, scheduleRender);
   function syncResolution(source, target, syncInput) {
     if (syncInput.checked) target.value = source.value;
     updateResolutionLabels();

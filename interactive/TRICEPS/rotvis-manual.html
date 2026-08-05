@@ -58,8 +58,7 @@
         <li>Choose a disk inclination and rotation curve shape.</li>
         <li>Change the spatial and velocity resolutions to see beam and spectral smearing.</li>
         <li>Adjust the merger separation in position and velocity.</li>
-        <li>Compare moment 0, moment 1, and the major-axis PV diagram.</li>
-        <li>Switch from PV diagrams to global 1D spectra when you want to inspect unresolved line profiles.</li>
+        <li>Compare moment 0, moment 1, moment 2, the major- and minor-axis PV diagrams, and the global 1D spectrum.</li>
       </ol>
     </section>
 
@@ -69,14 +68,18 @@
       <tbody>
         <tr><td data-label="Panel">Moment 0</td><td data-label="Meaning">Integrated intensity</td><td data-label="What to inspect">One peak versus two peaks? Elongation? Bridges? </td></tr>
         <tr><td data-label="Panel">Moment 1</td><td data-label="Meaning">Intensity-weighted line-of-sight velocity</td><td data-label="What to inspect">Smooth gradients? Twists? Discontinuities? The thick systemic-velocity contour (V=0)?</td></tr>
-        <tr><td data-label="Panel">PV diagram</td><td data-label="Meaning">Position-velocity diagram extracted along the kinematic major axis</td><td data-label="What to inspect">Symmetry? Multiple components? Line broadening? Effects of beam and spectral smearing? The Keplerian decline of the SMBH? Whether the merger produces a disk-like pattern?</td></tr>
-        <tr><td data-label="Panel">Global spectrum</td><td data-label="Meaning">Flux density integrated within the whole field of view</td><td data-label="What to inspect">Single-, double- or asymmetric line profiles? Spatial convolution conserves the flux in principle, but it can dilute the emission to outside of the field of view, and then change the spectrum.</td></tr>
+        <tr><td data-label="Panel">Moment 2</td><td data-label="Meaning">Intensity-weighted line-of-sight velocity dispersion, shown with Blues from 0 to 70 km s<sup>−1</sup></td><td data-label="What to inspect">A central dispersion peak? Beam smearing? Broad lines where two merger components overlap?</td></tr>
+        <tr><td data-label="Panel">Major-axis PV</td><td data-label="Meaning">Position-velocity diagram extracted along the global x axis</td><td data-label="What to inspect">Symmetry? Multiple components? Line broadening? Effects of beam and spectral smearing? The Keplerian decline of the SMBH? Whether the merger produces a disk-like pattern?</td></tr>
+        <tr><td data-label="Panel">Minor-axis PV</td><td data-label="Meaning">Position-velocity diagram extracted along the global y axis</td><td data-label="What to inspect">Velocity asymmetries away from the major axis? Multiple components? Off-axis emission inconsistent with a simple rotating disk?</td></tr>
+        <tr><td data-label="Panel">Global spectrum</td><td data-label="Meaning">Flux density integrated within the whole field of view</td><td data-label="What to inspect">Single-, double-peaked, or asymmetric line profiles? Spatial convolution conserves total flux in principle, but beam smearing can spread emission beyond the finite field of view and reduce the measured integrated spectrum.</td></tr>
       </tbody>
     </table>
+    <p>The vertical colorbars show normalized intensity for moment 0 and the PV diagrams, velocity in km s<sup>−1</sup> for moment 1, and velocity dispersion in km s<sup>−1</sup> for moment 2.</p>
 
     <h2>Disk controls</h2>
+    <p>On a wide screen, the disk and merger sliders are grouped in the left sidebar while the model panels remain on the right. On a narrow screen, the controls move above the panels.</p>
     <h3>Spatial resolution</h3>
-    <p>The circular Gaussian beam is specified by its FWHM in kpc. The spatial pixel size is one third of the selected FWHM. The field of view remains fixed at ±1.5 kpc and the brightest intrinsic disk pixel is registered at the centre.</p>
+    <p>The circular Gaussian beam is specified by its FWHM in kpc. The spatial pixel size is one third of the selected FWHM. The field of view remains fixed at 5 kpc (±2.5 kpc), and the brightest intrinsic disk pixel is registered at the centre.</p>
 
     <h3>Inclination</h3>
     <p>The inclination ranges from 1° (nearly face-on) to 89° (nearly edge-on). Projected rotation scales approximately as <em>V</em><sub>rot</sub> sin(<em>i</em>), while the projected minor axis contracts by cos(<em>i</em>).</p>
@@ -93,7 +96,10 @@
     <p>The equivalent exponential-disk mass is approximately 1.50 × 10<sup>10</sup> M<sub>☉</sub>, inferred by matching the adopted disk rotation speed near 2.2 scale lengths. The displayed bulge-to-disk and SMBH-to-disk fractions update with their sliders.</p>
 
     <h3>Dashed PV curve</h3>
-    <p>The cyan dashed line in the PV diagram is the intrinsic projected rotation curve before spatial or spectral convolution.</p>
+    <p>The cyan dashed line in the major-axis PV diagram is the intrinsic projected rotation curve before spatial or spectral convolution.</p>
+
+    <h3>PV extraction width</h3>
+    <p>Both PV diagrams are extracted over a width of one beam FWHM. Because the spatial pixel size is one third of the beam FWHM, the extraction sums three pixels: the central pixel and one pixel on either side.</p>
 
     <h2>Merger controls and geometry</h2>
     <p>The merger contains two elliptical Gaussian components with unequal sizes and amplitudes (peak 1 : 0.82). Their centres lie along an axis offset slightly in y rather than along the global x axis. Each component has a mild internal velocity shear, and a faint broader bridge connects them.</p>
@@ -115,7 +121,7 @@
     </ol>
     -->
 
-    <h2>How a merger mimic a disk :(</h2>
+    <h2>How a merger mimics a disk :(</h2>
     <p>RotVis demonstrates a degeneracy: spatial and spectral blending can turn two dynamically distinct components into a continuous red-to-blue moment-1 gradient. A high disk-fit <em>V</em>/σ therefore does not by itself prove that the source is an equilibrium rotating disk.</p>
     <!--
     <p>The message below the plots changes according to whether the merger components are resolved in position, velocity, both or neither. Treat this as a qualitative guide rather than a classification statistic.</p>
@@ -124,7 +130,7 @@
     <div class="note">
       <strong>Limitation.</strong> RotVis is a pedagogical toy model, not a replacement for 3D fitting, residual inspection or merger classification. It does not currently include noise, asymmetric beams, warps, radial flows, clumpy disk brightness, radiative transfer, dark matter, self-consistent interacting orbits or a telescope-specific response.
     </div>
-    
+
     <!--
     <h2>Suggested workflow for observations</h2>
     <ol>
