@@ -916,12 +916,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;span&gt;&lt;i class=&quot;dmc-swatch dmc-m1&quot;&gt;&lt;/i&gt;Moment 1: bwr&lt;/span&gt;
     &lt;span&gt;&lt;i class=&quot;dmc-swatch dmc-pv&quot;&gt;&lt;/i&gt;PV: Greys&lt;/span&gt;
   &lt;/div&gt;
+  &lt;label class=&quot;dmc-spectrum-toggle&quot;&gt;&lt;input id=&quot;dmc-show-spectrum&quot; type=&quot;checkbox&quot;&gt; Show global 1D spectra instead of PV diagrams&lt;/label&gt;
 
   &lt;details class=&quot;dmc-assumptions&quot; open&gt;
     &lt;summary&gt;Model assumptions&lt;/summary&gt;
     &lt;div class=&quot;dmc-assumption-grid&quot;&gt;
-      &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination &lt;span id=&quot;dmc-inc-assumption&quot;&gt;55&lt;/span&gt;°; &lt;span id=&quot;dmc-curve-assumption&quot;&gt;pure-disk&lt;/span&gt; rotation curve; intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
-      &lt;p&gt;&lt;strong&gt;Merger:&lt;/strong&gt; two offset Gaussian components separated by 0.88 kpc in projection, with a tunable velocity separation, mild internal shear, and a faint connecting component.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Disk:&lt;/strong&gt; thin exponential disk; inclination &lt;span id=&quot;dmc-inc-assumption&quot;&gt;55&lt;/span&gt;°; &lt;span id=&quot;dmc-curve-assumption&quot;&gt;pure-disk&lt;/span&gt; rotation curve; equivalent disk mass 1.50 × 10¹⁰ M☉; bulge mass 3.00 × 10⁹ M☉ (20% of the disk); SMBH mass 1.50 × 10⁸ M☉ (1% of the disk); intrinsic dispersion 35 km s⁻¹.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Merger:&lt;/strong&gt; two offset Gaussian components separated by &lt;span id=&quot;dmc-separation-assumption&quot;&gt;0.88&lt;/span&gt; kpc in projection, with a tunable velocity separation, mild internal shear, and a faint connecting component.&lt;/p&gt;
       &lt;p&gt;&lt;strong&gt;Resolution:&lt;/strong&gt; circular Gaussian spatial FWHM and Gaussian spectral FWHM; spatial pixels are FWHM/3, the disk centre is registered to a pixel, and every panel retains a fixed ±1.5 kpc field of view. Disk and merger can be synchronized or varied independently.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/details&gt;
@@ -941,7 +942,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;/figure&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-disk-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Major-axis position velocity diagram of a rotating disk&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&lt;/figcaption&gt;
+      &lt;figcaption id=&quot;dmc-disk-third-caption&quot;&gt;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&lt;/figcaption&gt;
     &lt;/figure&gt;
 
     &lt;div class=&quot;dmc-row-heading&quot;&gt;
@@ -952,6 +953,10 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;label class=&quot;form-label&quot; for=&quot;dmc-spatial-merger&quot;&gt;
         Merger spatial resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-spatial-merger-value&quot;&gt;0.35&lt;/span&gt; kpc&lt;/span&gt;
         &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-merger&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger spatial resolution&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-spatial-merger&quot; type=&quot;range&quot; min=&quot;0.05&quot; max=&quot;1&quot; step=&quot;0.05&quot; value=&quot;0.35&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-spatial-merger&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger spatial resolution&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;dmc-separation&quot;&gt;
+        Merger spatial separation: &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-separation-value&quot;&gt;0.88&lt;/span&gt; kpc&lt;/span&gt;
+        &lt;span class=&quot;dmc-slider-control&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-separation&quot; data-direction=&quot;-1&quot; aria-label=&quot;Decrease merger spatial separation&quot;&gt;−&lt;/button&gt;&lt;input class=&quot;form-range&quot; id=&quot;dmc-separation&quot; type=&quot;range&quot; min=&quot;0.20&quot; max=&quot;1.60&quot; step=&quot;0.02&quot; value=&quot;0.88&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dmc-step&quot; data-target=&quot;dmc-separation&quot; data-direction=&quot;1&quot; aria-label=&quot;Increase merger spatial separation&quot;&gt;+&lt;/button&gt;&lt;/span&gt;
       &lt;/label&gt;
       &lt;label class=&quot;form-label&quot; for=&quot;dmc-velocity-merger&quot;&gt;
         Merger velocity resolution (FWHM): &lt;span class=&quot;dmc-value-unit&quot;&gt;&lt;span id=&quot;dmc-velocity-merger-value&quot;&gt;15&lt;/span&gt; km s⁻¹&lt;/span&gt;
@@ -972,17 +977,18 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;/figure&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-merger-m1&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Moment one velocity map of a two-component merger&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Moment 1 · apparent rotating gradient; thick: 0 km s⁻¹&lt;/figcaption&gt;
+      &lt;figcaption&gt;Moment 1 · apparent “rotating” gradient; thick: 0 km s⁻¹&lt;/figcaption&gt;
     &lt;/figure&gt;
     &lt;figure&gt;
       &lt;canvas id=&quot;dmc-merger-pv&quot; width=&quot;620&quot; height=&quot;420&quot; role=&quot;img&quot; aria-label=&quot;Major-axis position velocity diagram of a two-component merger&quot;&gt;&lt;/canvas&gt;
-      &lt;figcaption&gt;Major-axis PV · blended components; black: intensity contours&lt;/figcaption&gt;
+      &lt;figcaption id=&quot;dmc-merger-third-caption&quot;&gt;Major-axis PV · blended components; black: intensity contours&lt;/figcaption&gt;
     &lt;/figure&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;dmc-note text-small&quot; id=&quot;dmc-note&quot; aria-live=&quot;polite&quot;&gt;
-    At this beam size, spatial and spectral blending turns two narrow components into a smooth red-to-blue gradient.
+    The components blend on the sky but remain separated in velocity; their moment-1 map can still resemble a smooth “rotating” gradient.
   &lt;/div&gt;
+  &lt;footer class=&quot;dmc-credit&quot;&gt;Powered by ChatGPT, guided by human wisdom.&lt;/footer&gt;
 &lt;/div&gt;
 
 &lt;style&gt;
@@ -1037,6 +1043,20 @@ html&gt;body{padding:0}&lt;/style&gt;
   #disk-merger-cube .dmc-sync-controls input {
     width: 17px;
     height: 17px;
+    accent-color: #134e9b;
+  }
+  #disk-merger-cube .dmc-spectrum-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #disk-merger-cube .dmc-spectrum-toggle input {
+    width: 19px;
+    height: 19px;
     accent-color: #134e9b;
   }
   #disk-merger-cube .form-range {
@@ -1218,6 +1238,14 @@ html&gt;body{padding:0}&lt;/style&gt;
     font-size: 16px;
     margin-top: 2px;
   }
+  #disk-merger-cube .dmc-credit {
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: 1px solid #c8c8c8;
+    color: #5f5f5f;
+    font-size: 14px;
+    text-align: center;
+  }
   @media (max-width: 540px) {
     #disk-merger-cube .viz-controls,
     #disk-merger-cube .dmc-plot-grid,
@@ -1243,15 +1271,21 @@ html&gt;body{padding:0}&lt;/style&gt;
   const syncVelocityInput = document.getElementById(&#x27;dmc-sync-velocity&#x27;);
   const curveInput = document.getElementById(&#x27;dmc-curve&#x27;);
   const dvInput = document.getElementById(&#x27;dmc-dv&#x27;);
+  const separationInput = document.getElementById(&#x27;dmc-separation&#x27;);
+  const showSpectrumInput = document.getElementById(&#x27;dmc-show-spectrum&#x27;);
   const incValue = document.getElementById(&#x27;dmc-inc-value&#x27;);
   const incAssumption = document.getElementById(&#x27;dmc-inc-assumption&#x27;);
   const curveAssumption = document.getElementById(&#x27;dmc-curve-assumption&#x27;);
+  const separationAssumption = document.getElementById(&#x27;dmc-separation-assumption&#x27;);
   const diskSpatialValue = document.getElementById(&#x27;dmc-spatial-disk-value&#x27;);
   const mergerSpatialValue = document.getElementById(&#x27;dmc-spatial-merger-value&#x27;);
   const diskVelocityValue = document.getElementById(&#x27;dmc-velocity-disk-value&#x27;);
   const mergerVelocityValue = document.getElementById(&#x27;dmc-velocity-merger-value&#x27;);
   const dvValue = document.getElementById(&#x27;dmc-dv-value&#x27;);
+  const separationValue = document.getElementById(&#x27;dmc-separation-value&#x27;);
   const mergerRatio = document.getElementById(&#x27;dmc-merger-ratio&#x27;);
+  const diskThirdCaption = document.getElementById(&#x27;dmc-disk-third-caption&#x27;);
+  const mergerThirdCaption = document.getElementById(&#x27;dmc-merger-third-caption&#x27;);
   const note = document.getElementById(&#x27;dmc-note&#x27;);
 
   const XMAX = 1.5, VMAX = 350;
@@ -1260,6 +1294,16 @@ html&gt;body{padding:0}&lt;/style&gt;
   let dx = 2 * XMAX / (NX - 1);
   let dvChan = 3;
   const sigma = 35;
+  const G = 4.3009e-6; // kpc (km s^-1)^2 Msun^-1
+  const DISK_SCALE_LENGTH = 0.55;
+  const DISK_TURN_RADIUS = 0.35;
+  const DISK_ASYMPTOTIC_SPEED = 220;
+  const EXPONENTIAL_DISK_PEAK_FACTOR = 0.6220225;
+  const DISK_MATCH_RADIUS = 2.2 * DISK_SCALE_LENGTH;
+  const DISK_MATCH_SPEED = DISK_ASYMPTOTIC_SPEED * (1 - Math.exp(-DISK_MATCH_RADIUS / DISK_TURN_RADIUS));
+  const DISK_MASS = (DISK_MATCH_SPEED / EXPONENTIAL_DISK_PEAK_FACTOR) ** 2 * DISK_SCALE_LENGTH / G;
+  const BULGE_MASS = 0.20 * DISK_MASS;
+  const BH_MASS = 0.01 * DISK_MASS;
 
   function setSampling(spatialFwhm, velocityFwhm) {
     // Keep an odd-sized, centre-registered grid: the intrinsic disk peak is
@@ -1342,23 +1386,20 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
 
   function rotationSpeed(r, curveType) {
-    const G = 4.3009e-6; // kpc (km s^-1)^2 Msun^-1
-    const disk = 220 * (1 - Math.exp(-r / 0.35));
+    const disk = DISK_ASYMPTOTIC_SPEED * (1 - Math.exp(-r / DISK_TURN_RADIUS));
     if (curveType === &#x27;disk&#x27;) return disk;
 
     // Hernquist-like compact bulge contribution.
-    const bulgeMass = 5e9;
     const bulgeScale = 0.25;
-    const bulge2 = G * bulgeMass * r / (r + bulgeScale) ** 2;
+    const bulge2 = G * BULGE_MASS * r / (r + bulgeScale) ** 2;
     if (curveType === &#x27;bulge-disk&#x27;) return Math.sqrt(disk ** 2 + bulge2);
 
-    // Central supermassive black hole, illustrative of a massive galaxy/AGN host.
-    const bhMass = 6e8;
-    const bh2 = G * bhMass / Math.max(r, 0.025);
+    // Central SMBH fixed to 1% of the equivalent exponential-disk mass.
+    const bh2 = G * BH_MASS / Math.max(r, 0.025);
     return Math.sqrt(disk ** 2 + bulge2 + bh2);
   }
 
-  function buildCube(kind, deltaV, inclination, curveType) {
+  function buildCube(kind, deltaV, inclination, curveType, mergerSeparation) {
     const cube = new Float32Array(NX * NY * NV);
     for (let iy = 0; iy &lt; NY; iy++) {
       const y = (iy - (NY - 1) / 2) * dx;
@@ -1367,7 +1408,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (kind === &#x27;disk&#x27;) {
           const yd = y / Math.cos(inclination);
           const r = Math.sqrt(x * x + yd * yd) + 1e-5;
-          const brightness = Math.exp(-r / 0.55);
+          const brightness = Math.exp(-r / DISK_SCALE_LENGTH);
           const vrot = rotationSpeed(r, curveType);
           const mean = vrot * Math.sin(inclination) * x / r;
           for (let iv = 0; iv &lt; NV; iv++) {
@@ -1375,9 +1416,13 @@ html&gt;body{padding:0}&lt;/style&gt;
             cube[idx(ix, iy, iv)] = brightness * gaussian(vel, mean, sigma);
           }
         } else {
+          const originalSeparation = Math.hypot(0.86, 0.20);
+          const ux = 0.86 / originalSeparation;
+          const uy = -0.20 / originalSeparation;
+          const halfSeparation = mergerSeparation / 2;
           const components = [
-            { x: -0.43, y: 0.10, sx: 0.29, sy: 0.23, amp: 1.00, vel: -deltaV / 2 },
-            { x:  0.43, y: -0.10, sx: 0.25, sy: 0.30, amp: 0.82, vel:  deltaV / 2 }
+            { x: -halfSeparation * ux, y: -halfSeparation * uy, sx: 0.29, sy: 0.23, amp: 1.00, vel: -deltaV / 2 },
+            { x:  halfSeparation * ux, y:  halfSeparation * uy, sx: 0.25, sy: 0.30, amp: 0.82, vel:  deltaV / 2 }
           ];
           for (const c of components) {
             const rx = (x - c.x) / c.sx;
@@ -1389,8 +1434,11 @@ html&gt;body{padding:0}&lt;/style&gt;
               cube[idx(ix, iy, iv)] += brightness * gaussian(vel, c.vel + localShear, sigma);
             }
           }
-          const bridge = 0.18 * Math.exp(-0.5 * ((x / 0.62) ** 2 + (y / 0.17) ** 2));
-          const bridgeVelocity = (deltaV / 2) * Math.max(-1, Math.min(1, x / 0.43));
+          const alongBridge = x * ux + y * uy;
+          const acrossBridge = -x * uy + y * ux;
+          const bridgeScale = Math.max(0.20, 0.70 * mergerSeparation);
+          const bridge = 0.18 * Math.exp(-0.5 * ((alongBridge / bridgeScale) ** 2 + (acrossBridge / 0.17) ** 2));
+          const bridgeVelocity = (deltaV / 2) * Math.max(-1, Math.min(1, alongBridge / halfSeparation));
           for (let iv = 0; iv &lt; NV; iv++) {
             const vel = -VMAX + iv * dvChan;
             cube[idx(ix, iy, iv)] += bridge * gaussian(vel, bridgeVelocity, 55);
@@ -1477,6 +1525,16 @@ html&gt;body{padding:0}&lt;/style&gt;
       max0 = Math.max(max0, sum);
     }
     return { m0, m1, max0 };
+  }
+
+  function globalSpectrum(cube) {
+    const flux = new Float64Array(NV);
+    let max = 0;
+    for (let y = 0; y &lt; NY; y++) for (let x = 0; x &lt; NX; x++) {
+      for (let v = 0; v &lt; NV; v++) flux[v] += cube[idx(x, y, v)];
+    }
+    for (let v = 0; v &lt; NV; v++) max = Math.max(max, flux[v]);
+    return { flux, max, channelWidth: dvChan };
   }
 
   function pvDiagram(cube) {
@@ -1724,6 +1782,61 @@ html&gt;body{padding:0}&lt;/style&gt;
     ctx.fillText(&#x27;-350&#x27;, left - 8, top + ph + 8);
   }
 
+  function drawSpectrum(canvas, spectrum, colors, lineColor) {
+    const g = prepareCanvas(canvas, colors);
+    const { ctx, W, H, left, right, top, bottom } = g;
+    const pw = W - left - right, ph = H - top - bottom;
+    const baseline = H - bottom;
+
+    ctx.strokeStyle = colors.border;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(left, top);
+    ctx.lineTo(left, baseline);
+    ctx.lineTo(W - right, baseline);
+    ctx.stroke();
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(left, top, pw, ph);
+    ctx.clip();
+    ctx.beginPath();
+    for (let v = 0; v &lt; spectrum.flux.length; v++) {
+      const velocity = -VMAX + v * spectrum.channelWidth;
+      const normalized = spectrum.max &gt; 0 ? spectrum.flux[v] / spectrum.max : 0;
+      const py = baseline - normalized * ph * 0.92;
+      const leftEdge = left + (velocity - spectrum.channelWidth / 2 + VMAX) / (2 * VMAX) * pw;
+      const rightEdge = left + (velocity + spectrum.channelWidth / 2 + VMAX) / (2 * VMAX) * pw;
+      if (v === 0) ctx.moveTo(leftEdge, py);
+      else ctx.lineTo(leftEdge, py);
+      ctx.lineTo(rightEdge, py);
+    }
+    ctx.strokeStyle = lineColor;
+    ctx.lineWidth = 3;
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.fillStyle = colors.fg;
+    ctx.font = `${g.axisFont}px sans-serif`;
+    ctx.textAlign = &#x27;center&#x27;;
+    ctx.fillText(&#x27;Velocity (km s⁻¹)&#x27;, (left + W - right) / 2, H - 13);
+    ctx.save();
+    ctx.translate(22, (top + baseline) / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText(&#x27;Normalized flux&#x27;, 0, 0);
+    ctx.restore();
+
+    ctx.fillStyle = colors.muted;
+    ctx.font = `${g.tickFont}px sans-serif`;
+    ctx.textAlign = &#x27;center&#x27;;
+    ctx.fillText(&#x27;-350&#x27;, left, baseline + 27);
+    ctx.fillText(&#x27;0&#x27;, left + pw / 2, baseline + 27);
+    ctx.fillText(&#x27;+350&#x27;, W - right, baseline + 27);
+    ctx.textAlign = &#x27;right&#x27;;
+    ctx.fillText(&#x27;1&#x27;, left - 8, top + 14);
+    ctx.fillText(&#x27;0&#x27;, left - 8, baseline + 7);
+  }
+
   let renderTimer;
   function spatialFwhm(input) {
     return Number(input.value);
@@ -1746,53 +1859,87 @@ html&gt;body{padding:0}&lt;/style&gt;
     const diskPlotRadius = displayRadius(diskBeam);
     const mergerPlotRadius = displayRadius(mergerBeam);
     const deltaV = Number(dvInput.value);
+    const mergerSeparation = Number(separationInput.value);
+    const showSpectrum = showSpectrumInput.checked;
     const curveType = curveInput.value;
     incValue.textContent = inclinationDeg.toFixed(0);
     incAssumption.textContent = inclinationDeg.toFixed(0);
     curveAssumption.textContent = curveInput.options[curveInput.selectedIndex].text.toLowerCase();
     updateResolutionLabels();
     dvValue.textContent = deltaV.toFixed(0);
+    separationValue.textContent = mergerSeparation.toFixed(2);
+    separationAssumption.textContent = mergerSeparation.toFixed(2);
     const inferredV = (deltaV / 2) / Math.sin(inclination);
     mergerRatio.textContent = `Disk-fit V/σ ≈ ${(inferredV / sigma).toFixed(1)}`;
 
     const colors = palette();
     setSampling(diskBeam, diskVelocityResolution);
     const diskCube = convolveSpectral(
-      convolveSpatial(buildCube(&#x27;disk&#x27;, deltaV, inclination, curveType), diskBeam),
+      convolveSpatial(buildCube(&#x27;disk&#x27;, deltaV, inclination, curveType, mergerSeparation), diskBeam),
       diskVelocityResolution
     );
     const diskMom = moments(diskCube);
     const diskPV = pvDiagram(diskCube);
+    const diskSpectrum = showSpectrum ? globalSpectrum(diskCube) : null;
 
     setSampling(mergerBeam, mergerVelocityResolution);
     const mergerCube = convolveSpectral(
-      convolveSpatial(buildCube(&#x27;merger&#x27;, deltaV, inclination, curveType), mergerBeam),
+      convolveSpatial(buildCube(&#x27;merger&#x27;, deltaV, inclination, curveType, mergerSeparation), mergerBeam),
       mergerVelocityResolution
     );
     const mergerMom = moments(mergerCube);
     const mergerPV = pvDiagram(mergerCube);
+    const mergerSpectrum = showSpectrum ? globalSpectrum(mergerCube) : null;
 
     setSampling(diskBeam, diskVelocityResolution);
     drawMap(document.getElementById(&#x27;dmc-disk-m0&#x27;), diskMom, &#x27;m0&#x27;, colors, diskBeam, diskPlotRadius);
     drawMap(document.getElementById(&#x27;dmc-disk-m1&#x27;), diskMom, &#x27;m1&#x27;, colors, diskBeam, diskPlotRadius);
-    drawPV(
-      document.getElementById(&#x27;dmc-disk-pv&#x27;),
-      diskPV,
-      colors,
-      radius =&gt; rotationSpeed(radius, curveType) * Math.sin(inclination),
-      diskPlotRadius
-    );
+    const diskThirdCanvas = document.getElementById(&#x27;dmc-disk-pv&#x27;);
+    if (showSpectrum) {
+      drawSpectrum(diskThirdCanvas, diskSpectrum, colors, &#x27;#006f9e&#x27;);
+      diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the rotating disk&#x27;);
+      diskThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
+    } else {
+      drawPV(
+        diskThirdCanvas,
+        diskPV,
+        colors,
+        radius =&gt; rotationSpeed(radius, curveType) * Math.sin(inclination),
+        diskPlotRadius
+      );
+      diskThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a rotating disk&#x27;);
+      diskThirdCaption.textContent = &#x27;Major-axis PV diagram; black: intensity contours; cyan: intrinsic projected rotation curve&#x27;;
+    }
     setSampling(mergerBeam, mergerVelocityResolution);
     drawMap(document.getElementById(&#x27;dmc-merger-m0&#x27;), mergerMom, &#x27;m0&#x27;, colors, mergerBeam, mergerPlotRadius);
     drawMap(document.getElementById(&#x27;dmc-merger-m1&#x27;), mergerMom, &#x27;m1&#x27;, colors, mergerBeam, mergerPlotRadius);
-    drawPV(document.getElementById(&#x27;dmc-merger-pv&#x27;), mergerPV, colors, null, mergerPlotRadius);
-
-    if (mergerBeam &gt;= 0.55) {
-      note.textContent = &#x27;With strong beam smearing, the merger components blend into an especially disk-like velocity gradient.&#x27;;
-    } else if (mergerBeam &lt;= 0.20) {
-      note.textContent = &#x27;At finer resolution, the merger retains two brightness peaks and a discontinuous PV structure.&#x27;;
+    const mergerThirdCanvas = document.getElementById(&#x27;dmc-merger-pv&#x27;);
+    if (showSpectrum) {
+      drawSpectrum(mergerThirdCanvas, mergerSpectrum, colors, &#x27;#9e0022&#x27;);
+      mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Spatially integrated one-dimensional spectrum of the two-component merger&#x27;);
+      mergerThirdCaption.textContent = &#x27;Global 1D spectrum · spatially integrated and normalized to its peak&#x27;;
     } else {
-      note.textContent = &#x27;At this beam size, spatial and spectral blending turns two narrow components into a smooth red-to-blue gradient.&#x27;;
+      drawPV(mergerThirdCanvas, mergerPV, colors, null, mergerPlotRadius);
+      mergerThirdCanvas.setAttribute(&#x27;aria-label&#x27;, &#x27;Major-axis position velocity diagram of a two-component merger&#x27;);
+      mergerThirdCaption.textContent = &#x27;Major-axis PV · blended components; black: intensity contours&#x27;;
+    }
+
+    // Compare the centre separation with the beam-broadened component size,
+    // and the velocity separation with the spectrally broadened line width.
+    const componentSpatialFwhm = 2.355 * 0.27;
+    const effectiveSpatialFwhm = Math.hypot(componentSpatialFwhm, mergerBeam);
+    const effectiveLineFwhm = Math.hypot(2.355 * sigma, mergerVelocityResolution);
+    const spatiallyResolved = mergerSeparation / effectiveSpatialFwhm &gt;= 1.5;
+    const spectrallyResolved = deltaV / effectiveLineFwhm &gt;= 1.5;
+
+    if (spatiallyResolved &amp;&amp; spectrallyResolved) {
+      note.textContent = &#x27;The components are resolved in position and velocity; their two-component nature should remain visible despite the connecting bridge.&#x27;;
+    } else if (spatiallyResolved) {
+      note.textContent = &#x27;The components are spatially distinct, but their line profiles overlap; the PV diagram is smoother than the moment-0 morphology.&#x27;;
+    } else if (spectrallyResolved) {
+      note.textContent = &#x27;The components blend on the sky but remain separated in velocity; their moment-1 map can still resemble a smooth “rotating” gradient.&#x27;;
+    } else {
+      note.textContent = &#x27;At these settings, spatial and spectral blending merge the two components into a smooth red-to-blue gradient; the bridge reinforces the disk-like appearance.&#x27;;
     }
   }
 
@@ -1803,6 +1950,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   incInput.addEventListener(&#x27;input&#x27;, scheduleRender);
   curveInput.addEventListener(&#x27;change&#x27;, scheduleRender);
+  showSpectrumInput.addEventListener(&#x27;change&#x27;, scheduleRender);
   function syncResolution(source, target, syncInput) {
     if (syncInput.checked) target.value = source.value;
     updateResolutionLabels();
@@ -1830,6 +1978,11 @@ html&gt;body{padding:0}&lt;/style&gt;
   syncSpatialInput.addEventListener(&#x27;change&#x27;, updateSyncState);
   syncVelocityInput.addEventListener(&#x27;change&#x27;, updateSyncState);
   dvInput.addEventListener(&#x27;input&#x27;, scheduleRender);
+  separationInput.addEventListener(&#x27;input&#x27;, () =&gt; {
+    separationValue.textContent = Number(separationInput.value).toFixed(2);
+    separationAssumption.textContent = Number(separationInput.value).toFixed(2);
+    scheduleRender();
+  });
   root.querySelectorAll(&#x27;.dmc-step&#x27;).forEach(button =&gt; {
     button.addEventListener(&#x27;click&#x27;, () =&gt; {
       const input = document.getElementById(button.dataset.target);
