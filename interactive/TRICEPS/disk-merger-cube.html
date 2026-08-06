@@ -1946,14 +1946,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     const { ctx, W, H } = g;
     const { left, right, top, bottom } = bounds;
     const pw = W - left - right, ph = H - top - bottom;
-    const major = beamFwhm / (2 * plotRadius) * pw;
-    const minor = 0.72 * major;
-    const cx = left + 16 + major / 2;
-    const cy = top + ph - 16 - minor / 2;
+    const diameter = beamFwhm / (2 * plotRadius) * pw;
+    const cx = left + 16 + diameter / 2;
+    const cy = top + ph - 16 - diameter / 2;
 
     ctx.save();
     ctx.beginPath();
-    ctx.ellipse(cx, cy, major / 2, minor / 2, -0.35, 0, 2 * Math.PI);
+    ctx.arc(cx, cy, diameter / 2, 0, 2 * Math.PI);
     ctx.fillStyle = colors.bg;
     ctx.fill();
     ctx.strokeStyle = colors.fg;
