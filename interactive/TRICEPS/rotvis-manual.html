@@ -68,7 +68,7 @@
       <tbody>
         <tr><td data-label="Panel">Moment 0</td><td data-label="Meaning">Integrated intensity</td><td data-label="What to inspect">One peak versus two peaks? Elongation? Bridges? </td></tr>
         <tr><td data-label="Panel">Moment 1</td><td data-label="Meaning">Intensity-weighted line-of-sight velocity</td><td data-label="What to inspect">Smooth gradients? Twists? Discontinuities? The thick systemic-velocity contour (V=0)?</td></tr>
-        <tr><td data-label="Panel">Moment 2</td><td data-label="Meaning">Intensity-weighted line-of-sight line broadening, shown with Blues from 0 to 70 km s<sup>−1</sup></td><td data-label="What to inspect">A central line broadening peak? Beam smearing? Broad lines where two merger components overlap?</td></tr>
+        <tr><td data-label="Panel">Moment 2</td><td data-label="Meaning">Intensity-weighted line-of-sight line broadening, shown with Blues from 0 to 50 km s<sup>−1</sup></td><td data-label="What to inspect">A central line broadening peak? Beam smearing? Broad lines where two merger components overlap?</td></tr>
         <tr><td data-label="Panel">Major-axis PV</td><td data-label="Meaning">Position-velocity diagram extracted along the global x axis</td><td data-label="What to inspect">Symmetry? Multiple components? Line broadening? Effects of beam and spectral smearing? The Keplerian decline of the SMBH? Whether the merger produces a disk-like pattern?</td></tr>
         <tr><td data-label="Panel">Minor-axis PV</td><td data-label="Meaning">Position-velocity diagram extracted along the global y axis</td><td data-label="What to inspect">Velocity asymmetries away from the major axis? Multiple components? Off-axis emission inconsistent with a simple rotating disk?</td></tr>
         <tr><td data-label="Panel">Global spectrum</td><td data-label="Meaning">Flux density integrated within the whole field of view</td><td data-label="What to inspect">Single-, double-peaked, or asymmetric line profiles? Spatial convolution conserves total flux in principle, but beam smearing can spread emission beyond the finite field of view and reduce the measured integrated spectrum.</td></tr>
@@ -123,6 +123,13 @@
 
     <h2>How a merger mimics a disk :(</h2>
     <p>RotVis demonstrates a degeneracy: spatial and spectral blending can turn two dynamically distinct components into a continuous red-to-blue moment-1 gradient. A high disk-fit <em>V</em>/σ therefore does not by itself prove that the source is an equilibrium rotating disk.</p>
+
+    <h3>Apparent disk-fit <em>V</em>/σ</h3>
+    <p>The value shown for the merger is a simple disk-like interpretation, not the result of fitting a rotating-disk model. RotVis treats half of the merger velocity separation, Δ<em>v</em>/2, as the projected rotation speed. It then applies the inclination selected for the disk:</p>
+    <p><em>V</em><sub>fake</sub> = (Δ<em>v</em>/2) / sin(<em>i</em>).</p>
+    <p>The denominator is the intrinsic Gaussian velocity dispersion assigned to each merger component, σ = 35 km s<sup>−1</sup>. The displayed quantity is therefore</p>
+    <p><em>V</em><sub>fake</sub>/σ = Δ<em>v</em> / [2 σ sin(<em>i</em>)].</p>
+    <p>For example, Δ<em>v</em> = 300 km s<sup>−1</sup> and <em>i</em> = 55° give <em>V</em><sub>fake</sub>/σ ≈ 5.2. Spatial and spectral resolution do not enter this numerical estimate; they determine only whether the two components blend sufficiently to make the disk-like interpretation plausible. The displayed ratio should therefore be regarded as an illustrative apparent value, not a recovered dynamical measurement.</p>
     <!--
     <p>The message below the plots changes according to whether the merger components are resolved in position, velocity, both or neither. Treat this as a qualitative guide rather than a classification statistic.</p>
     -->
