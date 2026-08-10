@@ -26,7 +26,7 @@ url                      : "https://astronlin.github.io/" # the base hostname & 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : /fig/lingrui_photo_2.png # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : /fig/ESO_supernova_logo.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Lingrui Lin" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Lingrui Lin"
-  avatar           : "/fig/galileo_museum.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/fig/lingrui_photo_2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "In the beginning, there was darkness; Until someone set themselves aflame; Only then did the Universe know light"
   location         : "Earth, Solar System, the Galaxy"
   # email            : lingruiphd@smail.nju.edu.cn
