@@ -52,7 +52,7 @@ massive galaxies at redshift $z=4-5$ using ALMA, VLA, and JWST observations.
 We aim to understand **how galaxies form and evolve in the early Universe**, 
 when the Universe was less than 10% of its current age.
 
-**Manuscript to be submitted.** 
+**Manuscript submitted. Stay tuned!** 
 
 ### Multi-wavelength atlas
 
