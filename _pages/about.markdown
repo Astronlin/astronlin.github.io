@@ -1,13 +1,14 @@
 ---
 layout: single 
 title: "About me" 
-excerpt: "*About an ever-evolving self, with much left to discover...*"
+excerpt: "*About **an ever-evolving self**, <br> with much left to discover...*"
 permalink: /about/
 # classes: wide
 header:
   overlay_image: /fig/zurich.jpeg
-  overlay_color: "#000"
-  overlay_filter: "0.6"
+  #overlay_color: "#000"
+  #overlay_filter: "0.6"
+  overlay_filter: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))
   caption: "November 26, 2023 @ Zurich, Switzerland (Credit: G. Luo)"
 author_profile: true
 gallery1:

@@ -5,7 +5,7 @@ permalink: /gallery/
 header:
   overlay_image: /fig/Pleiades_25p.jpg
   #overlay_filter: 
-  caption: "The Pleiades, 昴星团 (December 18, 2023, Munich)"
+  caption: "The Pleiades, 昴星团 (December, 2023, Munich)"
 title: "Seen from the Earth"
 excerpt: "*Swipe to see more images. Stay tuned.*"
 toc: true
@@ -180,7 +180,7 @@ author_profile: true
 <div class="scroll-row">
   <img src="/fig/star-trails.jpeg" alt="">
   <img src="/fig/moon.jpeg" alt="">
-  <img src="/fig/ESO_supernova.jpeg" alt="">
+  <img src="/fig/ESO_supernova_gallery.jpg" alt="">
   <img src="/fig/Pleiades.jpg" alt="">
   <img src="/fig/MW_sesto.jpeg" alt="">
 </div>

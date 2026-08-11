@@ -6,21 +6,24 @@ title: "Research"
 excerpt: "***The unknown** is but a fog to be dispersed; <br> **knowledge** is the true pillar of the world.*"
 permalink: /research/
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.6"
-  overlay_image: /fig/research/header.jpg
+  #overlay_color: "#000"
+  #overlay_filter: "0.4"
+  overlay_filter: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1))
+  #overlay_image: /fig/research/header.jpg
+  overlay_image: /fig/ESO_supernova.jpg
+  caption: "Stellar trail above ESO Supernova (December, 2023, Munich)"
 toc: true
 toc_label: "Research"
 toc_icon: "star"
 toc_sticky: true
 author_profile: true
 ---
-My Ph.D. research mainly focuses on the **kinematics** (how objects move) and
+My Ph.D. research focuses on the **kinematics** (how objects move) and
 **dynamics** (how motions change) of the interstellar gas across multiple
-physical scales -- from molecular clouds to galaxy disks, and across cosmic time
--- from the Milky Way to early galaxies. I am also interested in the physics of
-the **interstellar medium**, which is essential for proper interpretations of
-the observations. You may refer to my
+physical scales -- from molecular clouds to galaxy disks, and across cosmic
+time -- from the Milky Way to early galaxies. I am also interested in the
+physics of the **interstellar medium**, which is essential for proper
+interpretations of the observations. You may refer to my
 [ORCID](https://orcid.org/0000-0002-2231-8381) for my publications.
 
 I have extensive experience in reducing and analyzing radio, millimeter, and
