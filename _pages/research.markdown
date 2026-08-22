@@ -179,6 +179,10 @@ Published in *Astronomy & Astrophysics*. [Read the paper](https://www.aanda.org/
 ## HINSA identification
 - A Python implementation of the second-derivative method (Krčo et al. 2008) and MCMC. [Github](https://github.com/Astronlin/HINSA-codes)
 
+
+## Interactive scientific visualizations
+- Browser-based tools for exploring rotating-disk kinematics, Fourier power and scale-dependent velocity variance, and velocity harmonics. [Open the visualizations](/interactive/)
+
 ---
 
 # Other interests
