@@ -3,9 +3,12 @@ layout: single
 title: Gallery
 permalink: /gallery/
 header:
-  overlay_image: /fig/Pleiades_25p.jpg
+  #overlay_image: /fig/Pleiades_25p.jpg
   #overlay_filter: 
-  caption: "The Pleiades, 昴星团 (December, 2023, Munich)"
+  #caption: "The Pleiades, 昴星团 (December, 2023, Munich)"
+  overlay_image: /fig/Aug29_2026_Rome/Rome_DSC2028_top.jpg
+  overlay_filter: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))
+  caption: "Inside the Colosseum (August 29, 2026, Rome)"
 title: "Seen from the Earth"
 excerpt: "*Swipe to see more images. Stay tuned.*"
 toc: true
@@ -16,6 +19,20 @@ author_profile: true
 ---
 
 # Europe
+
+## August 29, 2026 · Rome, Italy 
+<div class="scroll-row">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC1956 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC1989 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC1997 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC2019 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC2028 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC1971 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC1992 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC2009 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC2022 Large.jpeg" alt="">
+<img src="/fig/Aug29_2026_Rome/Rome_DSC2028 Large.jpeg" alt="">
+</div>
 
 ## July 2026 · Sesto, Italy 
 
