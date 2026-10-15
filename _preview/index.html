@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A local preview of Lingrui Lin's personal and academic website.">
+  <meta name="theme-color" content="#fffaf5">
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem("lingrui-theme") === "dark" ? "dark" : "light"; }
+    catch (_) { document.documentElement.dataset.theme = "light"; }
+  </script>
+  <title>Lingrui Lin — My corner of the Universe</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="publications.js" defer></script>
+  <script src="gallery.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="masthead">
+    <a class="wordmark" href="#home" aria-label="Lingrui Lin, home">Lingrui Lin <span lang="zh">林令瑞</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="#home" data-page="home">Home</a>
+      <div class="nav-group">
+        <div class="nav-group-heading"><a href="#research" data-page="research">Research</a><button class="research-toggle" aria-expanded="false" aria-controls="research-submenu" aria-label="Show research menu">▾</button></div>
+        <div class="nav-submenu" id="research-submenu">
+          <a href="#research">Overview</a>
+          <a href="#publications" data-page="publications">Publications</a>
+          <a href="#tools" data-page="tools">Tools</a>
+        </div>
+      </div>
+      <a href="#about" data-page="about">About</a>
+      <a href="#gallery" data-page="gallery">Gallery</a>
+    </nav>
+    <button class="theme-toggle" aria-label="Switch to dark theme">Dark</button>
+    <a class="nav-cv" href="../CV/Lingrui_CV.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="content" tabindex="-1"></main>
+  <footer class="footer wrap">
+    <div><a class="footer-name" href="#home">Lingrui Lin <span lang="zh">林令瑞</span></a><p>Nanjing, China</p></div>
+    <div class="footer-links"><a href="mailto:lingruiphd@smail.nju.edu.cn">Email</a><a href="https://github.com/Astronlin" target="_blank" rel="noopener">GitHub ↗</a><a href="https://orcid.org/0000-0002-2231-8381" target="_blank" rel="noopener">ORCID ↗</a></div>
+  </footer>
+  <div class="preview-note">LOCAL DESIGN PREVIEW <span>·</span> Existing website and CV unchanged</div>
+  <dialog id="photo-dialog" aria-label="Photo viewer"><button class="photo-close" aria-label="Close photo">Close ×</button><img alt=""><p></p></dialog>
+  <noscript><div class="wrap">This local preview uses JavaScript for its page navigation. Please enable it to view the design.</div></noscript>
+</body>
+</html>
