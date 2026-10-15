@@ -64,8 +64,8 @@ h3,.pub-title,.timeline h3,.photo-tile h3{font-weight:600}
 .gallery-banner p{margin-top:18px}
 .research-banner{margin-block:32px 0;padding:18px;background:#fff;border:1px solid var(--line)}
 .research-banner img{width:100%;height:auto;object-fit:contain}
-.research-teaser{align-items:start}
-.research-teaser img{height:auto;background:transparent;object-fit:contain}
+.research-teaser{align-items:center}
+.research-teaser img{height:auto;background:transparent;object-fit:contain;align-self:center;justify-self:center}
 .contact-emails{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 28px}
 .contact-section .original-excerpt{margin:32px 0 0;line-height:1.8}
 .project-visual,.research-feature .feature-image{background:transparent;padding:0}
