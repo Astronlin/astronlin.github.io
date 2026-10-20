@@ -8,6 +8,7 @@
     themeButton.textContent = theme === "light" ? "Dark" : "Light";
     themeButton.setAttribute("aria-label", "Switch to " + (theme === "light" ? "dark" : "light") + " theme");
     document.querySelector('meta[name="theme-color"]').content = theme === "light" ? "#fffaf5" : "#1b1717";
+    window.siteLanguage?.translate();
   }
   applyTheme(document.documentElement.dataset.theme || "light");
   themeButton.addEventListener("click", () => {
@@ -96,6 +97,7 @@
         return `<article class="pub-row"><div class="pub-year">${esc(p.year)}</div><div><h3 class="pub-title">${esc(p.title)}</h3><p class="pub-authors">${names}</p><p class="pub-journal"><em>${esc(p.journal)}</em>${detail?`, ${esc(detail)}`:""}</p>${p.status!=="Published"?`<p class="pub-status">${esc(p.status)}</p>`:""}</div>${p.url?out(p.url,p.url.includes("arxiv.org")?"arXiv":"Paper","pub-out"):""}</article>`;
       }).join("")}</section>`;
     }).join(""):'<p class="empty">No publications match that search.</p>';
+    window.siteLanguage?.translate();
   }
 
   function tools() {
@@ -137,6 +139,7 @@
       if (filter !== "all" && album.group !== filter) return "";
       return `<section class="gallery-album"><div class="album-heading"><h2>${esc(album.title)}</h2><div class="album-controls"><button data-scroll-row="${index}" data-direction="-1" aria-label="Previous photos in ${esc(album.title)}">←</button><button data-scroll-row="${index}" data-direction="1" aria-label="Next photos in ${esc(album.title)}">→</button></div></div><div class="scroll-row" id="photo-row-${index}" tabindex="0" role="region" aria-label="${esc(album.title)} — scrollable photographs">${album.paths.map((path, i) => `<button class="scroll-photo" data-photo="${first + i}" aria-label="Enlarge ${esc(album.title)} photo ${i + 1}">${photo(path, album.title + " · Photo " + (i + 1))}</button>`).join("")}</div></section>`;
     }).join("") + (filter === "all" || filter === "pets" ? petExhibition() : "");
+    window.siteLanguage?.translate();
   }
 
   let currentFilter="all";
@@ -157,6 +160,11 @@
     if(!initial)main.focus({preventScroll:true});initial=false;
     window.scrollTo({top:0,behavior:"instant"});
     if(page==="research"&&sub)requestAnimationFrame(()=>document.getElementById(`project-${sub}`)?.scrollIntoView({behavior:"instant",block:"start"}));
+    window.siteLanguage?.translate();
+    if(window.siteLanguage?.current === "zh") {
+      const titles={home:"我的宇宙一隅",research:"科研",publications:"论文",tools:"代码开发",about:"关于我",gallery:"从地球看世界"};
+      document.title=`${titles[page]} — 林令瑞`;
+    }
   }
   document.querySelector(".menu-toggle").addEventListener("click",e=>{const b=e.currentTarget;const opened=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!opened));document.querySelector("#main-nav").classList.toggle("open",!opened);});
   main.addEventListener("input",e=>{if(e.target.id==="pub-search")renderPublications(currentFilter,e.target.value);});
@@ -171,8 +179,13 @@
       row.scrollBy({left: Number(scrollButton.dataset.direction) * row.clientWidth * 0.8, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"});
     }
     const photoButton=e.target.closest("[data-photo]");
-    if(photoButton){const p=photos[Number(photoButton.dataset.photo)];const d=document.querySelector("#photo-dialog");const img=d.querySelector("img");img.src=asset(p.path);img.alt=p.title+" — "+p.place;d.querySelector("p").textContent=p.place;d.showModal();}
+    if(photoButton){const p=photos[Number(photoButton.dataset.photo)];const d=document.querySelector("#photo-dialog");const img=d.querySelector("img");img.src=asset(p.path);img.alt=p.title+" — "+p.place;d.querySelector("p").textContent=p.place;d.showModal();window.siteLanguage?.translate();}
   });
   const dialog=document.querySelector("#photo-dialog");dialog.querySelector("button").addEventListener("click",()=>dialog.close());dialog.addEventListener("click",e=>{if(e.target===dialog){const b=dialog.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)dialog.close();}});
+  window.addEventListener("site-language-change", () => {
+    const y=window.scrollY;
+    render();
+    window.scrollTo({top:y,behavior:"instant"});
+  });
   window.addEventListener("hashchange",render);render();
 })();
