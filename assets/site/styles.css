@@ -153,3 +153,65 @@ html:not([data-theme="dark"]) .masthead{border-bottom-color:var(--line)}
  .project h2{font-size:29px}
  .project-visual{padding:0;min-height:0}
 }
+/* A little less whitespace; preserve typography, colors, and content width. */
+.home-hero{min-height:570px}
+.hero-copy{padding-block:28px 48px}
+.hello-row{margin-bottom:24px}
+.hero-actions{margin-top:24px}
+.hero-bottom{padding-block:14px}
+.section{padding-block:60px}
+.section-heading{margin-bottom:26px}
+.intro-grid{gap:64px}
+.two-col{gap:52px}
+.feature-copy{padding:34px}
+.research-pair{gap:24px;margin-top:24px}
+.research-teaser{padding-block:20px}
+.news-item{padding-block:18px}
+.personal-strip{padding-block:48px}
+.personal-grid{gap:52px}
+.contact-section{padding-block:54px}
+.page-head{padding-block:50px 32px}
+.page-head h1{margin-bottom:20px}
+.subnav{margin-top:22px}
+.project{padding-block:28px}
+.project-grid{gap:28px}
+.research-question{padding-block:28px 34px}
+.filters{padding-block:16px 22px}
+.pub-row{padding-block:18px}
+.pub-authors{margin-top:6px}
+.publication-note{margin-block:28px 44px}
+.tool-row{padding-block:28px}
+.tool-spotlight{padding:28px;gap:32px}
+.about-intro{padding-block:50px;gap:56px}
+.timeline,.service-list{margin-top:24px}
+.timeline-item{padding-block:18px}
+.service-list li{padding-block:14px}
+.about-personal{padding-block:52px;gap:44px}
+.about-pingpong{padding-block:28px 36px}
+.gallery-album{padding-block:18px}
+.album-heading{margin-bottom:12px}
+.footer{padding-block:28px 56px}
+@media(min-width:1650px){.home-hero{min-height:620px}}
+@media(min-width:761px) and (max-width:1050px){
+ .intro-grid,.two-col,.about-intro{gap:36px}
+}
+@media(max-width:760px){
+ .home-hero{min-height:590px}
+ .hero-copy{padding-block:34px 60px}
+ .section{padding-block:36px}
+ .section-heading{margin-bottom:24px}
+ .intro-grid,.two-col,.personal-grid,.about-intro,.about-personal,.tool-spotlight{gap:24px}
+ .feature-copy{padding:22px}
+ .research-pair{gap:0;margin-top:20px}
+ .personal-strip{padding-block:36px}
+ .contact-section{padding-block:40px}
+ .page-head{padding-block:32px 24px}
+ .project{padding-block:22px}
+ .project-grid{gap:18px}
+ .pub-row{padding-block:18px}
+ .tool-row{padding-block:22px}
+ .tool-spotlight{padding:20px}
+ .about-intro,.about-personal{padding-block:32px}
+ .timeline-item{padding-block:16px}
+ .footer{padding-block:24px 44px;gap:18px}
+}
