@@ -12,3 +12,10 @@ language switch remembers the visitor's choice. Direct links can specify
 Publication titles and author lists, figure labels, CV PDFs, and the standalone
 interactive tools retain their original language. When updating the English
 page text, update its matching Chinese entry in `i18n.js` as well.
+
+
+The standalone English FISH teaching page lives in `tutorials/fish-calibration/`
+and is linked from the FAST calibration entry on Tools. Its source/data archive
+is a fixed pre-release tutorial snapshot with real Sun17_A_01/M01 inputs. Keep commands,
+expected metrics, download size, and SHA256SUMS synchronized when replacing it;
+do not silently redirect the lesson to a different software version.
