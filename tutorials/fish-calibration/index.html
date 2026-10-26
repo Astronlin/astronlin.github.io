@@ -20,7 +20,7 @@
 <div class="actions"><a class="primary" href="#run">Run the example ↓</a><a class="text-link" href="downloads/fish-sun17-a01-source-20261025.tar.gz" download>Download source + data <span>16.19 MiB</span></a></div>
 <p class="small">The download contains the Python source, notebook, real SCI/CAL/Tcal extracts, and numerical regression results. It is a fixed teaching snapshot, not a claim that the entire pipeline is ready for general release.</p>
 </section>
-<nav class="contents" aria-label="On this page"><a href="#inputs">01 / Inputs</a><a href="#run">02 / Run</a><a href="#viewer">03 / Qt viewer</a><a href="#calculation">04 / Calculation</a><a href="#baseline">05 / Baseline</a><a href="#resampling">06 / Table</a><a href="#results">07 / Check</a><a href="#modify">08 / Modify</a></nav>
+<nav class="contents" aria-label="On this page"><a href="#inputs">01 / Inputs</a><a href="#run">02 / Run</a><a href="#start-here">Choose a route</a><a href="#viewer">03 / Qt viewer</a><a href="#viewer-controls">Viewer controls</a><a href="#cli">Command-line walkthrough</a><a href="#troubleshooting">Troubleshooting</a><a href="#calculation">04 / Calculation</a><a href="#baseline">05 / Baseline</a><a href="#resampling">06 / Table</a><a href="#results">07 / Check</a><a href="#modify">08 / Modify</a></nav>
 <section id="inputs" class="lesson-section">
 <div class="section-title"><p class="eyebrow">01 / Know the inputs</p><h2>Sun17_A_01 input dataset</h2></div>
 <div class="two-column"><div><p>The example contains actual Sun17_A_01 observations from 10 October 2021: M01, 32 consecutive science integrations, and both auto-polarizations. Original zero-based SCI rows 1040–1071 are retained from N_0001. The native band keeps all 65,536 channels over 31.25 MHz.</p><p>The selection contains 6.442450944 seconds of exposure. Matching ON/OFF and diode-reference extracts retain context for the two default 10-timestamp filters and the 16-frequency-channel Tcal filter.</p><p class="note">These are observed spectra, with no simulated signal or truth array. The original files are preserved. The complete example runs through baseline subtraction and Doppler-aligned resampling. Actual saved pointings and frequency factors are included; there is no need to download full telemetry. Spatial gridding is the only omitted production stage.</p></div>
@@ -39,9 +39,18 @@ python -m pip install -e '.[notebook,qt]'</code></pre><details><summary>Installa
   --output "$HOME/fish-suna01-workflow"</code></pre><p>The runner verifies inputs and executes the normal FISH run/wait sequence for reference, calibration/RFI, baseline and resampling. Use a new empty workspace. It saves fit records, a spectral table and diagnostic figures; no gridding is started.</p><details><summary>Prefer to inspect one cell at a time?</summary><pre><code>cd examples/minimal_calibration
 jupyter notebook walkthrough.ipynb</code></pre><p>The notebook explains each intermediate array and equation. Its final cell explicitly saves results to a temporary folder. <a class="inline-link" href="downloads/walkthrough.ipynb" download>Download the notebook separately</a> if you already have this source snapshot and its data.</p></details></div></article>
 </section>
+<section id="start-here" class="lesson-section">
+<p class="eyebrow">Start here / choose your route</p><h2>Two ways to work through the same data</h2><p><a class="inline-link" href="downloads/interactive-and-command-line-guide.txt" download>Download this operating guide as plain text</a>.</p>
+<p>Complete installation above first. All operating-system commands below are entered in a normal terminal, from the unpacked <code>fastfish-0.1.0</code> folder with its Python environment activated. Commands labelled <strong>FISH prompt</strong> are entered after starting <code>fish</code>; do not paste them into Bash, Zsh, or the unrelated fish operating-system shell. Do not type the printed <code>fish&gt;</code> prompt itself.</p>
+<div class="two-column"><article class="route-card"><h3>Route A · inspect, then process</h3><p>Recommended for your first attempt. Prepare an empty session, inspect every stage in the Qt viewer, apply your settings, then save the four processing stages from FISH.</p><p><a class="inline-link" href="#viewer">Follow the viewer walkthrough</a> and the <a class="inline-link" href="#viewer-controls">control reference</a>, then <a class="inline-link" href="#cli">save from the command line</a>.</p></article><article class="route-card"><h3>Route B · commands and a notebook</h3><p>Prepare the same session and run each processing stage from the FISH prompt. A display is optional. Read its status, settings and saved table. Open Qt later if a display is available.</p><p><a class="inline-link" href="#cli">Follow the command-line walkthrough</a>. Alternatively, execute <code>walkthrough.ipynb</code> cell by cell, or use the unattended runner above.</p></article></div>
+<p class="note"><strong>One session, one set of settings.</strong> Use one output directory throughout your chosen route. The examples below use <code>~/fish-suna01-session</code>. The earlier one-command runner uses a different directory; do not prepare an already populated directory again. Original inputs remain in the downloaded package, so keep that package at the same location while using its session.</p>
+<div class="flow" aria-label="Full teaching workflow"><span>Prepare inputs &amp; pointings</span><b>→</b><span>Inspect / adjust</span><b>→</b><span>Reference</span><b>→</b><span>Calibration + RFI</span><b>→</b><span>Baseline</span><b>→</b><span>Spectral table</span></div>
+<p>This example starts with <em>extracted</em> ON/OFF data. It does not demonstrate extraction from raw PSR files. Its real pointings and LSRK factors are already supplied; it does not recalculate telemetry. These choices keep the dataset small while exercising all four spectral processing stages.</p>
+</section>
+
 <section id="viewer" class="lesson-section">
-<p class="eyebrow">03 / Desktop interface</p><h2>Interactive calibration with the Qt viewer</h2>
-<p class="section-lede">Use the downloaded Sun17 example to run the actual FISH desktop viewer on your own computer. The instructions below create a session with 32 real spectra and their measured sky positions; no connection to the original data server is required. The screenshots show the calibration and baseline pages.</p>
+<p class="eyebrow">03 / Desktop interface</p><h2>Interactive workflow with the Qt viewer</h2>
+<p class="section-lede">Use the downloaded Sun17 example to run the actual FISH desktop viewer on your own computer. For the detailed click-by-click instructions, see <a class="inline-link" href="#viewer-controls">the viewer operating reference</a>. The overview below creates a session with 32 real spectra and their measured sky positions; no connection to the original data server is required. The screenshots show the calibration and baseline pages.</p>
 <div class="viewer-choices" role="group" aria-label="Viewer screenshot"><button type="button" class="viewer-choice" data-viewer="tsys" aria-pressed="true">Tsys calibration</button><button type="button" class="viewer-choice" data-viewer="apply" aria-pressed="false">Apply calibration</button><button type="button" class="viewer-choice" data-viewer="baseline" aria-pressed="false">Baseline</button></div>
 <figure class="viewer-figure"><a id="viewer-image-link" href="viewer-tsys.png"><img id="viewer-image" src="viewer-tsys.png" width="1500" height="937" loading="lazy" alt="Actual FISH Qt Tsys calibration page for Sun17_A_01 M01 row 1040, showing smoothing controls, footprint and raw versus smoothed temperature references."></a><figcaption id="viewer-caption">Tsys calibration: compare raw and filtered Tpsr, then adjust the two smoothing controls. Click the screenshot to enlarge it.</figcaption></figure>
 <div id="viewer-description" class="note" aria-live="polite">The upper-right panel compares raw and smoothed Tpsr. The lower-right panel shows the smoothed curve separately. Both summarize the temperature reference used for the selected spectrum.</div>
@@ -49,8 +58,8 @@ jupyter notebook walkthrough.ipynb</code></pre><p>The notebook explains each int
 <p>From the unpacked <code>fastfish-0.1.0</code> source directory, in the same Python environment used above:</p>
 <pre><code>python -m pip install -e '.[qt]'
 python examples/minimal_calibration/prepare_viewer.py \
-  --output "$HOME/fish-suna01-viewer"
-fish-viewer --session-state "$HOME/fish-suna01-viewer/fish_session.json"</code></pre>
+  --output "$HOME/fish-suna01-session"
+fish-viewer --session-state "$HOME/fish-suna01-session/fish_session.json"</code></pre>
 <p>Run the viewer on a machine with a desktop display; a headless Linux server needs a configured desktop/display session. The preparation command requires a new empty output directory and leaves the released data unchanged. To reopen a session and retain your edits, run only the last command. In the viewer, raw rows 0–31 refer to this compact extract and correspond to original Sun17 SCI rows 1040–1071.</p>
 <h3 class="viewer-launch-title">2. Inspect the temperature reference</h3>
 <ol class="viewer-instructions"><li>Select <strong>Tsys calibration</strong> in the Stage menu. Click one of the 32 points in the footprint; Previous / Next also changes the selected spectrum.</li><li>Keep <strong>Tpsr smoothing = 10</strong>, change <strong>ON−OFF smoothing</strong> from 10 to 5, then click <strong>Update preview</strong>. Compare the reference curves. This first filter changes the ON−OFF used to derive Tpsr.</li><li>Restore ON−OFF smoothing to 10, change <strong>Tpsr smoothing</strong> to 5 and update again. This second filter acts on Tpsr before matching SCI timestamps. The two changes need not have identical effects.</li><li>Use <strong>Reset edits</strong> to discard pending, unapplied edits. Once an edit has been applied, restore a value explicitly and click Update preview. Use values 1–10; larger filters require a longer CAL extract and are rejected in this teaching session.</li></ol>
@@ -62,7 +71,7 @@ fish-viewer --session-state "$HOME/fish-suna01-viewer/fish_session.json"</code><
 <h3 class="viewer-launch-title">5. Save the processing stages with your chosen settings</h3>
 <p>After inspecting and applying settings in the viewer, open FISH in the same environment and restore that session:</p>
 <pre><code>fish --viewer qt</code></pre>
-<pre><code>restore ~/fish-suna01-viewer/fish_session.json
+<pre><code>restore ~/fish-suna01-session/fish_session.json
 tsyscal run
 wait
 applycal run
@@ -94,6 +103,180 @@ status</code></pre>
 <p><strong>Run commands…</strong> copies stage commands for a full project; it does not execute them. This guide ends at the spectral table. Finite output does not establish true baseline quality or absolute calibration accuracy. Do not use a project path or Tcal reference from another observation without checking compatibility.</p>
 </details>
 </section>
+<section id="viewer-controls" class="lesson-section">
+<p class="eyebrow">Interactive tool / detailed operating reference</p><h2>How to operate the viewer at each step</h2>
+<p>The window is a working preview of the selected spectrum, not a browser simulation. Use the <strong>Stage</strong> menu to switch pages or <strong>Next step →</strong> to advance. In a spectrum page, the footprint is on the left and spectra are on the right. The selection line identifies scan, beam and zero-based row. Wait for <strong>Ready</strong> before requesting another calculation.</p>
+<h3>1. Open a fresh session and check the footprint</h3>
+<p><strong>Normal terminal:</strong></p><pre><code>python examples/minimal_calibration/prepare_viewer.py \
+  --output "$HOME/fish-suna01-session"
+fish-viewer --session-state "$HOME/fish-suna01-session/fish_session.json"</code></pre>
+<ol class="viewer-instructions"><li>Check that <strong>Stage = Footprint</strong>. This example contains only 32 positions from M01, so the map is a short track, not a two-dimensional survey.</li><li>Choose <strong>Tsys calibration</strong>. Click a point on the map, or use <strong>Previous / Next</strong>. Confirm the selection line changes. Row 0 corresponds to original SCI row 1040; row 31 corresponds to original row 1071.</li><li>To select another spectrum later, click a pointing again. Selecting it updates the requested preview; it does not discard other loaded spectra or change the batch selection.</li><li>Keep the same session open for the remaining steps. To reopen tomorrow, use only the <code>fish-viewer --session-state …</code> command; do not prepare the directory again.</li></ol>
+<h3>2. Understand the main controls before changing science settings</h3>
+<div class="table-scroll"><table class="timing-table"><thead><tr><th>Control</th><th>What to do</th><th>What it changes</th></tr></thead><tbody>
+<tr><td>Stage / Next step →</td><td>Select the inspection page.</td><td>The displayed diagnostic, not a batch reduction.</td></tr>
+<tr><td>AA / BB / average</td><td>Inspect AA and BB individually before their mean.</td><td>The displayed polarization. Baseline processing fits AA/BB separately.</td></tr>
+<tr><td>Settings</td><td>Show or hide the parameter area. Its arrow menu offers <strong>Detach parameter console</strong>; select <strong>Attach parameter console</strong> to put it back.</td><td>Window layout only.</td></tr>
+<tr><td>Update preview</td><td>After editing parameters, click once and wait for the result.</td><td>Saves the accepted settings to this session and recalculates the requested preview. It does not run all spectra or replace completed stage files.</td></tr>
+<tr><td>Reset edits</td><td>Discard unapplied edits.</td><td>Restores the controls to the session’s saved settings. It is not an undo for already applied edits.</td></tr>
+<tr><td>Refresh</td><td>Reload the session after changes made elsewhere, especially in the FISH prompt.</td><td>Synchronizes the window with current saved state.</td></tr>
+<tr><td>Run commands…</td><td>Read the run folder, then use <strong>Copy commands only</strong> and paste into FISH.</td><td>Copies commands; clicking it does not start processing. This example’s list ends at Table.</td></tr>
+</tbody></table></div>
+<p><strong>How to confirm an edit:</strong> after changing a field, the window reports <strong>Unapplied edits · Update preview</strong>. After a successful update it reports <strong>Settings applied</strong>. If an error appears, read it and correct the value; do not treat the old plotted curve as the result of the rejected edit. Before copying run commands, apply all intended edits and wait for the preview to finish.</p>
+<h3>3. Tsys calibration: choose the two time filters</h3>
+<ol class="viewer-instructions"><li>Use the <strong>Tsys calibration</strong> page. The upper plot compares raw and filtered Tpsr; the lower plot displays filtered Tpsr separately. These frequency summaries are diagnostics, not a replacement for the channel-dependent reference.</li><li>Start with <strong>ON−OFF smoothing = 10</strong> and <strong>Tpsr smoothing = 10</strong>. The first smooths the increment used to calculate Tpsr; the second smooths Tpsr before matching science times. Neither averages SCI timestamps together.</li><li>Change only ON−OFF smoothing to <strong>5</strong>, update and inspect AA/BB. Then restore it to 10. Change only Tpsr smoothing to 5 and compare. Restore both to 10 before reproducing the supplied default result.</li><li>Values <strong>1–10</strong> are supported by this extract; 1 disables that time filter. Larger values need additional CAL context. Do not bypass the context check.</li><li>Look for discontinuities, extreme values or invalid reference anchors. A visually smooth reference alone does not guarantee valid calibration. Continue to the calibrated spectra before deciding whether a setting is acceptable.</li></ol>
+<h3>4. Apply calibration: inspect temperatures and RFI</h3>
+<ol class="viewer-instructions"><li>Choose <strong>Apply calibration</strong>. The upper plot is raw SCI backend counts, the lower plot is calibrated K for the same timestamp/polarization. Their vertical scales differ because their units differ. Baseline subtraction has not yet happened.</li><li>Inspect <strong>AA</strong>, then <strong>BB</strong>. Zoom across the full band as well as around H I. The central bright line is not automatically interference.</li><li>Read the mask legend: <strong>Detected RFI</strong> is shown with red bands and a count; <strong>Protected H I</strong> is gray. A count of zero means no detections by the current search, not proof of an interference-free spectrum.</li><li>To load a catalogue, open <strong>Workflow → RFI catalogue…</strong> (also available from the display tools). Enter <code>packaged</code> for the distributed reference, or a compatible catalogue JSON path. Use Browse for a local file. For a remote viewer, enter the path on the data server. Choose a profile only if it matches the observation; leave it blank for catalogue statistics only, then click <strong>Open</strong>.</li><li>Catalogue entries guide the observed-spectrum search. They are not unconditional channel masks. Loading saves the choice for later runs and refreshes the preview; it does not rewrite completed products. A manually chosen baseline exclusion is also not an automatic RFI identification.</li></ol>
+<h3>5. Baseline: build, inspect and revise the component list</h3>
+<ol class="viewer-instructions"><li>Choose <strong>Baseline</strong>, select AA and inspect the upper observed/model curves and lower residual. Repeat for BB. First keep the supplied sin/cos followed by a degree-1 polynomial.</li><li>Each row is one component. Choose <strong>sin/cos</strong> or <strong>polynomial</strong>. For a polynomial set its degree <strong>n</strong>. For sin/cos enter a period in MHz as <code>auto</code>, a fixed value, or <code>min:max</code>. The degree control does not select the sinusoidal period.</li><li>Use <strong>Fit &amp; apply range</strong> = <code>full</code> for the full native band or <code>-1500:1500</code> for that LSRK interval. A component fits the residual left by preceding rows and is subtracted only inside its own range. A local function is not extrapolated outside its range.</li><li>Use <strong>+ Add component</strong> to add a function, <strong>↑ / ↓</strong> to change order and <strong>×</strong> to remove it. Order matters because fitting is sequential. Change one item at a time, then update and inspect the result.</li><li>Keep <strong>Protect ±km/s = 250</strong> for reproducing the example. This excludes the central H I range from fitting anchors; it does not leave the baseline unsubtracted beneath H I. Detected RFI and extra exclusions are also omitted from anchors.</li><li>For an additional baseline-only exclusion, enter paired intervals such as <code>[[800,850],[-900,-850]]</code> in <strong>Exclude km/s</strong>. Use <code>[]</code> for none. These are syntax examples, not identified contamination in this dataset. Do not exclude real emission without examining it.</li><li>Use <strong>Baseline zoom</strong> or set exact plot limits to inspect small offsets. The H I peak may extend beyond a tight intensity range; that is display clipping, not lost channels.</li><li>If <strong>Period at search limit</strong> appears, open <strong>Details…</strong>. It means the selected period lies at an allowed search boundary. Compare the residual and alternative justified functions/ranges. It does not by itself prove either a good fit or a failed fit.</li><li>Check clean channels outside protected H I for offsets and coherent structure. Also compare H I profiles between reasonable choices. Because the protected interval is not fitted, a low outside residual cannot establish the true baseline underneath it.</li></ol>
+<h3>6. Table: choose the spectral response and output interval</h3>
+<ol class="viewer-instructions"><li>Choose <strong>Table</strong>. Its upper plot is the selected native spectrum; the lower plot is the resampled product. The two plots can differ in channel spacing and response.</li><li>For the default result choose <strong>rebin</strong>, <strong>n_b = 2</strong>, and output velocities <strong>−250 to +250 km/s</strong>. Update the preview. The output uses the real LSRK factors for each timestamp.</li><li>For a comparison, select <strong>gaussian</strong> and set <strong>n_g</strong>, the target final Gaussian FWHM in native-channel units. It must not be smaller than the assumed native FWHM. Output spacing follows n_b in rebin mode or the final Gaussian FWHM in Gaussian mode. These settings change the science response; they are not merely display averaging.</li><li>To preview a spatial-selection mean, place the mouse over the footprint, press <strong>R</strong> or <strong>P</strong>, adjust the rectangle/polygon using its handles, and click <strong>Region mean</strong>. This is a preview limited to at most 128 spectra, with no gridding. It does not redefine which spectra a later stage run processes.</li><li>Return to the default settings if reproducing the released result. Check Settings applied and continue to the command-line saving steps below.</li></ol>
+<h3>7. Zoom, vertical ranges and plotting style</h3>
+<p>Click the plotting canvas to give it keyboard focus, then place the pointer over the panel you want to control. Typing in a numeric field does not invoke plot shortcuts. Free dragging and wheel navigation are disabled intentionally.</p>
+<div class="table-scroll"><table class="timing-table"><thead><tr><th>Action</th><th>How</th><th>Expected result</th></tr></thead><tbody>
+<tr><td>Zoom horizontally</td><td>Press <strong>Z</strong>, then drag a rectangle on a spectrum.</td><td>Changes the spectral X range and retains its Y range.</td></tr>
+<tr><td>Zoom both axes</td><td>Press <strong>Shift+Z</strong>, then drag a rectangle.</td><td>Changes both velocity and intensity limits.</td></tr>
+<tr><td>Cancel an armed zoom</td><td><strong>Escape</strong></td><td>Cancels the selection; it does not undo a completed zoom.</td></tr>
+<tr><td>Previous / full view</td><td><strong>B / F</strong> over the panel</td><td>Restores the previous view / full extent.</td></tr>
+<tr><td>Exact X and Y limits</td><td><strong>View → Plot ranges…</strong></td><td>Enter shared X limits and independent upper/lower Y limits, then Apply. Minimum must be below maximum. On Tsys, X is MJD; on spectra, it is km/s.</td></tr>
+<tr><td>Steps / lines / averaging</td><td><strong>View → Display tools (style, colors, images)</strong></td><td>Choose centered steps or lines and Display mean points. A value of 32 averages channels only for drawing; 1 displays native sampling. Stored data and fit settings are unaffected.</td></tr>
+<tr><td>Read cursor / help</td><td><strong>V / H</strong></td><td>Reports cursor coordinates in the status bar / opens keyboard help.</td></tr>
+<tr><td>Close the viewer</td><td><strong>E / Q</strong> with canvas focus, or close the window.</td><td>Closes the viewer; terminal/background reduction jobs continue.</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="cli" class="lesson-section">
+<p class="eyebrow">Command line / complete step-by-step route</p><h2>Run each spectral stage from the FISH prompt</h2>
+<p>This route uses the same real data, production functions and settings as the viewer. The compact example needs no original data-server access. Start from the package root in the activated environment. For a first run, keep the defaults below; parameter experiments can use a second, fresh workspace.</p>
+<h3>Step 1 · prepare the inputs, without processing</h3>
+<p><strong>Normal terminal:</strong> if you already prepared <code>~/fish-suna01-session</code> in the viewer walkthrough, skip this command.</p>
+<pre><code>python examples/minimal_calibration/prepare_viewer.py \
+  --output "$HOME/fish-suna01-session"</code></pre>
+<p><strong>Expected:</strong> “Created session” followed by a <code>fish_session.json</code> path. The workspace contains configuration, selection and real saved coordinates, plus a CAL copy. Native SCI and Tcal are referenced from the package. Preparation is not yet calibration.</p>
+<h3>Step 2 · enter FISH and restore the prepared session</h3>
+<p><strong>Normal terminal, with a desktop:</strong></p><pre><code>fish --viewer qt</code></pre>
+<p>On a headless computer, or for command-only processing, use <code>fish --viewer none</code>. The FISH prompt appears. From here, type only FISH commands:</p>
+<pre><code>restore ~/fish-suna01-session/fish_session.json
+guide
+settings
+status</code></pre>
+<p><strong>Expected:</strong> restore reports the loaded session; guide lists inspection/processing stages; settings prints the session, parameters and run directory; status lists completed or pending stages. A fresh session has no completed spectral products and reports that gridding is omitted. Check the paths before running anything. Restoring this compact session replaces the usual project/file/pointing setup; do not import <code>science.fits</code> separately here.</p>
+<h3>Step 3 · set and inspect the reference filters</h3>
+<p><strong>FISH prompt:</strong></p><pre><code>set n_t_cal 10
+set n_t_apply 10
+get 0
+tsyscal</code></pre>
+<p><strong>Expected:</strong> each set prints its accepted value. With Qt enabled, tsyscal opens the temperature-reference page for spectrum 0. With <code>--viewer none</code>, no inspection window is opened. Use <code>get next</code>, <code>get previous</code> or <code>get 15</code> to choose another zero-based spectrum; issue the desired inspection command again to view it. Indices in this example are 0–31.</p>
+<p><code>tsyscal</code> without <code>run</code> requests inspection. <code>tsyscal run</code> below computes/saves references for the whole loaded selection. The same distinction applies to applycal, baseline and table.</p>
+<h3>Step 4 · calculate and save the temperature references</h3>
+<pre><code>tsyscal run
+wait
+status</code></pre>
+<p><strong>Expected:</strong> Started reference, a job PID and log path; then Complete: reference with its stage directory. The example processes 32 selected science timestamps from one scan/beam. Do not start the next stage until wait reports completion. <code>wait 10</code> waits up to ten seconds and may report Still running; that is not failure. Run wait again or inspect status.</p>
+<h3>Step 5 · inspect calibration and the RFI catalogue, then save calibration</h3>
+<pre><code>catalog
+applycal</code></pre>
+<p><strong>Expected:</strong> catalog reports the active search-prior catalogue. With Qt, applycal shows counts above and K below. Inspect AA/BB and the legend as described above. To deliberately load a different compatible catalogue, use <code>catalog /absolute/path/to/catalog.json</code>; <code>catalog packaged</code> restores the distributed catalogue without selecting an observation profile. Use <code>help catalog</code> for the optional profile argument. Do not guess a profile for another observation.</p>
+<p>After deciding on the settings:</p><pre><code>applycal run
+wait
+status</code></pre>
+<p><strong>Expected:</strong> Complete: calibration. The saved products include frequency-dependent gain coefficients and detected RFI intervals; the fitted gain is applied independently to AA/BB. No baseline has been subtracted yet. Existing stage paths are fingerprinted by their settings and provenance.</p>
+<h3>Step 6 · configure the baseline, inspect it and save its coefficients</h3>
+<p>The following reproduces the initial two-component model. Enter the entire component list on one line:</p>
+<pre><code>set protect_kms 250
+set baseline_exclusions_kms []
+set baseline_components [{"function":"sincos","range_kms":null,"period_MHz":null},{"function":"polynomial","degree":1,"range_kms":[-1500,1500]}]
+baseline</code></pre>
+<p><strong>Meaning:</strong> <code>null</code> range means full band; <code>null</code> period requests automatic search. The second component is linear and confined to ±1500 km/s. AA and BB are fitted separately; H I and detected RFI are omitted from fitting anchors. These are initial teaching settings, not a claim that they are optimal for every spectrum.</p>
+<p>Inspect the components and residual in Qt, including Details for any period-boundary warning. A terminal-only run saves the fit reports for later inspection but cannot substitute for looking at the data. Once satisfied:</p><pre><code>baseline run
+wait
+status</code></pre>
+<p><strong>Expected:</strong> Complete: baseline. The stage stores component coefficients and reports. It does not create a spatial map. Reproducing the default example reports a period at its allowed boundary in one of its two chunks; investigate the warning rather than reading it as automatic success.</p>
+<h3>Step 7 · choose the spectral response and save the table</h3>
+<pre><code>set spectral_mode rebin
+set n_b 2
+set velocity_range_kms [-250,250]
+table</code></pre>
+<p>With Qt, inspect the resampled preview. For a separate Gaussian experiment, use <code>set spectral_mode gaussian</code> and <code>set n_g 2</code>, then inspect again; restore rebin to reproduce the default. n_g is a target final Gaussian FWHM in native-channel units. Native sampling, final resolution, output spacing and display averaging are distinct quantities.</p>
+<pre><code>table run
+wait
+status</code></pre>
+<p><strong>Expected:</strong> Complete: resample, with a root-level <code>table_manifest.json</code>. The default disk-backed table has <strong>32 rows × 2,485 channels</strong>. Each row is one selected timestamp; its spectrum has been baseline-subtracted, Doppler-aligned and resampled. No spatial gridding occurs. Do not run xy_map in this compact session.</p>
+<h3>Step 8 · save your session and leave safely</h3>
+<pre><code>save ~/fish-suna01-session/my-settings.json
+exit</code></pre>
+<p>The session JSON stores paths and parameters, not a self-contained data archive. A saved copy still points to the same workspace and input files; it is not a new isolated reduction. To continue, start FISH again and <code>restore ~/fish-suna01-session/my-settings.json</code>. Reopen Qt with <code>fish-viewer --session-state "$HOME/fish-suna01-session/fish_session.json"</code> for the original session, or use the saved settings path to open that snapshot. Keep one active settings file while alternating terminal and viewer edits.</p>
+<h3>Step 9 · read the saved spectral table</h3>
+<p><strong>Python or a notebook:</strong> read product paths through the manifest instead of guessing fingerprinted folder names.</p>
+<pre><code>from pathlib import Path
+import json
+import numpy as np
+
+root = Path.home() / "fish-suna01-session"
+manifest = json.loads((root / "table_manifest.json").read_text())
+records = json.loads(Path(manifest["processed"]).read_text())
+product = records[0]["products"][0]
+spectra = np.load(product["data"], mmap_mode="r")
+frequency_ghz = np.asarray(manifest["frequency_ghz"])
+print(spectra.shape)                 # default: (32, 2485)
+print(np.isfinite(spectra).all())     # default: True</code></pre>
+<p>The unattended runner additionally creates <code>workflow_summary.json</code> and three figures. The manual stage sequence saves the normal production products and manifest; it does not automatically make those extra tutorial figures. Run the notebook or unattended example in its own fresh workspace to obtain them.</p>
+<h3>Optional · run a reproducible command file</h3>
+<p>Create a plain-text file called <code>sun17-example.fish</code>, containing FISH commands, not operating-system commands. This file assumes the prepared session already exists:</p>
+<pre><code># Run against the existing prepared session.
+restore ~/fish-suna01-session/fish_session.json
+set n_t_cal 10
+set n_t_apply 10
+set protect_kms 250
+set baseline_exclusions_kms []
+set baseline_components [{"function":"sincos","range_kms":null,"period_MHz":null},{"function":"polynomial","degree":1,"range_kms":[-1500,1500]}]
+set spectral_mode rebin
+set n_b 2
+set velocity_range_kms [-250,250]
+tsyscal run
+wait
+applycal run
+wait
+baseline run
+wait
+table run
+wait
+status
+exit</code></pre>
+<p><strong>Normal terminal:</strong></p><pre><code>fish --viewer none --execute sun17-example.fish</code></pre>
+<p>The command-file reader stops on a reported command error. Read the printed output and stage log; do not remove wait commands or launch another run into the same workspace. For unattended use with compact summary figures, the supplied <code>run_workflow.py</code> remains the shorter option.</p>
+<h3>What must be rerun after a setting change?</h3>
+<div class="table-scroll"><table class="timing-table"><thead><tr><th>Changed setting</th><th>Stages to complete with the new settings</th></tr></thead><tbody>
+<tr><td>ON−OFF / Tpsr filters, or calibration/RFI catalogue</td><td>Start with tsyscal run, then calibration, baseline and table, checking each stage. Compatible checkpoints may be reused.</td></tr>
+<tr><td>Baseline functions, protected range or extra exclusions</td><td>Ensure the required upstream checkpoints exist for the current settings; run baseline and table. If FISH requests a missing dependency, complete the requested upstream stage first.</td></tr>
+<tr><td>Rebin/Gaussian choice or output velocity range</td><td>Regenerate Table using compatible upstream products; follow any dependency message.</td></tr>
+<tr><td>Plot style, display averaging, colors or zoom</td><td>No processing rerun. These are drawing controls.</td></tr>
+</tbody></table></div>
+<p>Fingerprints determine product compatibility. The current settings can point to a different stage directory even though older products remain on disk. Use status after an edit; do not rename old products to make a dependency appear satisfied.</p>
+</section>
+<section id="troubleshooting" class="lesson-section">
+<p class="eyebrow">Troubleshooting / check before continuing</p><h2>Common problems and recovery</h2>
+<div class="table-scroll"><table class="timing-table"><thead><tr><th>Symptom</th><th>Check and next action</th></tr></thead><tbody>
+<tr><td>fish or fish-viewer is not found / wrong fish program starts</td><td>Activate the Python environment where this source was installed. FISH is this package’s executable; an unrelated operating-system fish shell may also exist. From the package root, <code>python -m fastfish.commands.shell --viewer qt</code> explicitly starts the package prompt.</td></tr>
+<tr><td>Qt cannot connect to a display</td><td>Use a desktop session for Qt. On a headless host run <code>fish --viewer none</code> for processing, or use the remote-viewer route below. Installing Qt alone does not create a display.</td></tr>
+<tr><td>Output directory is not empty</td><td>Reopen its existing fish_session.json; do not prepare again. For an independent experiment, choose a new output directory.</td></tr>
+<tr><td>A file is missing after moving the package</td><td>Sessions contain paths to package inputs. Restore the original location or prepare a new session from the new package location. Copying only fish_session.json does not copy SCI/CAL/Tcal.</td></tr>
+<tr><td>Unapplied edits / run commands disabled</td><td>Click Update preview and wait. Fix a reported validation error, or Reset edits to discard the draft. The previous plot is not confirmation that a rejected change worked.</td></tr>
+<tr><td>Keyboard shortcuts or vertical zoom seem inactive</td><td>Click the canvas and hover the target panel. Use Shift+Z for both axes, or View → Plot ranges. Z alone intentionally preserves spectral Y limits. Escape cancels an armed zoom; B undoes a completed view change.</td></tr>
+<tr><td>Period at search limit</td><td>Read Details and inspect residuals in both polarizations. Compare justified ranges/functions; widening a bound without evidence is not a quality check.</td></tr>
+<tr><td>No red RFI bands</td><td>Read the detection count and catalogue/profile. Entries are search priors, not guaranteed contamination. Inspect the observed band; zero detections does not prove every spike is astrophysical.</td></tr>
+<tr><td>Need smoothing above 10 timestamps</td><td>The compact CAL extract lacks the required context. Use a larger real CAL selection; do not disable the support guard.</td></tr>
+<tr><td>Complete upstream stage first</td><td>Current settings do not have a compatible dependency checkpoint. Run the named upstream stage, wait and check status, then continue downstream.</td></tr>
+<tr><td>Stage stopped or failed</td><td>Read the exact job log path in the message. Inspect the last traceback and scheduler status. A stopped process is not completion. Preserve the log and resolve the actual error before starting the next stage.</td></tr>
+<tr><td>Want progress without stopping the job</td><td>Use status or a bounded wait. Ctrl+C during wait returns to the prompt and leaves processing running. Closing the viewer or leaving FISH does not mean the science job was stopped. Use <code>stop</code> only when you intend to terminate the owned active job.</td></tr>
+</tbody></table></div>
+<h3>Using the same viewer with server data</h3>
+<p>The downloadable tutorial is local and needs no server. For your own remote session, prepare it on the data host and use its absolute session path. With the package and Qt installed on your desktop and working SSH access, the general form is:</p>
+<pre><code>fish-viewer --remote USER@HOST \
+  --remote-source /absolute/server/package/src \
+  --session-state /absolute/server/workspace/fish_session.json</code></pre>
+<p>The worker reads spectra on the server and the desktop draws the plots. The session and catalogue paths refer to the server; local Browse is unavailable for a remote catalogue. Use compatible package versions on both hosts. This does not copy an observation onto the desktop and does not create SSH access. Run processing commands in FISH on the <strong>data host</strong>, not against server paths in a local FISH prompt.</p>
+</section>
+
 <section id="calculation" class="lesson-section">
 <p class="eyebrow">04 / Follow the calculation</p><h2>Calibration procedure</h2>
 <p class="section-lede">The example calls the production calibration functions. It does not maintain a second estimator just for the tutorial. Open each step to see its meaning and code location.</p>
@@ -148,7 +331,7 @@ print(spectra.shape)  # (32, 2485) for the defaults</code></pre></details>
   --n-t-cal 1 --n-t-apply 1</code></pre><p>Compare the reference curves, gain coefficients and spectra with the default result. Real references fluctuate, so changing the two filters can change the answer. The default regression comparison is skipped for non-default windows; the change is reported instead. With both filters disabled, a few nonfinite references appear at 1425.415 and 1426.514 MHz; the production fit rejects invalid anchors and the summary reports them. This does not make reference-quality checks optional.</p></div><div><h3>Relevant source functions</h3><p>Read <code>rebuild_reference</code> for the two time filters. Read <code>frequency_gain</code> for overlap averaging, exclusions, log fitting, clipping, and support checks. The package’s <code>src/README.md</code> maps the remaining modules and explains how to extend them.</p><p>The compact extract supports time-filter windows from 1 to 10. Larger windows need more surrounding CAL timestamps and must not be forced by disabling support checks. Preserve the released data and numerical reference when experimenting.</p></div></div>
 <details><summary>Scope of the full reduction workflow</summary><p>Real reductions add input convention and reference-quality checks, observed RFI detection, consistent pointing/time/Doppler calculations, configurable baseline components, spectral resampling, and spatial gridding. This compact tutorial demonstrates the spectral stages; spatial gridding and full-observation quality assessment require a larger dataset. Native channel spacing is not a measurement of the instrumental line-spread function.</p></details>
 </section>
-<footer class="tutorial-footer"><p>FISH spectral workflow tutorial · Lingrui Lin · 25 October 2026</p><p><a class="inline-link" href="downloads/SHA256SUMS.txt">Download checksums</a> · <a class="inline-link" href="https://github.com/Astronlin/NJU_FAST_ISM">Project repository</a> · <a class="inline-link" href="../../#tools">Back to tools</a></p><p class="small">This tutorial uses the downloadable snapshot above. The public repository may differ from that snapshot.</p></footer>
+<footer class="tutorial-footer"><p>FISH spectral workflow tutorial · Lingrui Lin · Instructions updated 26 October 2026</p><p><a class="inline-link" href="downloads/SHA256SUMS.txt">Download checksums</a> · <a class="inline-link" href="https://github.com/Astronlin/NJU_FAST_ISM">Project repository</a> · <a class="inline-link" href="../../#tools">Back to tools</a></p><p class="small">This tutorial uses the downloadable snapshot above. The public repository may differ from that snapshot.</p></footer>
 </main>
 <div class="sr-only" role="status" id="copy-status"></div>
 </body></html>
