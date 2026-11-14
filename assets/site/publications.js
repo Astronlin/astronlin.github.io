@@ -126,13 +126,13 @@ window.PUBLICATIONS = [
       "Zhang",
       "Zheng"
     ],
-    "year": "2025",
-    "month": "sep",
+    "year": "2026",
+    "month": "feb",
     "journal": "Science China Physics, Mechanics & Astronomy",
-    "volume": "",
-    "pages": "",
+    "volume": "69",
+    "pages": "229511",
     "group": "coauthor",
-    "status": "Accepted",
+    "status": "Published",
     "url": "https://doi.org/10.48550/arXiv.2509.13983"
   },
   {
@@ -492,6 +492,21 @@ window.PUBLICATIONS = [
     "group": "review",
     "status": "Under review",
     "url": "https://arxiv.org/abs/2609.30375"
+  },
+  {
+    "key": "Lu_TRICEPS_V_submitted_2026",
+    "title": "TRICEPS. V. The spatially resolved star-formation relation in massive galaxies at z=4–5",
+    "authors": ["Lu"],
+    "authorDisplay": "Lu et al.",
+    "authorNote": "Lin (fourth author)",
+    "year": "2026",
+    "month": "",
+    "journal": "",
+    "volume": "",
+    "pages": "",
+    "group": "review",
+    "status": "Submitted",
+    "url": ""
   },
   {
     "key": "Li_IRAS18293_under_review_2026",
