@@ -10,7 +10,7 @@
     "A thread through my work":"贯穿研究的一条线索", "From clouds":"从分子云", "to galaxies.":"到星系", "Follow the questions":"沿着问题继续", "Selected research":"研究选摘", "All research":"全部研究", "Ongoing · ALMA / JWST / VLA":"进行中 · ALMA / JWST / VLA", "Cold gas disks":"早期宇宙中的", "in the early Universe":"冷气体盘", "Inside TRICEPS":"走近 TRICEPS", "What supports a molecular cloud?":"是什么支撑着分子云？", "Read the story":"了解这项研究", "A cold disk at cosmic noon":"宇宙正午的冷气体盘", "Resolved gas dynamics in a starburst radio galaxy.":"研究一个恒星暴射电星系中气体的运动。", "Examining the balance between turbulent motions and gravity.":"研究湍流运动与引力之间的平衡。",
     "Clouds assemble from the gas in a galaxy, while the stars born within them reshape their surroundings. Working on both molecular clouds and distant galaxy disks has made me increasingly interested in the physical connections between them.":"恒星在分子云中诞生。分子云由星系中的气体汇聚而成，新生恒星又会影响周围的气体。从银河系中的分子云到遥远的星系盘，研究这些不同的天体让我越来越想了解它们之间的联系。",
     "I lead the kinematic analysis of TRICEPS, a survey of 16 massive star-forming galaxies at redshifts 4–5.":"TRICEPS 巡天观测了16个红移为4–5、恒星形成活跃的大质量星系。我负责研究这些星系中气体的运动。",
-    "Recently":"近况", "Recent updates":"最近动态", "Oct 2026":"2026年10月", "Jul 2026":"2026年7月", "The TRICEPS survey and kinematic papers are under review at":"TRICEPS 巡天论文和运动学论文正在", ".":"。", "See the manuscripts →":"查看稿件 →", "Our coauthored study of the broad-line region in NGC 1068 has been accepted by":"我参与的 NGC 1068 宽线区研究已被以下期刊接收：", "Publication list →":"论文列表 →", "I shared our TRICEPS work at EAS in Lausanne and at the galaxy-dynamics workshop in Sexten.":"我在洛桑的欧洲天文学年会（EAS）和塞斯托的星系动力学研讨会上介绍了 TRICEPS 的研究。",
+    "Recently":"近况", "Recent updates":"最近动态", "Oct 2026":"2026年10月", "Jul 2026":"2026年7月", "The TRICEPS survey and kinematic papers are under review at":"TRICEPS 巡天论文和运动学论文正在", ".":"。", "See the manuscripts →":"查看稿件 →", "Our coauthored study of the broad-line region in NGC 1068 has been published in":"我参与的 NGC 1068 宽线区研究已发表于", "Publication list →":"论文列表 →", "I shared our TRICEPS work at EAS in Lausanne and at the galaxy-dynamics workshop in Sexten.":"我在洛桑的欧洲天文学年会（EAS）和塞斯托的星系动力学研讨会上介绍了 TRICEPS 的研究。",
     "Code development":"代码开发", "Tools and visualizations":"工具与可视化", "Explore the tools":"查看工具", "Beyond academia":"科研之外", "Seen from":"从地球", "the Earth.":"看世界", "Through my lens":"透过我的镜头", "Ganyu · Home by the sea":"赣榆 · 海边的家乡", "Rome · August 2026":"罗马 · 2026年8月", "A camera, a walk. There are many ways I enjoy getting to know the world, whether I am close to home or somewhere new.":"带着相机，四处走走。无论是在家附近，还是来到陌生的地方，我都喜欢用自己的方式认识这个世界。", "Get in touch":"联系我", "I am always happy to discuss research or share a curiosity.":"很乐意与你交流，聊聊我们共同好奇的事情。",
     // Genshin Impact, Natlan Archon Quest: 当一切镌刻成碑.
     // https://wiki.biligame.com/ys/当一切镌刻成碑
@@ -50,7 +50,7 @@
   };
   Object.assign(zh, {
     "The TRICEPS survey and kinematic papers are under review at":"TRICEPS 巡天论文和运动学论文均在审，投稿期刊为",
-    "Scientific commentary":"科学评论", "Conference contribution":"会议成果", "Download my CV ↗":"下载简历 ↗",
+    "Scientific commentary":"科学评论", "Conference poster":"会议海报", "Download my CV ↗":"下载简历 ↗",
     "an ever-evolving self":"不断成长的自己",
     "with much left to discover...":"还有许多值得探索的事……",
     "A thread through my work":"研究中的一条线索", "Follow the questions":"看看我在研究什么",
@@ -60,7 +60,7 @@
     "How does a galaxy set the conditions":"星系中的运动如何影响", "for its local star formation?":"恒星诞生的条件？",
     "A camera, a walk. There are many ways I enjoy getting to know the world, whether I am close to home or somewhere new.":"带着相机出门走走，是我认识世界的另一种方式。家附近的海岸、旅途中的街道，都有值得停下来看的风景。",
     "I am always happy to discuss research or share a curiosity.":"如果你想交流科研问题，或是有共同感兴趣的话题，欢迎给我写信。",
-    "Our coauthored study of the broad-line region in NGC 1068 has been accepted by":"我参与的 NGC 1068 宽线区研究已获接收，将发表于",
+    "Our coauthored study of the broad-line region in NGC 1068 has been published in":"我参与的 NGC 1068 宽线区研究已发表于",
     "I was born in Ganyu, Lianyungang, Jiangsu (江苏省连云港市赣榆区), China, and grew up near the sea.":"我出生在江苏省连云港市赣榆区，从小在海边长大。",
     "I like to record the world with my camera, both close to home and when traveling.":"无论是在家附近还是旅行途中，我都喜欢用相机记录看到的风景。",
     "My research is based mainly on radio and millimeter observations. I have led ten observing programs and worked with data from both single-dish telescopes and interferometers. I am experienced in taking a project from the observing proposal through data reduction and analysis to publication.":"我的研究主要基于射电和毫米波观测。我主持过十项观测项目，处理过单天线望远镜和干涉阵的数据，也有从申请观测、处理和分析数据到发表论文的完整经历。",

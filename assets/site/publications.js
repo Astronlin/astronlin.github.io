@@ -2,7 +2,7 @@
 window.PUBLICATIONS = [
   {
     "key": "Guo_NGC1068_MNRAS_accepted_2026",
-    "title": "Constrain the Size of Broad Line Region in NGC 1068 Using Sub-millimeter Excess",
+    "title": "Constrain the size of broad-line region in NGC 1068 using submillimetre excess",
     "authors": [
       "Guo",
       "Wang",
@@ -12,13 +12,13 @@ window.PUBLICATIONS = [
       "Zhu"
     ],
     "year": "2026",
-    "month": "oct",
+    "month": "nov",
     "journal": "MNRAS",
-    "volume": "",
-    "pages": "",
+    "volume": "553(1)",
+    "pages": "stag1946",
     "group": "coauthor",
-    "status": "Accepted",
-    "url": "https://arxiv.org/abs/2610.20260"
+    "status": "Published",
+    "url": "https://doi.org/10.1093/mnras/stag1946"
   },
   {
     "key": "2026A&A...712L..17L",
@@ -133,7 +133,7 @@ window.PUBLICATIONS = [
     "pages": "229511",
     "group": "coauthor",
     "status": "Published",
-    "url": "https://doi.org/10.48550/arXiv.2509.13983"
+    "url": "https://arxiv.org/abs/2509.13983"
   },
   {
     "key": "2025A&A...696A..88W",
@@ -330,9 +330,9 @@ window.PUBLICATIONS = [
     "month": "dec",
     "journal": "ALMA at 10 years: Past, Present, and Future",
     "volume": "",
-    "pages": "50",
+    "pages": "",
     "group": "other",
-    "status": "Conference contribution",
+    "status": "Conference poster",
     "url": "https://doi.org/10.5281/zenodo.10244516"
   },
   {
@@ -449,7 +449,7 @@ window.PUBLICATIONS = [
       "De Breuck",
       "Paris",
       "Bevacqua",
-      "Perez-Diaz",
+      "Pérez-Díaz",
       "Man",
       "Gandolfi",
       "Tsukui",
@@ -481,7 +481,7 @@ window.PUBLICATIONS = [
       "Man",
       "Marasco",
       "Paris",
-      "Perez-Diaz",
+      "Pérez-Díaz",
       "Santini"
     ],
     "year": "2026",
